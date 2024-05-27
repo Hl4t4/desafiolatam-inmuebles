@@ -1,0 +1,43 @@
+Santiago:
+Inmueble en Santiago: Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 10.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, Santiago, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500
+Inmueble en Santiago: Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 28.0[m²]
+ Metros Totales o del Terreno: 32.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 2
+ Direccion: Direccion 3, Santiago, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $9509000
+San Bernardo:
+Inmueble en San Bernardo: Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+Independencia:
+Inmueble en Independencia: Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, Independencia, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000

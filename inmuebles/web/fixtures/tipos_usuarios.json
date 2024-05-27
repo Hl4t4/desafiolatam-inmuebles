@@ -1,0 +1,1 @@
+[{"model": "web.tipousuario", "pk": 5, "fields": {"nombre_tipo_usuario": "arrendatario"}}, {"model": "web.tipousuario", "pk": 6, "fields": {"nombre_tipo_usuario": "arrendador"}}]

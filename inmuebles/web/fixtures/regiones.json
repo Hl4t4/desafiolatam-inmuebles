@@ -1,0 +1,130 @@
+[
+    {
+        "model": "web.Region",
+        "pk": 1,
+        "fields": {
+            "id": 1,
+            "nombre_region": "Arica y Parinacota"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 2,
+        "fields": {
+            "id": 2,
+            "nombre_region": "Tarapacá"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 3,
+        "fields": {
+            "id": 3,
+            "nombre_region": "Antofagasta"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 4,
+        "fields": {
+            "id": 4,
+            "nombre_region": "Atacama"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 5,
+        "fields": {
+            "id": 5,
+            "nombre_region": "Coquimbo"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 6,
+        "fields": {
+            "id": 6,
+            "nombre_region": "Valparaíso"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 7,
+        "fields": {
+            "id": 7,
+            "nombre_region": "Metropolitana de Santiago"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 8,
+        "fields": {
+            "id": 8,
+            "nombre_region": "Libertador General Bernardo O'Higgins"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 9,
+        "fields": {
+            "id": 9,
+            "nombre_region": "Maule"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 10,
+        "fields": {
+            "id": 10,
+            "nombre_region": "Ñuble"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 11,
+        "fields": {
+            "id": 11,
+            "nombre_region": "Biobío"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 12,
+        "fields": {
+            "id": 12,
+            "nombre_region": "La Araucanía"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 13,
+        "fields": {
+            "id": 13,
+            "nombre_region": "Los Ríos"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 14,
+        "fields": {
+            "id": 14,
+            "nombre_region": "Los Lagos"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 15,
+        "fields": {
+            "id": 15,
+            "nombre_region": "Aisén del General Carlos Ibáñez del Campo"
+        }
+    },
+    {
+        "model": "web.Region",
+        "pk": 16,
+        "fields": {
+            "id": 16,
+            "nombre_region": "Magallanes y la Antártica Chilena"
+        }
+    }
+]

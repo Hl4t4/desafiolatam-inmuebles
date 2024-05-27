@@ -10,4 +10,28 @@ python manage.py createsuperuser
 
 python manage.py runsslserver
 
+------------------------------------------------------------------
+
+
 python manage.py makemigrations --empty web --name populate_database
+
+python manage.py dumpdata web.Inmueble --output=web/fixtures/inmuebles.json
+
+python manage.py dumpdata web.Usuario --output=web/fixtures/usuarios.json
+
+python manage.py dumpdata web.Comuna --output=web/fixtures/comunas.json --encoding=utf-8
+
+python manage.py dumpdata web.Comuna --output=web/fixtures/comunas.json
+
+python manage.py dumpdata web.Region --output=web/fixtures/regiones.json
+
+python manage.py dumpdata web.TipoUsuario --output=web/fixtures/tipos_usuarios.json
+
+python manage.py dumpdata web.TipoInmueble --output=web/fixtures/tipos_inmuebles.json
+
+------------------------------------------------------------------
+
+python manage.py loaddata web/fixtures/comunas.json
+python manage.py loaddata web/fixtures/regiones.json
+python manage.py loaddata web/fixtures/inmuebles.json web/fixtures/usuarios.json web/fixtures/tipos_usuarios.json web/fixtures/tipos_inmuebles.json
+
