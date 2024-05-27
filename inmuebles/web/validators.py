@@ -2,6 +2,9 @@ from django.core.exceptions import ValidationError
 from django.core.validators import BaseValidator
 import re
 
+class TerrenoVsConstruidoValidator (BaseValidator):
+    pass
+
 class RutValidator (BaseValidator):
     code = 'rut_invalido'
     message = f'Valor invalido. Solo un RUT valido segun reglas del estado puede ser usado.'

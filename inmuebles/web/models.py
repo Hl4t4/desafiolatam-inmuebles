@@ -33,7 +33,7 @@ class Usuario (AbstractBaseUser, PermissionsMixin):
     apellidos = models.CharField(max_length = 50, null = False, blank = False, verbose_name = 'Apellidos')
     rut = models.CharField(max_length = 10, null = False, blank = False, verbose_name = 'RUT')
     direccion = models.CharField(max_length = 50, null = False, blank = True, verbose_name = 'Direccion')
-    telefono_personal = models.IntegerField(null = False, blank = True, verbose_name = 'Telefono Personal', validators=[MinValueValidator(0)])
+    telefono_personal = models.PositiveIntegerField(null = False, blank = True, verbose_name = 'Telefono Personal', validators=[MinValueValidator(0)])
     tipo_de_usuario = models.ForeignKey(to = "TipoUsuario", on_delete = models.CASCADE, null = True, blank = True)
     is_staff = models.BooleanField(default = False)
     date_joined = models.DateTimeField(auto_now_add = date.today())
@@ -79,14 +79,14 @@ class Inmueble (models.Model):
     descripcion = models.TextField(null = False, blank = True, verbose_name = 'Descripcion')
     m2_construidos = models.FloatField(null = False, blank = False, validators=[MinValueValidator(0.0)], verbose_name = 'Metros² Construidos')
     m2_totales = models.FloatField(null = False, blank = False, validators=[MinValueValidator(0.0)], verbose_name = 'Metros² Totales o del terreno')
-    estacionamientos = models.IntegerField(null = False, blank = False, validators=[MinValueValidator(0)], verbose_name = 'Cantidad de estacionamientos')
-    habitaciones = models.IntegerField(null = False, blank = False, validators=[MinValueValidator(0)], verbose_name = 'Cantidad de habitaciones')
-    restrooms = models.IntegerField(null = False, blank = False, validators=[MinValueValidator(0)], verbose_name = 'Cantidad de baños')
+    estacionamientos = models.PositiveIntegerField(null = False, blank = False, validators=[MinValueValidator(0)], verbose_name = 'Cantidad de estacionamientos')
+    habitaciones = models.PositiveIntegerField(null = False, blank = False, validators=[MinValueValidator(0)], verbose_name = 'Cantidad de habitaciones')
+    restrooms = models.PositiveIntegerField(null = False, blank = False, validators=[MinValueValidator(0)], verbose_name = 'Cantidad de baños')
     direccion = models.CharField(max_length = 50, null = False, blank = True, verbose_name = 'Direccion')
     comuna = models.ForeignKey(to = "Comuna", on_delete = models.CASCADE)
     region = models.ForeignKey(to = "Region", on_delete = models.CASCADE)
     tipo_inmueble = models.ForeignKey(to = "TipoInmueble", on_delete = models.CASCADE)
-    arriendo = models.IntegerField(null = False, blank = False, validators=[MinValueValidator(0)], verbose_name = 'Precio mensual de arriendo')
+    arriendo = models.PositiveIntegerField(null = False, blank = False, validators=[MinValueValidator(0)], verbose_name = 'Precio mensual de arriendo')
     arrendador = models.ForeignKey(Usuario, null=True, blank=True, on_delete = models.CASCADE, related_name = 'inmueble_arrendador')
     arrendatario = models.ForeignKey(Usuario, null = False, blank = False, on_delete = models.CASCADE, related_name = 'inmueble_arrendatario')
     
@@ -101,7 +101,7 @@ class Inmueble (models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Nombre: {self.nombre}\n Descripcion: {self.descripcion}\n Metros² Construidos: {self.m2_construidos}[m²]\n Metros Totales o del Terreno: {self.m2_totales}[m²]\n Cantidad de estacionamientos: {self.estacionamientos}\n Cantidad de habitaciones: {self.habitaciones}\n Cantidad de baños: {self.restrooms}\n Direccion: {self.direccion}, {self.comuna}\n Tipo de Inmueble: {self.tipo_inmueble}\n Precio mensual de arriendo: ${self.arriendo}'
+        return f'Nombre: {self.nombre}\n Descripcion: {self.descripcion}\n Metros² Construidos: {self.m2_construidos}[m²]\n Metros Totales o del Terreno: {self.m2_totales}[m²]\n Cantidad de estacionamientos: {self.estacionamientos}\n Cantidad de habitaciones: {self.habitaciones}\n Cantidad de baños: {self.restrooms}\n Direccion: {self.direccion}, {self.comuna}, {self.region}\n Tipo de Inmueble: {self.tipo_inmueble}\n Precio mensual de arriendo: ${self.arriendo}'
 
 class SolicitudArriendo (models.Model):
     arrendador = models.OneToOneField(Usuario, on_delete=models.CASCADE, verbose_name = "Arrendador")

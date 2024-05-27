@@ -1,0 +1,1157 @@
+<QuerySet [<Usuario: Nombre: Nombre 2 Apellido 2
+ RUT: 17.740.481-0
+ Direccion: Direccion Falsa 2, Telefono: 777777777
+ Correo Electronico: correo2@correo2.cl
+ Tipo de Usuario: arrendatario>, <Usuario: Nombre: Usuario 1 Apellido 1
+ RUT: 18.585.543-0
+ Direccion: Direccion 1, Telefono: 4
+ Correo Electronico: correo@correo.cl
+ Tipo de Usuario: arrendador>, <Usuario: Nombre: Jose Andres Latapiatt Perez
+ RUT: 10.336.495-7
+ Direccion: Calle siempre falsa 123, Telefono: 888888888
+ Correo Electronico: jose.latapiatt@proton.me
+ Tipo de Usuario: None>]>
+<QuerySet [<Inmueble: Nombre: asd
+ Descripcion: das
+ Metros² Construidos: 123.0[m²]
+ Metros Totales o del Terreno: 123.0[m²]
+ Cantidad de estacionamientos: 213
+ Cantidad de habitaciones: 213
+ Cantidad de baños: 120
+ Direccion: 123, Independencia, Aisén del General Carlos Ibáñez del Campo
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $123>, <Inmueble: Nombre: asd
+ Descripcion: asd
+ Metros² Construidos: 123.0[m²]
+ Metros Totales o del Terreno: 213.0[m²]
+ Cantidad de estacionamientos: 213
+ Cantidad de habitaciones: 23
+ Cantidad de baños: 211
+ Direccion: 213, Puente Alto, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $12312>, <Inmueble: Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000>, <Inmueble: Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500000>, <Inmueble: Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000>, <Inmueble: Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000>, <Inmueble: Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000>, <Inmueble: Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000>, <Inmueble: Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000>, <Inmueble: Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500000>, <Inmueble: Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000>, <Inmueble: Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000>, <Inmueble: Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000>, <Inmueble: Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000>, <Inmueble: Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000>, <Inmueble: Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000>, <Inmueble: Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000>, <Inmueble: Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000>, <Inmueble: Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000>, <Inmueble: Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000>, '...(remaining elements truncated)...']>
+Inmueble
+Nombre: asd
+ Descripcion: das
+ Metros² Construidos: 123.0[m²]
+ Metros Totales o del Terreno: 123.0[m²]
+ Cantidad de estacionamientos: 213
+ Cantidad de habitaciones: 213
+ Cantidad de baños: 120
+ Direccion: 123, Independencia, Aisén del General Carlos Ibáñez del Campo
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $123
+Inmueble
+Nombre: asd
+ Descripcion: asd
+ Metros² Construidos: 123.0[m²]
+ Metros Totales o del Terreno: 213.0[m²]
+ Cantidad de estacionamientos: 213
+ Cantidad de habitaciones: 23
+ Cantidad de baños: 211
+ Direccion: 213, Puente Alto, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $12312
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+
+
+
+
+
+
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500000
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+
+
+
+
+
+
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+
+
+
+
+
+
+
+
+
+
+Inmueble
+Nombre: asd
+ Descripcion: das
+ Metros² Construidos: 123.0[m²]
+ Metros Totales o del Terreno: 123.0[m²]
+ Cantidad de estacionamientos: 213
+ Cantidad de habitaciones: 213
+ Cantidad de baños: 120
+ Direccion: 123, Independencia, Aisén del General Carlos Ibáñez del Campo
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $123
+Inmueble
+Nombre: asd
+ Descripcion: asd
+ Metros² Construidos: 123.0[m²]
+ Metros Totales o del Terreno: 213.0[m²]
+ Cantidad de estacionamientos: 213
+ Cantidad de habitaciones: 23
+ Cantidad de baños: 211
+ Direccion: 213, Puente Alto, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $12312
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: asd
+ Descripcion: das
+ Metros² Construidos: 123.0[m²]
+ Metros Totales o del Terreno: 123.0[m²]
+ Cantidad de estacionamientos: 213
+ Cantidad de habitaciones: 213
+ Cantidad de baños: 120
+ Direccion: 123, Independencia, Aisén del General Carlos Ibáñez del Campo
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $123
+Inmueble
+Nombre: asd
+ Descripcion: asd
+ Metros² Construidos: 123.0[m²]
+ Metros Totales o del Terreno: 213.0[m²]
+ Cantidad de estacionamientos: 213
+ Cantidad de habitaciones: 23
+ Cantidad de baños: 211
+ Direccion: 213, Puente Alto, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $12312
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $500000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 5
+ Descripcion: Descripcion 5
+ Metros² Construidos: 50.0[m²]
+ Metros Totales o del Terreno: 55.0[m²]
+ Cantidad de estacionamientos: 4
+ Cantidad de habitaciones: 5
+ Cantidad de baños: 5
+ Direccion: Direccion 5, Quilicura, Libertador General Bernardo O'Higgins
+ Tipo de Inmueble: Parcela
+ Precio mensual de arriendo: $405000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+Inmueble
+Nombre: nombre 4
+ Descripcion: Descripcion 4
+ Metros² Construidos: 40.0[m²]
+ Metros Totales o del Terreno: 45.0[m²]
+ Cantidad de estacionamientos: 3
+ Cantidad de habitaciones: 1
+ Cantidad de baños: 4
+ Direccion: Direccion 4, La Pintana, Metropolitana de Santiago
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $50000
+Inmueble
+Nombre: nombre 6
+ Descripcion: Descripcion 6
+ Metros² Construidos: 60.0[m²]
+ Metros Totales o del Terreno: 65.0[m²]
+ Cantidad de estacionamientos: 50
+ Cantidad de habitaciones: 6
+ Cantidad de baños: 6
+ Direccion: Direccion 6, Recoleta, Maule
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $800000
+Inmueble
+Nombre: nombre 1
+ Descripcion: Descripcion 1
+ Metros² Construidos: 10.0[m²]
+ Metros Totales o del Terreno: 15.0[m²]
+ Cantidad de estacionamientos: 5
+ Cantidad de habitaciones: 4
+ Cantidad de baños: 3
+ Direccion: Direccion 1, Las Condes, Atacama
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $999000
+Inmueble
+Nombre: nombre 2
+ Descripcion: Descripcion 2
+ Metros² Construidos: 20.0[m²]
+ Metros Totales o del Terreno: 25.0[m²]
+ Cantidad de estacionamientos: 1
+ Cantidad de habitaciones: 3
+ Cantidad de baños: 1
+ Direccion: Direccion 2, Puente Alto, Coquimbo
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $420000
+Inmueble
+Nombre: nombre 3
+ Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, San Bernardo, Valparaíso
+ Tipo de Inmueble: Departamento
+ Precio mensual de arriendo: $1500000
+
+
+
+
