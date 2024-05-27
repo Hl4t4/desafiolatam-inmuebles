@@ -1,0 +1,13 @@
+django-admin startproject inmuebles
+
+django-admin startapp web
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+python manage.py runsslserver
+
+python manage.py makemigrations --empty web --name populate_database
