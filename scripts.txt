@@ -35,3 +35,10 @@ python manage.py loaddata web/fixtures/comunas.json
 python manage.py loaddata web/fixtures/regiones.json
 python manage.py loaddata web/fixtures/inmuebles.json web/fixtures/usuarios.json web/fixtures/tipos_usuarios.json web/fixtures/tipos_inmuebles.json
 
+from web.models import Region, Comuna, Inmueble, TipoInmueble, TipoUsuario, Usuario
+Usuario.objects.all().delete()
+Inmueble.objects.all().delete()
+TipoInmueble.objects.all().delete()
+TipoUsuario.objects.all().delete()
+Region.objects.all().delete()
+Comuna.objects.all().delete()

@@ -4,7 +4,8 @@
         "pk": 1,
         "fields": {
             "id": 1,
-            "nombre_comuna": "Santiago"
+            "nombre_comuna": "Arica",
+            "region": 1
         }
     },
     {
@@ -12,7 +13,8 @@
         "pk": 2,
         "fields": {
             "id": 2,
-            "nombre_comuna": "La Florida"
+            "nombre_comuna": "Camarones",
+            "region": 1
         }
     },
     {
@@ -20,7 +22,8 @@
         "pk": 3,
         "fields": {
             "id": 3,
-            "nombre_comuna": "Maipú"
+            "nombre_comuna": "Putre",
+            "region": 1
         }
     },
     {
@@ -28,7 +31,8 @@
         "pk": 4,
         "fields": {
             "id": 4,
-            "nombre_comuna": "Las Condes"
+            "nombre_comuna": "General Lagos",
+            "region": 1
         }
     },
     {
@@ -36,7 +40,8 @@
         "pk": 5,
         "fields": {
             "id": 5,
-            "nombre_comuna": "Puente Alto"
+            "nombre_comuna": "Iquique",
+            "region": 2
         }
     },
     {
@@ -44,7 +49,8 @@
         "pk": 6,
         "fields": {
             "id": 6,
-            "nombre_comuna": "San Bernardo"
+            "nombre_comuna": "Alto Hospicio",
+            "region": 2
         }
     },
     {
@@ -52,7 +58,8 @@
         "pk": 7,
         "fields": {
             "id": 7,
-            "nombre_comuna": "La Pintana"
+            "nombre_comuna": "Pozo Almonte",
+            "region": 2
         }
     },
     {
@@ -60,7 +67,8 @@
         "pk": 8,
         "fields": {
             "id": 8,
-            "nombre_comuna": "Quilicura"
+            "nombre_comuna": "Camiña",
+            "region": 2
         }
     },
     {
@@ -68,7 +76,8 @@
         "pk": 9,
         "fields": {
             "id": 9,
-            "nombre_comuna": "Recoleta"
+            "nombre_comuna": "Colchane",
+            "region": 2
         }
     },
     {
@@ -76,7 +85,8 @@
         "pk": 10,
         "fields": {
             "id": 10,
-            "nombre_comuna": "Providencia"
+            "nombre_comuna": "Huara",
+            "region": 2
         }
     },
     {
@@ -84,7 +94,8 @@
         "pk": 11,
         "fields": {
             "id": 11,
-            "nombre_comuna": "La Reina"
+            "nombre_comuna": "Pica",
+            "region": 2
         }
     },
     {
@@ -92,7 +103,8 @@
         "pk": 12,
         "fields": {
             "id": 12,
-            "nombre_comuna": "Peñaflor"
+            "nombre_comuna": "Antofagasta",
+            "region": 3
         }
     },
     {
@@ -100,7 +112,8 @@
         "pk": 13,
         "fields": {
             "id": 13,
-            "nombre_comuna": "Renca"
+            "nombre_comuna": "Mejillones",
+            "region": 3
         }
     },
     {
@@ -108,7 +121,8 @@
         "pk": 14,
         "fields": {
             "id": 14,
-            "nombre_comuna": "San Ramón"
+            "nombre_comuna": "Sierra Gorda",
+            "region": 3
         }
     },
     {
@@ -116,7 +130,8 @@
         "pk": 15,
         "fields": {
             "id": 15,
-            "nombre_comuna": "Ñuñoa"
+            "nombre_comuna": "Taltal",
+            "region": 3
         }
     },
     {
@@ -124,7 +139,8 @@
         "pk": 16,
         "fields": {
             "id": 16,
-            "nombre_comuna": "El Bosque"
+            "nombre_comuna": "Calama",
+            "region": 3
         }
     },
     {
@@ -132,7 +148,8 @@
         "pk": 17,
         "fields": {
             "id": 17,
-            "nombre_comuna": "Independencia"
+            "nombre_comuna": "Ollagüe",
+            "region": 3
         }
     },
     {
@@ -140,7 +157,8 @@
         "pk": 18,
         "fields": {
             "id": 18,
-            "nombre_comuna": "Huechuraba"
+            "nombre_comuna": "San Pedro de Atacama",
+            "region": 3
         }
     },
     {
@@ -148,7 +166,8 @@
         "pk": 19,
         "fields": {
             "id": 19,
-            "nombre_comuna": "Colina"
+            "nombre_comuna": "Tocopilla",
+            "region": 3
         }
     },
     {
@@ -156,7 +175,8 @@
         "pk": 20,
         "fields": {
             "id": 20,
-            "nombre_comuna": "Padre Hurtado"
+            "nombre_comuna": "María Elena",
+            "region": 3
         }
     },
     {
@@ -164,7 +184,8 @@
         "pk": 21,
         "fields": {
             "id": 21,
-            "nombre_comuna": "Lo Barnechea"
+            "nombre_comuna": "Copiapó",
+            "region": 4
         }
     },
     {
@@ -172,7 +193,8 @@
         "pk": 22,
         "fields": {
             "id": 22,
-            "nombre_comuna": "Lo Espejo"
+            "nombre_comuna": "Caldera",
+            "region": 4
         }
     },
     {
@@ -180,7 +202,8 @@
         "pk": 23,
         "fields": {
             "id": 23,
-            "nombre_comuna": "Lo Prado"
+            "nombre_comuna": "Tierra Amarilla",
+            "region": 4
         }
     },
     {
@@ -188,7 +211,8 @@
         "pk": 24,
         "fields": {
             "id": 24,
-            "nombre_comuna": "Macul"
+            "nombre_comuna": "Chañaral",
+            "region": 4
         }
     },
     {
@@ -196,7 +220,8 @@
         "pk": 25,
         "fields": {
             "id": 25,
-            "nombre_comuna": "Conchalí"
+            "nombre_comuna": "Diego de Almagro",
+            "region": 4
         }
     },
     {
@@ -204,7 +229,8 @@
         "pk": 26,
         "fields": {
             "id": 26,
-            "nombre_comuna": "Cerrillos"
+            "nombre_comuna": "Vallenar",
+            "region": 4
         }
     },
     {
@@ -212,7 +238,8 @@
         "pk": 27,
         "fields": {
             "id": 27,
-            "nombre_comuna": "Cerro Navia"
+            "nombre_comuna": "Alto del Carmen",
+            "region": 4
         }
     },
     {
@@ -220,7 +247,8 @@
         "pk": 28,
         "fields": {
             "id": 28,
-            "nombre_comuna": "Estación Central"
+            "nombre_comuna": "Freirina",
+            "region": 4
         }
     },
     {
@@ -228,7 +256,8 @@
         "pk": 29,
         "fields": {
             "id": 29,
-            "nombre_comuna": "Pedro Aguirre Cerda"
+            "nombre_comuna": "Huasco",
+            "region": 4
         }
     },
     {
@@ -236,7 +265,8 @@
         "pk": 30,
         "fields": {
             "id": 30,
-            "nombre_comuna": "Peñalolén"
+            "nombre_comuna": "La Serena",
+            "region": 5
         }
     },
     {
@@ -244,7 +274,8 @@
         "pk": 31,
         "fields": {
             "id": 31,
-            "nombre_comuna": "Pirque"
+            "nombre_comuna": "Coquimbo",
+            "region": 5
         }
     },
     {
@@ -252,7 +283,8 @@
         "pk": 32,
         "fields": {
             "id": 32,
-            "nombre_comuna": "San Joaquín"
+            "nombre_comuna": "Andacollo",
+            "region": 5
         }
     },
     {
@@ -260,7 +292,8 @@
         "pk": 33,
         "fields": {
             "id": 33,
-            "nombre_comuna": "San José de Maipo"
+            "nombre_comuna": "La Higuera",
+            "region": 5
         }
     },
     {
@@ -268,7 +301,8 @@
         "pk": 34,
         "fields": {
             "id": 34,
-            "nombre_comuna": "San Miguel"
+            "nombre_comuna": "Paiguano",
+            "region": 5
         }
     },
     {
@@ -276,7 +310,8 @@
         "pk": 35,
         "fields": {
             "id": 35,
-            "nombre_comuna": "Santa Cruz"
+            "nombre_comuna": "Vicuña",
+            "region": 5
         }
     },
     {
@@ -284,7 +319,8 @@
         "pk": 36,
         "fields": {
             "id": 36,
-            "nombre_comuna": "Talagante"
+            "nombre_comuna": "Illapel",
+            "region": 5
         }
     },
     {
@@ -292,7 +328,8 @@
         "pk": 37,
         "fields": {
             "id": 37,
-            "nombre_comuna": "Vitacura"
+            "nombre_comuna": "Canela",
+            "region": 5
         }
     },
     {
@@ -300,7 +337,8 @@
         "pk": 38,
         "fields": {
             "id": 38,
-            "nombre_comuna": "La Granja"
+            "nombre_comuna": "Los Vilos",
+            "region": 5
         }
     },
     {
@@ -308,7 +346,8 @@
         "pk": 39,
         "fields": {
             "id": 39,
-            "nombre_comuna": "Paine"
+            "nombre_comuna": "Salamanca",
+            "region": 5
         }
     },
     {
@@ -316,7 +355,8 @@
         "pk": 40,
         "fields": {
             "id": 40,
-            "nombre_comuna": "Alhué"
+            "nombre_comuna": "Ovalle",
+            "region": 5
         }
     },
     {
@@ -324,7 +364,8 @@
         "pk": 41,
         "fields": {
             "id": 41,
-            "nombre_comuna": "Buin"
+            "nombre_comuna": "Combarbalá",
+            "region": 5
         }
     },
     {
@@ -332,7 +373,8 @@
         "pk": 42,
         "fields": {
             "id": 42,
-            "nombre_comuna": "Calera de Tango"
+            "nombre_comuna": "Monte Patria",
+            "region": 5
         }
     },
     {
@@ -340,7 +382,8 @@
         "pk": 43,
         "fields": {
             "id": 43,
-            "nombre_comuna": "Curacaví"
+            "nombre_comuna": "Punitaqui",
+            "region": 5
         }
     },
     {
@@ -348,7 +391,8 @@
         "pk": 44,
         "fields": {
             "id": 44,
-            "nombre_comuna": "Lampa"
+            "nombre_comuna": "Río Hurtado",
+            "region": 5
         }
     },
     {
@@ -356,7 +400,8 @@
         "pk": 45,
         "fields": {
             "id": 45,
-            "nombre_comuna": "María Pinto"
+            "nombre_comuna": "Valparaíso",
+            "region": 6
         }
     },
     {
@@ -364,7 +409,8 @@
         "pk": 46,
         "fields": {
             "id": 46,
-            "nombre_comuna": "Melipilla"
+            "nombre_comuna": "Casablanca",
+            "region": 6
         }
     },
     {
@@ -372,7 +418,8 @@
         "pk": 47,
         "fields": {
             "id": 47,
-            "nombre_comuna": "Til Til"
+            "nombre_comuna": "Concón",
+            "region": 6
         }
     },
     {
@@ -380,7 +427,8 @@
         "pk": 48,
         "fields": {
             "id": 48,
-            "nombre_comuna": "Pudahuel"
+            "nombre_comuna": "Juan Fernández",
+            "region": 6
         }
     },
     {
@@ -388,7 +436,8 @@
         "pk": 49,
         "fields": {
             "id": 49,
-            "nombre_comuna": "Quinta Normal"
+            "nombre_comuna": "Puchuncaví",
+            "region": 6
         }
     },
     {
@@ -396,7 +445,8 @@
         "pk": 50,
         "fields": {
             "id": 50,
-            "nombre_comuna": "Arica"
+            "nombre_comuna": "Quintero",
+            "region": 6
         }
     },
     {
@@ -404,7 +454,8 @@
         "pk": 51,
         "fields": {
             "id": 51,
-            "nombre_comuna": "Camarones"
+            "nombre_comuna": "Viña del Mar",
+            "region": 6
         }
     },
     {
@@ -412,7 +463,8 @@
         "pk": 52,
         "fields": {
             "id": 52,
-            "nombre_comuna": "General Lagos"
+            "nombre_comuna": "Isla de Pascua",
+            "region": 6
         }
     },
     {
@@ -420,7 +472,8 @@
         "pk": 53,
         "fields": {
             "id": 53,
-            "nombre_comuna": "Putre"
+            "nombre_comuna": "Los Andes",
+            "region": 6
         }
     },
     {
@@ -428,7 +481,8 @@
         "pk": 54,
         "fields": {
             "id": 54,
-            "nombre_comuna": "Iquique"
+            "nombre_comuna": "Calle Larga",
+            "region": 6
         }
     },
     {
@@ -436,7 +490,8 @@
         "pk": 55,
         "fields": {
             "id": 55,
-            "nombre_comuna": "Alto Hospicio"
+            "nombre_comuna": "Rinconada",
+            "region": 6
         }
     },
     {
@@ -444,7 +499,8 @@
         "pk": 56,
         "fields": {
             "id": 56,
-            "nombre_comuna": "Camiña"
+            "nombre_comuna": "San Esteban",
+            "region": 6
         }
     },
     {
@@ -452,7 +508,8 @@
         "pk": 57,
         "fields": {
             "id": 57,
-            "nombre_comuna": "Colchane"
+            "nombre_comuna": "La Ligua",
+            "region": 6
         }
     },
     {
@@ -460,7 +517,8 @@
         "pk": 58,
         "fields": {
             "id": 58,
-            "nombre_comuna": "Huara"
+            "nombre_comuna": "Cabildo",
+            "region": 6
         }
     },
     {
@@ -468,7 +526,8 @@
         "pk": 59,
         "fields": {
             "id": 59,
-            "nombre_comuna": "Pica"
+            "nombre_comuna": "Papudo",
+            "region": 6
         }
     },
     {
@@ -476,7 +535,8 @@
         "pk": 60,
         "fields": {
             "id": 60,
-            "nombre_comuna": "Pozo Almonte"
+            "nombre_comuna": "Petorca",
+            "region": 6
         }
     },
     {
@@ -484,7 +544,8 @@
         "pk": 61,
         "fields": {
             "id": 61,
-            "nombre_comuna": "Antofagasta"
+            "nombre_comuna": "Zapallar",
+            "region": 6
         }
     },
     {
@@ -492,7 +553,8 @@
         "pk": 62,
         "fields": {
             "id": 62,
-            "nombre_comuna": "Mejillones"
+            "nombre_comuna": "Quillota",
+            "region": 6
         }
     },
     {
@@ -500,7 +562,8 @@
         "pk": 63,
         "fields": {
             "id": 63,
-            "nombre_comuna": "Sierra Gorda"
+            "nombre_comuna": "Calera",
+            "region": 6
         }
     },
     {
@@ -508,7 +571,8 @@
         "pk": 64,
         "fields": {
             "id": 64,
-            "nombre_comuna": "Taltal"
+            "nombre_comuna": "Hijuelas",
+            "region": 6
         }
     },
     {
@@ -516,7 +580,8 @@
         "pk": 65,
         "fields": {
             "id": 65,
-            "nombre_comuna": "Calama"
+            "nombre_comuna": "La Cruz",
+            "region": 6
         }
     },
     {
@@ -524,7 +589,8 @@
         "pk": 66,
         "fields": {
             "id": 66,
-            "nombre_comuna": "Ollagüe"
+            "nombre_comuna": "Nogales",
+            "region": 6
         }
     },
     {
@@ -532,7 +598,8 @@
         "pk": 67,
         "fields": {
             "id": 67,
-            "nombre_comuna": "San Pedro de Atacama"
+            "nombre_comuna": "San Antonio",
+            "region": 6
         }
     },
     {
@@ -540,7 +607,8 @@
         "pk": 68,
         "fields": {
             "id": 68,
-            "nombre_comuna": "Tocopilla"
+            "nombre_comuna": "Algarrobo",
+            "region": 6
         }
     },
     {
@@ -548,7 +616,8 @@
         "pk": 69,
         "fields": {
             "id": 69,
-            "nombre_comuna": "María Elena"
+            "nombre_comuna": "Cartagena",
+            "region": 6
         }
     },
     {
@@ -556,7 +625,8 @@
         "pk": 70,
         "fields": {
             "id": 70,
-            "nombre_comuna": "Copiapó"
+            "nombre_comuna": "El Quisco",
+            "region": 6
         }
     },
     {
@@ -564,7 +634,8 @@
         "pk": 71,
         "fields": {
             "id": 71,
-            "nombre_comuna": "Caldera"
+            "nombre_comuna": "El Tabo",
+            "region": 6
         }
     },
     {
@@ -572,7 +643,8 @@
         "pk": 72,
         "fields": {
             "id": 72,
-            "nombre_comuna": "Tierra Amarilla"
+            "nombre_comuna": "Santo Domingo",
+            "region": 6
         }
     },
     {
@@ -580,7 +652,8 @@
         "pk": 73,
         "fields": {
             "id": 73,
-            "nombre_comuna": "Chañaral"
+            "nombre_comuna": "San Felipe",
+            "region": 6
         }
     },
     {
@@ -588,7 +661,8 @@
         "pk": 74,
         "fields": {
             "id": 74,
-            "nombre_comuna": "Diego de Almagro"
+            "nombre_comuna": "Catemu",
+            "region": 6
         }
     },
     {
@@ -596,7 +670,8 @@
         "pk": 75,
         "fields": {
             "id": 75,
-            "nombre_comuna": "Vallenar"
+            "nombre_comuna": "Llaillay",
+            "region": 6
         }
     },
     {
@@ -604,7 +679,8 @@
         "pk": 76,
         "fields": {
             "id": 76,
-            "nombre_comuna": "Alto del Carmen"
+            "nombre_comuna": "Panquehue",
+            "region": 6
         }
     },
     {
@@ -612,7 +688,8 @@
         "pk": 77,
         "fields": {
             "id": 77,
-            "nombre_comuna": "Freirina"
+            "nombre_comuna": "Putaendo",
+            "region": 6
         }
     },
     {
@@ -620,7 +697,8 @@
         "pk": 78,
         "fields": {
             "id": 78,
-            "nombre_comuna": "Huasco"
+            "nombre_comuna": "Santa María",
+            "region": 6
         }
     },
     {
@@ -628,7 +706,8 @@
         "pk": 79,
         "fields": {
             "id": 79,
-            "nombre_comuna": "La Serena"
+            "nombre_comuna": "Quilpué",
+            "region": 6
         }
     },
     {
@@ -636,7 +715,8 @@
         "pk": 80,
         "fields": {
             "id": 80,
-            "nombre_comuna": "Coquimbo"
+            "nombre_comuna": "Limache",
+            "region": 6
         }
     },
     {
@@ -644,7 +724,8 @@
         "pk": 81,
         "fields": {
             "id": 81,
-            "nombre_comuna": "Andacollo"
+            "nombre_comuna": "Olmué",
+            "region": 6
         }
     },
     {
@@ -652,7 +733,8 @@
         "pk": 82,
         "fields": {
             "id": 82,
-            "nombre_comuna": "La Higuera"
+            "nombre_comuna": "Villa Alemana",
+            "region": 6
         }
     },
     {
@@ -660,7 +742,8 @@
         "pk": 83,
         "fields": {
             "id": 83,
-            "nombre_comuna": "Paiguano"
+            "nombre_comuna": "Rancagua",
+            "region": 7
         }
     },
     {
@@ -668,7 +751,8 @@
         "pk": 84,
         "fields": {
             "id": 84,
-            "nombre_comuna": "Vicuña"
+            "nombre_comuna": "Codegua",
+            "region": 7
         }
     },
     {
@@ -676,7 +760,8 @@
         "pk": 85,
         "fields": {
             "id": 85,
-            "nombre_comuna": "Illapel"
+            "nombre_comuna": "Coinco",
+            "region": 7
         }
     },
     {
@@ -684,7 +769,8 @@
         "pk": 86,
         "fields": {
             "id": 86,
-            "nombre_comuna": "Canela"
+            "nombre_comuna": "Coltauco",
+            "region": 7
         }
     },
     {
@@ -692,7 +778,8 @@
         "pk": 87,
         "fields": {
             "id": 87,
-            "nombre_comuna": "Los Vilos"
+            "nombre_comuna": "Doñihue",
+            "region": 7
         }
     },
     {
@@ -700,7 +787,8 @@
         "pk": 88,
         "fields": {
             "id": 88,
-            "nombre_comuna": "Salamanca"
+            "nombre_comuna": "Graneros",
+            "region": 7
         }
     },
     {
@@ -708,7 +796,8 @@
         "pk": 89,
         "fields": {
             "id": 89,
-            "nombre_comuna": "Ovalle"
+            "nombre_comuna": "Las Cabras",
+            "region": 7
         }
     },
     {
@@ -716,7 +805,8 @@
         "pk": 90,
         "fields": {
             "id": 90,
-            "nombre_comuna": "Combarbalá"
+            "nombre_comuna": "Machalí",
+            "region": 7
         }
     },
     {
@@ -724,7 +814,8 @@
         "pk": 91,
         "fields": {
             "id": 91,
-            "nombre_comuna": "Monte Patria"
+            "nombre_comuna": "Malloa",
+            "region": 7
         }
     },
     {
@@ -732,7 +823,8 @@
         "pk": 92,
         "fields": {
             "id": 92,
-            "nombre_comuna": "Punitaqui"
+            "nombre_comuna": "Mostazal",
+            "region": 7
         }
     },
     {
@@ -740,7 +832,8 @@
         "pk": 93,
         "fields": {
             "id": 93,
-            "nombre_comuna": "Río Hurtado"
+            "nombre_comuna": "Olivar",
+            "region": 7
         }
     },
     {
@@ -748,7 +841,8 @@
         "pk": 94,
         "fields": {
             "id": 94,
-            "nombre_comuna": "Valparaíso"
+            "nombre_comuna": "Peumo",
+            "region": 7
         }
     },
     {
@@ -756,7 +850,8 @@
         "pk": 95,
         "fields": {
             "id": 95,
-            "nombre_comuna": "Casablanca"
+            "nombre_comuna": "Pichidegua",
+            "region": 7
         }
     },
     {
@@ -764,7 +859,8 @@
         "pk": 96,
         "fields": {
             "id": 96,
-            "nombre_comuna": "Concón"
+            "nombre_comuna": "Quinta de Tilcoco",
+            "region": 7
         }
     },
     {
@@ -772,7 +868,8 @@
         "pk": 97,
         "fields": {
             "id": 97,
-            "nombre_comuna": "Juan Fernández"
+            "nombre_comuna": "Rengo",
+            "region": 7
         }
     },
     {
@@ -780,7 +877,8 @@
         "pk": 98,
         "fields": {
             "id": 98,
-            "nombre_comuna": "Puchuncaví"
+            "nombre_comuna": "Requínoa",
+            "region": 7
         }
     },
     {
@@ -788,7 +886,8 @@
         "pk": 99,
         "fields": {
             "id": 99,
-            "nombre_comuna": "Quintero"
+            "nombre_comuna": "San Vicente",
+            "region": 7
         }
     },
     {
@@ -796,7 +895,8 @@
         "pk": 100,
         "fields": {
             "id": 100,
-            "nombre_comuna": "Viña del Mar"
+            "nombre_comuna": "Pichilemu",
+            "region": 7
         }
     },
     {
@@ -804,7 +904,8 @@
         "pk": 101,
         "fields": {
             "id": 101,
-            "nombre_comuna": "Isla de Pascua"
+            "nombre_comuna": "La Estrella",
+            "region": 7
         }
     },
     {
@@ -812,7 +913,8 @@
         "pk": 102,
         "fields": {
             "id": 102,
-            "nombre_comuna": "Los Andes"
+            "nombre_comuna": "Litueche",
+            "region": 7
         }
     },
     {
@@ -820,7 +922,8 @@
         "pk": 103,
         "fields": {
             "id": 103,
-            "nombre_comuna": "Calle Larga"
+            "nombre_comuna": "Marchihue",
+            "region": 7
         }
     },
     {
@@ -828,7 +931,8 @@
         "pk": 104,
         "fields": {
             "id": 104,
-            "nombre_comuna": "Rinconada"
+            "nombre_comuna": "Navidad",
+            "region": 7
         }
     },
     {
@@ -836,7 +940,8 @@
         "pk": 105,
         "fields": {
             "id": 105,
-            "nombre_comuna": "San Esteban"
+            "nombre_comuna": "Paredones",
+            "region": 7
         }
     },
     {
@@ -844,7 +949,8 @@
         "pk": 106,
         "fields": {
             "id": 106,
-            "nombre_comuna": "La Ligua"
+            "nombre_comuna": "San Fernando",
+            "region": 7
         }
     },
     {
@@ -852,7 +958,8 @@
         "pk": 107,
         "fields": {
             "id": 107,
-            "nombre_comuna": "Cabildo"
+            "nombre_comuna": "Chépica",
+            "region": 7
         }
     },
     {
@@ -860,7 +967,8 @@
         "pk": 108,
         "fields": {
             "id": 108,
-            "nombre_comuna": "Papudo"
+            "nombre_comuna": "Chimbarongo",
+            "region": 7
         }
     },
     {
@@ -868,7 +976,8 @@
         "pk": 109,
         "fields": {
             "id": 109,
-            "nombre_comuna": "Petorca"
+            "nombre_comuna": "Lolol",
+            "region": 7
         }
     },
     {
@@ -876,7 +985,8 @@
         "pk": 110,
         "fields": {
             "id": 110,
-            "nombre_comuna": "Zapallar"
+            "nombre_comuna": "Nancagua",
+            "region": 7
         }
     },
     {
@@ -884,7 +994,8 @@
         "pk": 111,
         "fields": {
             "id": 111,
-            "nombre_comuna": "Quillota"
+            "nombre_comuna": "Palmilla",
+            "region": 7
         }
     },
     {
@@ -892,7 +1003,8 @@
         "pk": 112,
         "fields": {
             "id": 112,
-            "nombre_comuna": "La Calera"
+            "nombre_comuna": "Peralillo",
+            "region": 7
         }
     },
     {
@@ -900,7 +1012,8 @@
         "pk": 113,
         "fields": {
             "id": 113,
-            "nombre_comuna": "Hijuelas"
+            "nombre_comuna": "Placilla",
+            "region": 7
         }
     },
     {
@@ -908,7 +1021,8 @@
         "pk": 114,
         "fields": {
             "id": 114,
-            "nombre_comuna": "La Cruz"
+            "nombre_comuna": "Pumanque",
+            "region": 7
         }
     },
     {
@@ -916,7 +1030,8 @@
         "pk": 115,
         "fields": {
             "id": 115,
-            "nombre_comuna": "Nogales"
+            "nombre_comuna": "Santa Cruz",
+            "region": 7
         }
     },
     {
@@ -924,7 +1039,8 @@
         "pk": 116,
         "fields": {
             "id": 116,
-            "nombre_comuna": "San Antonio"
+            "nombre_comuna": "Talca",
+            "region": 8
         }
     },
     {
@@ -932,7 +1048,8 @@
         "pk": 117,
         "fields": {
             "id": 117,
-            "nombre_comuna": "Algarrobo"
+            "nombre_comuna": "Constitución",
+            "region": 8
         }
     },
     {
@@ -940,7 +1057,8 @@
         "pk": 118,
         "fields": {
             "id": 118,
-            "nombre_comuna": "Cartagena"
+            "nombre_comuna": "Curepto",
+            "region": 8
         }
     },
     {
@@ -948,7 +1066,8 @@
         "pk": 119,
         "fields": {
             "id": 119,
-            "nombre_comuna": "El Quisco"
+            "nombre_comuna": "Empedrado",
+            "region": 8
         }
     },
     {
@@ -956,7 +1075,8 @@
         "pk": 120,
         "fields": {
             "id": 120,
-            "nombre_comuna": "El Tabo"
+            "nombre_comuna": "Maule",
+            "region": 8
         }
     },
     {
@@ -964,7 +1084,8 @@
         "pk": 121,
         "fields": {
             "id": 121,
-            "nombre_comuna": "Santo Domingo"
+            "nombre_comuna": "Pelarco",
+            "region": 8
         }
     },
     {
@@ -972,7 +1093,8 @@
         "pk": 122,
         "fields": {
             "id": 122,
-            "nombre_comuna": "San Felipe"
+            "nombre_comuna": "Pencahue",
+            "region": 8
         }
     },
     {
@@ -980,7 +1102,8 @@
         "pk": 123,
         "fields": {
             "id": 123,
-            "nombre_comuna": "Catemu"
+            "nombre_comuna": "Río Claro",
+            "region": 8
         }
     },
     {
@@ -988,7 +1111,8 @@
         "pk": 124,
         "fields": {
             "id": 124,
-            "nombre_comuna": "Llaillay"
+            "nombre_comuna": "San Clemente",
+            "region": 8
         }
     },
     {
@@ -996,7 +1120,8 @@
         "pk": 125,
         "fields": {
             "id": 125,
-            "nombre_comuna": "Panquehue"
+            "nombre_comuna": "San Rafael",
+            "region": 8
         }
     },
     {
@@ -1004,7 +1129,8 @@
         "pk": 126,
         "fields": {
             "id": 126,
-            "nombre_comuna": "Putaendo"
+            "nombre_comuna": "Cauquenes",
+            "region": 8
         }
     },
     {
@@ -1012,7 +1138,8 @@
         "pk": 127,
         "fields": {
             "id": 127,
-            "nombre_comuna": "Santa María"
+            "nombre_comuna": "Chanco",
+            "region": 8
         }
     },
     {
@@ -1020,7 +1147,8 @@
         "pk": 128,
         "fields": {
             "id": 128,
-            "nombre_comuna": "Quilpué"
+            "nombre_comuna": "Pelluhue",
+            "region": 8
         }
     },
     {
@@ -1028,7 +1156,8 @@
         "pk": 129,
         "fields": {
             "id": 129,
-            "nombre_comuna": "Limache"
+            "nombre_comuna": "Curicó",
+            "region": 8
         }
     },
     {
@@ -1036,7 +1165,8 @@
         "pk": 130,
         "fields": {
             "id": 130,
-            "nombre_comuna": "Olmué"
+            "nombre_comuna": "Hualañé",
+            "region": 8
         }
     },
     {
@@ -1044,7 +1174,8 @@
         "pk": 131,
         "fields": {
             "id": 131,
-            "nombre_comuna": "Villa Alemana"
+            "nombre_comuna": "Licantén",
+            "region": 8
         }
     },
     {
@@ -1052,7 +1183,8 @@
         "pk": 132,
         "fields": {
             "id": 132,
-            "nombre_comuna": "Rancagua"
+            "nombre_comuna": "Molina",
+            "region": 8
         }
     },
     {
@@ -1060,7 +1192,8 @@
         "pk": 133,
         "fields": {
             "id": 133,
-            "nombre_comuna": "Codegua"
+            "nombre_comuna": "Rauco",
+            "region": 8
         }
     },
     {
@@ -1068,7 +1201,8 @@
         "pk": 134,
         "fields": {
             "id": 134,
-            "nombre_comuna": "Coinco"
+            "nombre_comuna": "Romeral",
+            "region": 8
         }
     },
     {
@@ -1076,7 +1210,8 @@
         "pk": 135,
         "fields": {
             "id": 135,
-            "nombre_comuna": "Coltauco"
+            "nombre_comuna": "Sagrada Familia",
+            "region": 8
         }
     },
     {
@@ -1084,7 +1219,8 @@
         "pk": 136,
         "fields": {
             "id": 136,
-            "nombre_comuna": "Doñihue"
+            "nombre_comuna": "Teno",
+            "region": 8
         }
     },
     {
@@ -1092,7 +1228,8 @@
         "pk": 137,
         "fields": {
             "id": 137,
-            "nombre_comuna": "Graneros"
+            "nombre_comuna": "Vichuquén",
+            "region": 8
         }
     },
     {
@@ -1100,7 +1237,8 @@
         "pk": 138,
         "fields": {
             "id": 138,
-            "nombre_comuna": "Las Cabras"
+            "nombre_comuna": "Linares",
+            "region": 8
         }
     },
     {
@@ -1108,7 +1246,8 @@
         "pk": 139,
         "fields": {
             "id": 139,
-            "nombre_comuna": "Machalí"
+            "nombre_comuna": "Colbún",
+            "region": 8
         }
     },
     {
@@ -1116,7 +1255,8 @@
         "pk": 140,
         "fields": {
             "id": 140,
-            "nombre_comuna": "Malloa"
+            "nombre_comuna": "Longaví",
+            "region": 8
         }
     },
     {
@@ -1124,7 +1264,8 @@
         "pk": 141,
         "fields": {
             "id": 141,
-            "nombre_comuna": "Mostazal"
+            "nombre_comuna": "Parral",
+            "region": 8
         }
     },
     {
@@ -1132,7 +1273,8 @@
         "pk": 142,
         "fields": {
             "id": 142,
-            "nombre_comuna": "Olivar"
+            "nombre_comuna": "Retiro",
+            "region": 8
         }
     },
     {
@@ -1140,7 +1282,8 @@
         "pk": 143,
         "fields": {
             "id": 143,
-            "nombre_comuna": "Peumo"
+            "nombre_comuna": "San Javier",
+            "region": 8
         }
     },
     {
@@ -1148,7 +1291,8 @@
         "pk": 144,
         "fields": {
             "id": 144,
-            "nombre_comuna": "Pichidegua"
+            "nombre_comuna": "Villa Alegre",
+            "region": 8
         }
     },
     {
@@ -1156,7 +1300,8 @@
         "pk": 145,
         "fields": {
             "id": 145,
-            "nombre_comuna": "Quinta de Tilcoco"
+            "nombre_comuna": "Yerbas Buenas",
+            "region": 8
         }
     },
     {
@@ -1164,7 +1309,8 @@
         "pk": 146,
         "fields": {
             "id": 146,
-            "nombre_comuna": "Requínoa"
+            "nombre_comuna": "Cobquecura",
+            "region": 9
         }
     },
     {
@@ -1172,7 +1318,8 @@
         "pk": 147,
         "fields": {
             "id": 147,
-            "nombre_comuna": "Rengo"
+            "nombre_comuna": "Coelemu",
+            "region": 9
         }
     },
     {
@@ -1180,7 +1327,8 @@
         "pk": 148,
         "fields": {
             "id": 148,
-            "nombre_comuna": "San Vicente"
+            "nombre_comuna": "Ninhue",
+            "region": 9
         }
     },
     {
@@ -1188,7 +1336,8 @@
         "pk": 149,
         "fields": {
             "id": 149,
-            "nombre_comuna": "Pichilemu"
+            "nombre_comuna": "Portezuelo",
+            "region": 9
         }
     },
     {
@@ -1196,7 +1345,8 @@
         "pk": 150,
         "fields": {
             "id": 150,
-            "nombre_comuna": "La Estrella"
+            "nombre_comuna": "Quirihue",
+            "region": 9
         }
     },
     {
@@ -1204,7 +1354,8 @@
         "pk": 151,
         "fields": {
             "id": 151,
-            "nombre_comuna": "Litueche"
+            "nombre_comuna": "Ránquil",
+            "region": 9
         }
     },
     {
@@ -1212,7 +1363,8 @@
         "pk": 152,
         "fields": {
             "id": 152,
-            "nombre_comuna": "Marchihue"
+            "nombre_comuna": "Treguaco",
+            "region": 9
         }
     },
     {
@@ -1220,7 +1372,8 @@
         "pk": 153,
         "fields": {
             "id": 153,
-            "nombre_comuna": "Navidad"
+            "nombre_comuna": "Bulnes",
+            "region": 9
         }
     },
     {
@@ -1228,7 +1381,8 @@
         "pk": 154,
         "fields": {
             "id": 154,
-            "nombre_comuna": "Paredones"
+            "nombre_comuna": "Chillán Viejo",
+            "region": 9
         }
     },
     {
@@ -1236,7 +1390,8 @@
         "pk": 155,
         "fields": {
             "id": 155,
-            "nombre_comuna": "San Fernando"
+            "nombre_comuna": "Chillán",
+            "region": 9
         }
     },
     {
@@ -1244,7 +1399,8 @@
         "pk": 156,
         "fields": {
             "id": 156,
-            "nombre_comuna": "Chimbarongo"
+            "nombre_comuna": "El Carmen",
+            "region": 9
         }
     },
     {
@@ -1252,7 +1408,8 @@
         "pk": 157,
         "fields": {
             "id": 157,
-            "nombre_comuna": "Lolol"
+            "nombre_comuna": "Pemuco",
+            "region": 9
         }
     },
     {
@@ -1260,7 +1417,8 @@
         "pk": 158,
         "fields": {
             "id": 158,
-            "nombre_comuna": "Nancagua"
+            "nombre_comuna": "Pinto",
+            "region": 9
         }
     },
     {
@@ -1268,7 +1426,8 @@
         "pk": 159,
         "fields": {
             "id": 159,
-            "nombre_comuna": "Palmilla"
+            "nombre_comuna": "Quillón",
+            "region": 9
         }
     },
     {
@@ -1276,7 +1435,8 @@
         "pk": 160,
         "fields": {
             "id": 160,
-            "nombre_comuna": "Peralillo"
+            "nombre_comuna": "San Ignacio",
+            "region": 9
         }
     },
     {
@@ -1284,7 +1444,8 @@
         "pk": 161,
         "fields": {
             "id": 161,
-            "nombre_comuna": "Placilla"
+            "nombre_comuna": "Yungay",
+            "region": 9
         }
     },
     {
@@ -1292,7 +1453,8 @@
         "pk": 162,
         "fields": {
             "id": 162,
-            "nombre_comuna": "Pumanque"
+            "nombre_comuna": "Coihueco",
+            "region": 9
         }
     },
     {
@@ -1300,7 +1462,8 @@
         "pk": 163,
         "fields": {
             "id": 163,
-            "nombre_comuna": "Curicó"
+            "nombre_comuna": "Ñiquén",
+            "region": 9
         }
     },
     {
@@ -1308,7 +1471,8 @@
         "pk": 164,
         "fields": {
             "id": 164,
-            "nombre_comuna": "Hualañé"
+            "nombre_comuna": "San Carlos",
+            "region": 9
         }
     },
     {
@@ -1316,7 +1480,8 @@
         "pk": 165,
         "fields": {
             "id": 165,
-            "nombre_comuna": "Licantén"
+            "nombre_comuna": "San Fabián",
+            "region": 9
         }
     },
     {
@@ -1324,7 +1489,8 @@
         "pk": 166,
         "fields": {
             "id": 166,
-            "nombre_comuna": "Molina"
+            "nombre_comuna": "San Nicolás",
+            "region": 9
         }
     },
     {
@@ -1332,7 +1498,8 @@
         "pk": 167,
         "fields": {
             "id": 167,
-            "nombre_comuna": "Rauco"
+            "nombre_comuna": "Concepción",
+            "region": 10
         }
     },
     {
@@ -1340,7 +1507,8 @@
         "pk": 168,
         "fields": {
             "id": 168,
-            "nombre_comuna": "Romeral"
+            "nombre_comuna": "Coronel",
+            "region": 10
         }
     },
     {
@@ -1348,7 +1516,8 @@
         "pk": 169,
         "fields": {
             "id": 169,
-            "nombre_comuna": "Sagrada Familia"
+            "nombre_comuna": "Chiguayante",
+            "region": 10
         }
     },
     {
@@ -1356,7 +1525,8 @@
         "pk": 170,
         "fields": {
             "id": 170,
-            "nombre_comuna": "Teno"
+            "nombre_comuna": "Florida",
+            "region": 10
         }
     },
     {
@@ -1364,7 +1534,8 @@
         "pk": 171,
         "fields": {
             "id": 171,
-            "nombre_comuna": "Vichuquén"
+            "nombre_comuna": "Hualqui",
+            "region": 10
         }
     },
     {
@@ -1372,7 +1543,8 @@
         "pk": 172,
         "fields": {
             "id": 172,
-            "nombre_comuna": "Talca"
+            "nombre_comuna": "Lota",
+            "region": 10
         }
     },
     {
@@ -1380,7 +1552,8 @@
         "pk": 173,
         "fields": {
             "id": 173,
-            "nombre_comuna": "Constitución"
+            "nombre_comuna": "Penco",
+            "region": 10
         }
     },
     {
@@ -1388,7 +1561,8 @@
         "pk": 174,
         "fields": {
             "id": 174,
-            "nombre_comuna": "Curepto"
+            "nombre_comuna": "San Pedro de la Paz",
+            "region": 10
         }
     },
     {
@@ -1396,7 +1570,8 @@
         "pk": 175,
         "fields": {
             "id": 175,
-            "nombre_comuna": "Empedrado"
+            "nombre_comuna": "Santa Juana",
+            "region": 10
         }
     },
     {
@@ -1404,7 +1579,8 @@
         "pk": 176,
         "fields": {
             "id": 176,
-            "nombre_comuna": "Maule"
+            "nombre_comuna": "Talcahuano",
+            "region": 10
         }
     },
     {
@@ -1412,7 +1588,8 @@
         "pk": 177,
         "fields": {
             "id": 177,
-            "nombre_comuna": "Pelarco"
+            "nombre_comuna": "Tomé",
+            "region": 10
         }
     },
     {
@@ -1420,7 +1597,8 @@
         "pk": 178,
         "fields": {
             "id": 178,
-            "nombre_comuna": "Pencahue"
+            "nombre_comuna": "Hualpén",
+            "region": 10
         }
     },
     {
@@ -1428,7 +1606,8 @@
         "pk": 179,
         "fields": {
             "id": 179,
-            "nombre_comuna": "Río Claro"
+            "nombre_comuna": "Lebu",
+            "region": 10
         }
     },
     {
@@ -1436,7 +1615,8 @@
         "pk": 180,
         "fields": {
             "id": 180,
-            "nombre_comuna": "San Clemente"
+            "nombre_comuna": "Arauco",
+            "region": 10
         }
     },
     {
@@ -1444,7 +1624,8 @@
         "pk": 181,
         "fields": {
             "id": 181,
-            "nombre_comuna": "San Rafael"
+            "nombre_comuna": "Cañete",
+            "region": 10
         }
     },
     {
@@ -1452,7 +1633,8 @@
         "pk": 182,
         "fields": {
             "id": 182,
-            "nombre_comuna": "Linares"
+            "nombre_comuna": "Contulmo",
+            "region": 10
         }
     },
     {
@@ -1460,7 +1642,8 @@
         "pk": 183,
         "fields": {
             "id": 183,
-            "nombre_comuna": "Colbún"
+            "nombre_comuna": "Curanilahue",
+            "region": 10
         }
     },
     {
@@ -1468,7 +1651,8 @@
         "pk": 184,
         "fields": {
             "id": 184,
-            "nombre_comuna": "Longaví"
+            "nombre_comuna": "Los Álamos",
+            "region": 10
         }
     },
     {
@@ -1476,7 +1660,8 @@
         "pk": 185,
         "fields": {
             "id": 185,
-            "nombre_comuna": "Parral"
+            "nombre_comuna": "Tirúa",
+            "region": 10
         }
     },
     {
@@ -1484,7 +1669,8 @@
         "pk": 186,
         "fields": {
             "id": 186,
-            "nombre_comuna": "Retiro"
+            "nombre_comuna": "Los Ángeles",
+            "region": 10
         }
     },
     {
@@ -1492,7 +1678,8 @@
         "pk": 187,
         "fields": {
             "id": 187,
-            "nombre_comuna": "San Javier"
+            "nombre_comuna": "Antuco",
+            "region": 10
         }
     },
     {
@@ -1500,7 +1687,8 @@
         "pk": 188,
         "fields": {
             "id": 188,
-            "nombre_comuna": "Villa Alegre"
+            "nombre_comuna": "Cabrero",
+            "region": 10
         }
     },
     {
@@ -1508,7 +1696,8 @@
         "pk": 189,
         "fields": {
             "id": 189,
-            "nombre_comuna": "Yerbas Buenas"
+            "nombre_comuna": "Laja",
+            "region": 10
         }
     },
     {
@@ -1516,7 +1705,8 @@
         "pk": 190,
         "fields": {
             "id": 190,
-            "nombre_comuna": "Cauquenes"
+            "nombre_comuna": "Mulchén",
+            "region": 10
         }
     },
     {
@@ -1524,7 +1714,8 @@
         "pk": 191,
         "fields": {
             "id": 191,
-            "nombre_comuna": "Chanco"
+            "nombre_comuna": "Nacimiento",
+            "region": 10
         }
     },
     {
@@ -1532,7 +1723,8 @@
         "pk": 192,
         "fields": {
             "id": 192,
-            "nombre_comuna": "Pelluhue"
+            "nombre_comuna": "Negrete",
+            "region": 10
         }
     },
     {
@@ -1540,7 +1732,8 @@
         "pk": 193,
         "fields": {
             "id": 193,
-            "nombre_comuna": "Chillán"
+            "nombre_comuna": "Quilaco",
+            "region": 10
         }
     },
     {
@@ -1548,7 +1741,8 @@
         "pk": 194,
         "fields": {
             "id": 194,
-            "nombre_comuna": "Bulnes"
+            "nombre_comuna": "Quilleco",
+            "region": 10
         }
     },
     {
@@ -1556,7 +1750,8 @@
         "pk": 195,
         "fields": {
             "id": 195,
-            "nombre_comuna": "Coihueco"
+            "nombre_comuna": "San Rosendo",
+            "region": 10
         }
     },
     {
@@ -1564,7 +1759,8 @@
         "pk": 196,
         "fields": {
             "id": 196,
-            "nombre_comuna": "El Carmen"
+            "nombre_comuna": "Santa Bárbara",
+            "region": 10
         }
     },
     {
@@ -1572,7 +1768,8 @@
         "pk": 197,
         "fields": {
             "id": 197,
-            "nombre_comuna": "Pemuco"
+            "nombre_comuna": "Tucapel",
+            "region": 10
         }
     },
     {
@@ -1580,7 +1777,8 @@
         "pk": 198,
         "fields": {
             "id": 198,
-            "nombre_comuna": "Pinto"
+            "nombre_comuna": "Yumbel",
+            "region": 10
         }
     },
     {
@@ -1588,7 +1786,8 @@
         "pk": 199,
         "fields": {
             "id": 199,
-            "nombre_comuna": "Quillón"
+            "nombre_comuna": "Alto Biobío",
+            "region": 10
         }
     },
     {
@@ -1596,7 +1795,8 @@
         "pk": 200,
         "fields": {
             "id": 200,
-            "nombre_comuna": "San Ignacio"
+            "nombre_comuna": "Temuco",
+            "region": 11
         }
     },
     {
@@ -1604,7 +1804,8 @@
         "pk": 201,
         "fields": {
             "id": 201,
-            "nombre_comuna": "Yungay"
+            "nombre_comuna": "Carahue",
+            "region": 11
         }
     },
     {
@@ -1612,7 +1813,8 @@
         "pk": 202,
         "fields": {
             "id": 202,
-            "nombre_comuna": "Quirihue"
+            "nombre_comuna": "Cunco",
+            "region": 11
         }
     },
     {
@@ -1620,7 +1822,8 @@
         "pk": 203,
         "fields": {
             "id": 203,
-            "nombre_comuna": "Cobquecura"
+            "nombre_comuna": "Curarrehue",
+            "region": 11
         }
     },
     {
@@ -1628,7 +1831,8 @@
         "pk": 204,
         "fields": {
             "id": 204,
-            "nombre_comuna": "Ninhue"
+            "nombre_comuna": "Freire",
+            "region": 11
         }
     },
     {
@@ -1636,7 +1840,8 @@
         "pk": 205,
         "fields": {
             "id": 205,
-            "nombre_comuna": "Treguaco"
+            "nombre_comuna": "Galvarino",
+            "region": 11
         }
     },
     {
@@ -1644,7 +1849,8 @@
         "pk": 206,
         "fields": {
             "id": 206,
-            "nombre_comuna": "San Carlos"
+            "nombre_comuna": "Gorbea",
+            "region": 11
         }
     },
     {
@@ -1652,7 +1858,8 @@
         "pk": 207,
         "fields": {
             "id": 207,
-            "nombre_comuna": "Ñuble"
+            "nombre_comuna": "Lautaro",
+            "region": 11
         }
     },
     {
@@ -1660,7 +1867,8 @@
         "pk": 208,
         "fields": {
             "id": 208,
-            "nombre_comuna": "San Nicolás"
+            "nombre_comuna": "Loncoche",
+            "region": 11
         }
     },
     {
@@ -1668,7 +1876,8 @@
         "pk": 209,
         "fields": {
             "id": 209,
-            "nombre_comuna": "Concepción"
+            "nombre_comuna": "Melipeuco",
+            "region": 11
         }
     },
     {
@@ -1676,7 +1885,8 @@
         "pk": 210,
         "fields": {
             "id": 210,
-            "nombre_comuna": "Coronel"
+            "nombre_comuna": "Nueva Imperial",
+            "region": 11
         }
     },
     {
@@ -1684,7 +1894,8 @@
         "pk": 211,
         "fields": {
             "id": 211,
-            "nombre_comuna": "Chiguayante"
+            "nombre_comuna": "Padre las Casas",
+            "region": 11
         }
     },
     {
@@ -1692,7 +1903,8 @@
         "pk": 212,
         "fields": {
             "id": 212,
-            "nombre_comuna": "Florida"
+            "nombre_comuna": "Perquenco",
+            "region": 11
         }
     },
     {
@@ -1700,7 +1912,8 @@
         "pk": 213,
         "fields": {
             "id": 213,
-            "nombre_comuna": "Hualqui"
+            "nombre_comuna": "Pitrufquén",
+            "region": 11
         }
     },
     {
@@ -1708,7 +1921,8 @@
         "pk": 214,
         "fields": {
             "id": 214,
-            "nombre_comuna": "Lota"
+            "nombre_comuna": "Pucón",
+            "region": 11
         }
     },
     {
@@ -1716,7 +1930,8 @@
         "pk": 215,
         "fields": {
             "id": 215,
-            "nombre_comuna": "Penco"
+            "nombre_comuna": "Saavedra",
+            "region": 11
         }
     },
     {
@@ -1724,7 +1939,8 @@
         "pk": 216,
         "fields": {
             "id": 216,
-            "nombre_comuna": "San Pedro de la Paz"
+            "nombre_comuna": "Teodoro Schmidt",
+            "region": 11
         }
     },
     {
@@ -1732,7 +1948,8 @@
         "pk": 217,
         "fields": {
             "id": 217,
-            "nombre_comuna": "Santa Juana"
+            "nombre_comuna": "Toltén",
+            "region": 11
         }
     },
     {
@@ -1740,7 +1957,8 @@
         "pk": 218,
         "fields": {
             "id": 218,
-            "nombre_comuna": "Talcahuano"
+            "nombre_comuna": "Vilcún",
+            "region": 11
         }
     },
     {
@@ -1748,7 +1966,8 @@
         "pk": 219,
         "fields": {
             "id": 219,
-            "nombre_comuna": "Tomé"
+            "nombre_comuna": "Villarrica",
+            "region": 11
         }
     },
     {
@@ -1756,7 +1975,8 @@
         "pk": 220,
         "fields": {
             "id": 220,
-            "nombre_comuna": "Hualpén"
+            "nombre_comuna": "Cholchol",
+            "region": 11
         }
     },
     {
@@ -1764,7 +1984,8 @@
         "pk": 221,
         "fields": {
             "id": 221,
-            "nombre_comuna": "Lebu"
+            "nombre_comuna": "Angol",
+            "region": 11
         }
     },
     {
@@ -1772,7 +1993,8 @@
         "pk": 222,
         "fields": {
             "id": 222,
-            "nombre_comuna": "Arauco"
+            "nombre_comuna": "Collipulli",
+            "region": 11
         }
     },
     {
@@ -1780,7 +2002,8 @@
         "pk": 223,
         "fields": {
             "id": 223,
-            "nombre_comuna": "Cañete"
+            "nombre_comuna": "Curacautín",
+            "region": 11
         }
     },
     {
@@ -1788,7 +2011,8 @@
         "pk": 224,
         "fields": {
             "id": 224,
-            "nombre_comuna": "Contulmo"
+            "nombre_comuna": "Ercilla",
+            "region": 11
         }
     },
     {
@@ -1796,7 +2020,8 @@
         "pk": 225,
         "fields": {
             "id": 225,
-            "nombre_comuna": "Curanilahue"
+            "nombre_comuna": "Lonquimay",
+            "region": 11
         }
     },
     {
@@ -1804,7 +2029,8 @@
         "pk": 226,
         "fields": {
             "id": 226,
-            "nombre_comuna": "Los Álamos"
+            "nombre_comuna": "Los Sauces",
+            "region": 11
         }
     },
     {
@@ -1812,7 +2038,8 @@
         "pk": 227,
         "fields": {
             "id": 227,
-            "nombre_comuna": "Tirúa"
+            "nombre_comuna": "Lumaco",
+            "region": 11
         }
     },
     {
@@ -1820,7 +2047,8 @@
         "pk": 228,
         "fields": {
             "id": 228,
-            "nombre_comuna": "Los Ángeles"
+            "nombre_comuna": "Purén",
+            "region": 11
         }
     },
     {
@@ -1828,7 +2056,8 @@
         "pk": 229,
         "fields": {
             "id": 229,
-            "nombre_comuna": "Antuco"
+            "nombre_comuna": "Renaico",
+            "region": 11
         }
     },
     {
@@ -1836,7 +2065,8 @@
         "pk": 230,
         "fields": {
             "id": 230,
-            "nombre_comuna": "Cabrero"
+            "nombre_comuna": "Traiguén",
+            "region": 11
         }
     },
     {
@@ -1844,7 +2074,8 @@
         "pk": 231,
         "fields": {
             "id": 231,
-            "nombre_comuna": "Laja"
+            "nombre_comuna": "Victoria",
+            "region": 11
         }
     },
     {
@@ -1852,7 +2083,8 @@
         "pk": 232,
         "fields": {
             "id": 232,
-            "nombre_comuna": "Mulchén"
+            "nombre_comuna": "Valdivia",
+            "region": 12
         }
     },
     {
@@ -1860,7 +2092,8 @@
         "pk": 233,
         "fields": {
             "id": 233,
-            "nombre_comuna": "Nacimiento"
+            "nombre_comuna": "Corral",
+            "region": 12
         }
     },
     {
@@ -1868,7 +2101,8 @@
         "pk": 234,
         "fields": {
             "id": 234,
-            "nombre_comuna": "Negrete"
+            "nombre_comuna": "Lanco",
+            "region": 12
         }
     },
     {
@@ -1876,7 +2110,8 @@
         "pk": 235,
         "fields": {
             "id": 235,
-            "nombre_comuna": "Quilleco"
+            "nombre_comuna": "Los Lagos",
+            "region": 12
         }
     },
     {
@@ -1884,7 +2119,8 @@
         "pk": 236,
         "fields": {
             "id": 236,
-            "nombre_comuna": "San Rosendo"
+            "nombre_comuna": "Máfil",
+            "region": 12
         }
     },
     {
@@ -1892,7 +2128,8 @@
         "pk": 237,
         "fields": {
             "id": 237,
-            "nombre_comuna": "Santa Bárbara"
+            "nombre_comuna": "Mariquina",
+            "region": 12
         }
     },
     {
@@ -1900,7 +2137,8 @@
         "pk": 238,
         "fields": {
             "id": 238,
-            "nombre_comuna": "Tucapel"
+            "nombre_comuna": "Paillaco",
+            "region": 12
         }
     },
     {
@@ -1908,7 +2146,8 @@
         "pk": 239,
         "fields": {
             "id": 239,
-            "nombre_comuna": "Yumbel"
+            "nombre_comuna": "Panguipulli",
+            "region": 12
         }
     },
     {
@@ -1916,7 +2155,8 @@
         "pk": 240,
         "fields": {
             "id": 240,
-            "nombre_comuna": "Alto Biobío"
+            "nombre_comuna": "La Unión",
+            "region": 12
         }
     },
     {
@@ -1924,7 +2164,8 @@
         "pk": 241,
         "fields": {
             "id": 241,
-            "nombre_comuna": "Temuco"
+            "nombre_comuna": "Futrono",
+            "region": 12
         }
     },
     {
@@ -1932,7 +2173,8 @@
         "pk": 242,
         "fields": {
             "id": 242,
-            "nombre_comuna": "Carahue"
+            "nombre_comuna": "Lago Ranco",
+            "region": 12
         }
     },
     {
@@ -1940,7 +2182,8 @@
         "pk": 243,
         "fields": {
             "id": 243,
-            "nombre_comuna": "Cunco"
+            "nombre_comuna": "Río Bueno",
+            "region": 12
         }
     },
     {
@@ -1948,7 +2191,8 @@
         "pk": 244,
         "fields": {
             "id": 244,
-            "nombre_comuna": "Curarrehue"
+            "nombre_comuna": "Puerto Montt",
+            "region": 13
         }
     },
     {
@@ -1956,7 +2200,8 @@
         "pk": 245,
         "fields": {
             "id": 245,
-            "nombre_comuna": "Freire"
+            "nombre_comuna": "Calbuco",
+            "region": 13
         }
     },
     {
@@ -1964,7 +2209,8 @@
         "pk": 246,
         "fields": {
             "id": 246,
-            "nombre_comuna": "Galvarino"
+            "nombre_comuna": "Cochamó",
+            "region": 13
         }
     },
     {
@@ -1972,7 +2218,8 @@
         "pk": 247,
         "fields": {
             "id": 247,
-            "nombre_comuna": "Gorbea"
+            "nombre_comuna": "Fresia",
+            "region": 13
         }
     },
     {
@@ -1980,7 +2227,8 @@
         "pk": 248,
         "fields": {
             "id": 248,
-            "nombre_comuna": "Lautaro"
+            "nombre_comuna": "Frutillar",
+            "region": 13
         }
     },
     {
@@ -1988,7 +2236,8 @@
         "pk": 249,
         "fields": {
             "id": 249,
-            "nombre_comuna": "Loncoche"
+            "nombre_comuna": "Los Muermos",
+            "region": 13
         }
     },
     {
@@ -1996,7 +2245,8 @@
         "pk": 250,
         "fields": {
             "id": 250,
-            "nombre_comuna": "Melipeuco"
+            "nombre_comuna": "Llanquihue",
+            "region": 13
         }
     },
     {
@@ -2004,7 +2254,8 @@
         "pk": 251,
         "fields": {
             "id": 251,
-            "nombre_comuna": "Nueva Imperial"
+            "nombre_comuna": "Maullín",
+            "region": 13
         }
     },
     {
@@ -2012,7 +2263,8 @@
         "pk": 252,
         "fields": {
             "id": 252,
-            "nombre_comuna": "Padre Las Casas"
+            "nombre_comuna": "Puerto Varas",
+            "region": 13
         }
     },
     {
@@ -2020,7 +2272,8 @@
         "pk": 253,
         "fields": {
             "id": 253,
-            "nombre_comuna": "Perquenco"
+            "nombre_comuna": "Castro",
+            "region": 13
         }
     },
     {
@@ -2028,7 +2281,8 @@
         "pk": 254,
         "fields": {
             "id": 254,
-            "nombre_comuna": "Pitrufquén"
+            "nombre_comuna": "Ancud",
+            "region": 13
         }
     },
     {
@@ -2036,7 +2290,8 @@
         "pk": 255,
         "fields": {
             "id": 255,
-            "nombre_comuna": "Pucón"
+            "nombre_comuna": "Chonchi",
+            "region": 13
         }
     },
     {
@@ -2044,7 +2299,8 @@
         "pk": 256,
         "fields": {
             "id": 256,
-            "nombre_comuna": "Saavedra"
+            "nombre_comuna": "Curaco de Vélez",
+            "region": 13
         }
     },
     {
@@ -2052,7 +2308,8 @@
         "pk": 257,
         "fields": {
             "id": 257,
-            "nombre_comuna": "Teodoro Schmidt"
+            "nombre_comuna": "Dalcahue",
+            "region": 13
         }
     },
     {
@@ -2060,7 +2317,8 @@
         "pk": 258,
         "fields": {
             "id": 258,
-            "nombre_comuna": "Toltén"
+            "nombre_comuna": "Puqueldón",
+            "region": 13
         }
     },
     {
@@ -2068,7 +2326,8 @@
         "pk": 259,
         "fields": {
             "id": 259,
-            "nombre_comuna": "Vilcún"
+            "nombre_comuna": "Queilén",
+            "region": 13
         }
     },
     {
@@ -2076,7 +2335,8 @@
         "pk": 260,
         "fields": {
             "id": 260,
-            "nombre_comuna": "Villarrica"
+            "nombre_comuna": "Quellón",
+            "region": 13
         }
     },
     {
@@ -2084,7 +2344,8 @@
         "pk": 261,
         "fields": {
             "id": 261,
-            "nombre_comuna": "Cholchol"
+            "nombre_comuna": "Quemchi",
+            "region": 13
         }
     },
     {
@@ -2092,7 +2353,8 @@
         "pk": 262,
         "fields": {
             "id": 262,
-            "nombre_comuna": "Angol"
+            "nombre_comuna": "Quinchao",
+            "region": 13
         }
     },
     {
@@ -2100,7 +2362,8 @@
         "pk": 263,
         "fields": {
             "id": 263,
-            "nombre_comuna": "Collipulli"
+            "nombre_comuna": "Osorno",
+            "region": 13
         }
     },
     {
@@ -2108,7 +2371,8 @@
         "pk": 264,
         "fields": {
             "id": 264,
-            "nombre_comuna": "Curacautín"
+            "nombre_comuna": "Puerto Octay",
+            "region": 13
         }
     },
     {
@@ -2116,7 +2380,8 @@
         "pk": 265,
         "fields": {
             "id": 265,
-            "nombre_comuna": "Ercilla"
+            "nombre_comuna": "Purranque",
+            "region": 13
         }
     },
     {
@@ -2124,7 +2389,8 @@
         "pk": 266,
         "fields": {
             "id": 266,
-            "nombre_comuna": "Lonquimay"
+            "nombre_comuna": "Puyehue",
+            "region": 13
         }
     },
     {
@@ -2132,7 +2398,8 @@
         "pk": 267,
         "fields": {
             "id": 267,
-            "nombre_comuna": "Los Sauces"
+            "nombre_comuna": "Río Negro",
+            "region": 13
         }
     },
     {
@@ -2140,7 +2407,8 @@
         "pk": 268,
         "fields": {
             "id": 268,
-            "nombre_comuna": "Lumaco"
+            "nombre_comuna": "San Juan de la Costa",
+            "region": 13
         }
     },
     {
@@ -2148,7 +2416,8 @@
         "pk": 269,
         "fields": {
             "id": 269,
-            "nombre_comuna": "Purén"
+            "nombre_comuna": "San Pablo",
+            "region": 13
         }
     },
     {
@@ -2156,7 +2425,8 @@
         "pk": 270,
         "fields": {
             "id": 270,
-            "nombre_comuna": "Renaico"
+            "nombre_comuna": "Chaitén",
+            "region": 13
         }
     },
     {
@@ -2164,7 +2434,8 @@
         "pk": 271,
         "fields": {
             "id": 271,
-            "nombre_comuna": "Traiguén"
+            "nombre_comuna": "Futaleufú",
+            "region": 13
         }
     },
     {
@@ -2172,7 +2443,8 @@
         "pk": 272,
         "fields": {
             "id": 272,
-            "nombre_comuna": "Victoria"
+            "nombre_comuna": "Hualaihué",
+            "region": 13
         }
     },
     {
@@ -2180,7 +2452,8 @@
         "pk": 273,
         "fields": {
             "id": 273,
-            "nombre_comuna": "Corral"
+            "nombre_comuna": "Palena",
+            "region": 13
         }
     },
     {
@@ -2188,7 +2461,8 @@
         "pk": 274,
         "fields": {
             "id": 274,
-            "nombre_comuna": "Lanco"
+            "nombre_comuna": "Coihaique",
+            "region": 14
         }
     },
     {
@@ -2196,7 +2470,8 @@
         "pk": 275,
         "fields": {
             "id": 275,
-            "nombre_comuna": "Los Lagos"
+            "nombre_comuna": "Lago Verde",
+            "region": 14
         }
     },
     {
@@ -2204,7 +2479,8 @@
         "pk": 276,
         "fields": {
             "id": 276,
-            "nombre_comuna": "Máfil"
+            "nombre_comuna": "Aisén",
+            "region": 14
         }
     },
     {
@@ -2212,7 +2488,8 @@
         "pk": 277,
         "fields": {
             "id": 277,
-            "nombre_comuna": "Mariquina"
+            "nombre_comuna": "Cisnes",
+            "region": 14
         }
     },
     {
@@ -2220,7 +2497,8 @@
         "pk": 278,
         "fields": {
             "id": 278,
-            "nombre_comuna": "Paillaco"
+            "nombre_comuna": "Guaitecas",
+            "region": 14
         }
     },
     {
@@ -2228,7 +2506,8 @@
         "pk": 279,
         "fields": {
             "id": 279,
-            "nombre_comuna": "Panguipulli"
+            "nombre_comuna": "Cochrane",
+            "region": 14
         }
     },
     {
@@ -2236,7 +2515,8 @@
         "pk": 280,
         "fields": {
             "id": 280,
-            "nombre_comuna": "La Unión"
+            "nombre_comuna": "O’Higgins",
+            "region": 14
         }
     },
     {
@@ -2244,7 +2524,8 @@
         "pk": 281,
         "fields": {
             "id": 281,
-            "nombre_comuna": "Futrono"
+            "nombre_comuna": "Tortel",
+            "region": 14
         }
     },
     {
@@ -2252,7 +2533,8 @@
         "pk": 282,
         "fields": {
             "id": 282,
-            "nombre_comuna": "Lago Ranco"
+            "nombre_comuna": "Chile Chico",
+            "region": 14
         }
     },
     {
@@ -2260,7 +2542,8 @@
         "pk": 283,
         "fields": {
             "id": 283,
-            "nombre_comuna": "Río Bueno"
+            "nombre_comuna": "Río Ibáñez",
+            "region": 14
         }
     },
     {
@@ -2268,7 +2551,8 @@
         "pk": 284,
         "fields": {
             "id": 284,
-            "nombre_comuna": "Puerto Montt"
+            "nombre_comuna": "Punta Arenas",
+            "region": 15
         }
     },
     {
@@ -2276,7 +2560,8 @@
         "pk": 285,
         "fields": {
             "id": 285,
-            "nombre_comuna": "Calbuco"
+            "nombre_comuna": "Laguna Blanca",
+            "region": 15
         }
     },
     {
@@ -2284,7 +2569,8 @@
         "pk": 286,
         "fields": {
             "id": 286,
-            "nombre_comuna": "Cochamó"
+            "nombre_comuna": "Río Verde",
+            "region": 15
         }
     },
     {
@@ -2292,7 +2578,8 @@
         "pk": 287,
         "fields": {
             "id": 287,
-            "nombre_comuna": "Fresia"
+            "nombre_comuna": "San Gregorio",
+            "region": 15
         }
     },
     {
@@ -2300,7 +2587,8 @@
         "pk": 288,
         "fields": {
             "id": 288,
-            "nombre_comuna": "Frutillar"
+            "nombre_comuna": "Cabo de Hornos (Ex Navarino)",
+            "region": 15
         }
     },
     {
@@ -2308,7 +2596,8 @@
         "pk": 289,
         "fields": {
             "id": 289,
-            "nombre_comuna": "Los Muermos"
+            "nombre_comuna": "Antártica",
+            "region": 15
         }
     },
     {
@@ -2316,7 +2605,8 @@
         "pk": 290,
         "fields": {
             "id": 290,
-            "nombre_comuna": "Llanquihue"
+            "nombre_comuna": "Porvenir",
+            "region": 15
         }
     },
     {
@@ -2324,7 +2614,8 @@
         "pk": 291,
         "fields": {
             "id": 291,
-            "nombre_comuna": "Maullín"
+            "nombre_comuna": "Primavera",
+            "region": 15
         }
     },
     {
@@ -2332,7 +2623,8 @@
         "pk": 292,
         "fields": {
             "id": 292,
-            "nombre_comuna": "Puerto Varas"
+            "nombre_comuna": "Timaukel",
+            "region": 15
         }
     },
     {
@@ -2340,7 +2632,8 @@
         "pk": 293,
         "fields": {
             "id": 293,
-            "nombre_comuna": "Castro"
+            "nombre_comuna": "Natales",
+            "region": 15
         }
     },
     {
@@ -2348,7 +2641,8 @@
         "pk": 294,
         "fields": {
             "id": 294,
-            "nombre_comuna": "Ancud"
+            "nombre_comuna": "Torres del Paine",
+            "region": 15
         }
     },
     {
@@ -2356,7 +2650,8 @@
         "pk": 295,
         "fields": {
             "id": 295,
-            "nombre_comuna": "Chonchi"
+            "nombre_comuna": "Cerrillos",
+            "region": 16
         }
     },
     {
@@ -2364,7 +2659,8 @@
         "pk": 296,
         "fields": {
             "id": 296,
-            "nombre_comuna": "Curaco de Vélez"
+            "nombre_comuna": "Cerro Navia",
+            "region": 16
         }
     },
     {
@@ -2372,7 +2668,8 @@
         "pk": 297,
         "fields": {
             "id": 297,
-            "nombre_comuna": "Dalcahue"
+            "nombre_comuna": "Conchalí",
+            "region": 16
         }
     },
     {
@@ -2380,7 +2677,8 @@
         "pk": 298,
         "fields": {
             "id": 298,
-            "nombre_comuna": "Puqueldón"
+            "nombre_comuna": "El Bosque",
+            "region": 16
         }
     },
     {
@@ -2388,7 +2686,8 @@
         "pk": 299,
         "fields": {
             "id": 299,
-            "nombre_comuna": "Queilén"
+            "nombre_comuna": "Estación Central",
+            "region": 16
         }
     },
     {
@@ -2396,7 +2695,8 @@
         "pk": 300,
         "fields": {
             "id": 300,
-            "nombre_comuna": "Quellón"
+            "nombre_comuna": "Huechuraba",
+            "region": 16
         }
     },
     {
@@ -2404,7 +2704,8 @@
         "pk": 301,
         "fields": {
             "id": 301,
-            "nombre_comuna": "Quemchi"
+            "nombre_comuna": "Independencia",
+            "region": 16
         }
     },
     {
@@ -2412,7 +2713,8 @@
         "pk": 302,
         "fields": {
             "id": 302,
-            "nombre_comuna": "Quinchao"
+            "nombre_comuna": "La Cisterna",
+            "region": 16
         }
     },
     {
@@ -2420,7 +2722,8 @@
         "pk": 303,
         "fields": {
             "id": 303,
-            "nombre_comuna": "Osorno"
+            "nombre_comuna": "La Florida",
+            "region": 16
         }
     },
     {
@@ -2428,7 +2731,8 @@
         "pk": 304,
         "fields": {
             "id": 304,
-            "nombre_comuna": "Puerto Octay"
+            "nombre_comuna": "La Granja",
+            "region": 16
         }
     },
     {
@@ -2436,7 +2740,8 @@
         "pk": 305,
         "fields": {
             "id": 305,
-            "nombre_comuna": "Purranque"
+            "nombre_comuna": "La Pintana",
+            "region": 16
         }
     },
     {
@@ -2444,7 +2749,8 @@
         "pk": 306,
         "fields": {
             "id": 306,
-            "nombre_comuna": "Puyehue"
+            "nombre_comuna": "La Reina",
+            "region": 16
         }
     },
     {
@@ -2452,7 +2758,8 @@
         "pk": 307,
         "fields": {
             "id": 307,
-            "nombre_comuna": "Río Negro"
+            "nombre_comuna": "Las Condes",
+            "region": 16
         }
     },
     {
@@ -2460,7 +2767,8 @@
         "pk": 308,
         "fields": {
             "id": 308,
-            "nombre_comuna": "San Juan de la Costa"
+            "nombre_comuna": "Lo Barnechea",
+            "region": 16
         }
     },
     {
@@ -2468,7 +2776,8 @@
         "pk": 309,
         "fields": {
             "id": 309,
-            "nombre_comuna": "San Pablo"
+            "nombre_comuna": "Lo Espejo",
+            "region": 16
         }
     },
     {
@@ -2476,7 +2785,8 @@
         "pk": 310,
         "fields": {
             "id": 310,
-            "nombre_comuna": "Chaitén"
+            "nombre_comuna": "Lo Prado",
+            "region": 16
         }
     },
     {
@@ -2484,7 +2794,8 @@
         "pk": 311,
         "fields": {
             "id": 311,
-            "nombre_comuna": "Futaleufú"
+            "nombre_comuna": "Macul",
+            "region": 16
         }
     },
     {
@@ -2492,7 +2803,8 @@
         "pk": 312,
         "fields": {
             "id": 312,
-            "nombre_comuna": "Hualaihué"
+            "nombre_comuna": "Maipú",
+            "region": 16
         }
     },
     {
@@ -2500,7 +2812,8 @@
         "pk": 313,
         "fields": {
             "id": 313,
-            "nombre_comuna": "Palena"
+            "nombre_comuna": "Ñuñoa",
+            "region": 16
         }
     },
     {
@@ -2508,7 +2821,8 @@
         "pk": 314,
         "fields": {
             "id": 314,
-            "nombre_comuna": "Coyhaique"
+            "nombre_comuna": "Pedro Aguirre Cerda",
+            "region": 16
         }
     },
     {
@@ -2516,7 +2830,8 @@
         "pk": 315,
         "fields": {
             "id": 315,
-            "nombre_comuna": "Lagos del Mont"
+            "nombre_comuna": "Peñalolén",
+            "region": 16
         }
     },
     {
@@ -2524,7 +2839,8 @@
         "pk": 316,
         "fields": {
             "id": 316,
-            "nombre_comuna": "Aysén"
+            "nombre_comuna": "Providencia",
+            "region": 16
         }
     },
     {
@@ -2532,7 +2848,8 @@
         "pk": 317,
         "fields": {
             "id": 317,
-            "nombre_comuna": "Cisnes"
+            "nombre_comuna": "Pudahuel",
+            "region": 16
         }
     },
     {
@@ -2540,7 +2857,8 @@
         "pk": 318,
         "fields": {
             "id": 318,
-            "nombre_comuna": "Guaitecas"
+            "nombre_comuna": "Quilicura",
+            "region": 16
         }
     },
     {
@@ -2548,7 +2866,8 @@
         "pk": 319,
         "fields": {
             "id": 319,
-            "nombre_comuna": "Cochrane"
+            "nombre_comuna": "Quinta Normal",
+            "region": 16
         }
     },
     {
@@ -2556,7 +2875,8 @@
         "pk": 320,
         "fields": {
             "id": 320,
-            "nombre_comuna": "O'Higgins"
+            "nombre_comuna": "Recoleta",
+            "region": 16
         }
     },
     {
@@ -2564,7 +2884,8 @@
         "pk": 321,
         "fields": {
             "id": 321,
-            "nombre_comuna": "Tortel"
+            "nombre_comuna": "Renca",
+            "region": 16
         }
     },
     {
@@ -2572,7 +2893,8 @@
         "pk": 322,
         "fields": {
             "id": 322,
-            "nombre_comuna": "Chile Chico"
+            "nombre_comuna": "Santiago",
+            "region": 16
         }
     },
     {
@@ -2580,7 +2902,8 @@
         "pk": 323,
         "fields": {
             "id": 323,
-            "nombre_comuna": "Río Ibáñez"
+            "nombre_comuna": "San Joaquín",
+            "region": 16
         }
     },
     {
@@ -2588,7 +2911,8 @@
         "pk": 324,
         "fields": {
             "id": 324,
-            "nombre_comuna": "Punta Arenas"
+            "nombre_comuna": "San Miguel",
+            "region": 16
         }
     },
     {
@@ -2596,7 +2920,8 @@
         "pk": 325,
         "fields": {
             "id": 325,
-            "nombre_comuna": "Laguna Blanca"
+            "nombre_comuna": "San Ramón",
+            "region": 16
         }
     },
     {
@@ -2604,7 +2929,8 @@
         "pk": 326,
         "fields": {
             "id": 326,
-            "nombre_comuna": "Río Verde"
+            "nombre_comuna": "Vitacura",
+            "region": 16
         }
     },
     {
@@ -2612,7 +2938,8 @@
         "pk": 327,
         "fields": {
             "id": 327,
-            "nombre_comuna": "San Gregorio"
+            "nombre_comuna": "Puente Alto",
+            "region": 16
         }
     },
     {
@@ -2620,7 +2947,8 @@
         "pk": 328,
         "fields": {
             "id": 328,
-            "nombre_comuna": "Cabo de Hornos"
+            "nombre_comuna": "Pirque",
+            "region": 16
         }
     },
     {
@@ -2628,7 +2956,8 @@
         "pk": 329,
         "fields": {
             "id": 329,
-            "nombre_comuna": "Antártica"
+            "nombre_comuna": "San José de Maipo",
+            "region": 16
         }
     },
     {
@@ -2636,7 +2965,8 @@
         "pk": 330,
         "fields": {
             "id": 330,
-            "nombre_comuna": "Porvenir"
+            "nombre_comuna": "Colina",
+            "region": 16
         }
     },
     {
@@ -2644,7 +2974,8 @@
         "pk": 331,
         "fields": {
             "id": 331,
-            "nombre_comuna": "Primavera"
+            "nombre_comuna": "Lampa",
+            "region": 16
         }
     },
     {
@@ -2652,7 +2983,8 @@
         "pk": 332,
         "fields": {
             "id": 332,
-            "nombre_comuna": "Timaukel"
+            "nombre_comuna": "Tiltil",
+            "region": 16
         }
     },
     {
@@ -2660,7 +2992,8 @@
         "pk": 333,
         "fields": {
             "id": 333,
-            "nombre_comuna": "Natales"
+            "nombre_comuna": "San Bernardo",
+            "region": 16
         }
     },
     {
@@ -2668,7 +3001,8 @@
         "pk": 334,
         "fields": {
             "id": 334,
-            "nombre_comuna": "Torres del Paine"
+            "nombre_comuna": "Buin",
+            "region": 16
         }
     },
     {
@@ -2676,7 +3010,8 @@
         "pk": 335,
         "fields": {
             "id": 335,
-            "nombre_comuna": "Colchagua"
+            "nombre_comuna": "Calera de Tango",
+            "region": 16
         }
     },
     {
@@ -2684,7 +3019,98 @@
         "pk": 336,
         "fields": {
             "id": 336,
-            "nombre_comuna": "Valdivia"
+            "nombre_comuna": "Paine",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 337,
+        "fields": {
+            "id": 337,
+            "nombre_comuna": "Melipilla",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 338,
+        "fields": {
+            "id": 338,
+            "nombre_comuna": "Alhué",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 339,
+        "fields": {
+            "id": 339,
+            "nombre_comuna": "Curacaví",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 340,
+        "fields": {
+            "id": 340,
+            "nombre_comuna": "María Pinto",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 341,
+        "fields": {
+            "id": 341,
+            "nombre_comuna": "San Pedro",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 342,
+        "fields": {
+            "id": 342,
+            "nombre_comuna": "Talagante",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 343,
+        "fields": {
+            "id": 343,
+            "nombre_comuna": "El Monte",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 344,
+        "fields": {
+            "id": 344,
+            "nombre_comuna": "Isla de Maipo",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 345,
+        "fields": {
+            "id": 345,
+            "nombre_comuna": "Padre Hurtado",
+            "region": 16
+        }
+    },
+    {
+        "model": "web.Comuna",
+        "pk": 346,
+        "fields": {
+            "id": 346,
+            "nombre_comuna": "Peñaflor",
+            "region": 16
         }
     }
 ]

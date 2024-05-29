@@ -1,1 +1,74 @@
-[{"model": "web.usuario", "pk": 1, "fields": {"password": "pbkdf2_sha256$600000$WBqylD3meio5XX6Thc6ZWt$BRlznWpOnIqmOkwWy883bPw363GHTHeDt16AG8e0ScE=", "last_login": "2024-05-26T21:09:04Z", "is_superuser": true, "email": "jose.latapiatt@proton.me", "nombres": "Jose Andres", "apellidos": "Latapiatt Perez", "rut": "103364957", "direccion": "Calle siempre falsa 123", "telefono_personal": 888888888, "tipo_de_usuario": null, "is_staff": true, "date_joined": "2024-05-26T21:08:25.104Z", "groups": [], "user_permissions": []}}, {"model": "web.usuario", "pk": 2, "fields": {"password": "contra123456789", "last_login": "2024-05-26T21:09:14Z", "is_superuser": false, "email": "correo@correo.cl", "nombres": "Usuario 1", "apellidos": "Apellido 1", "rut": "185855430", "direccion": "Direccion 1", "telefono_personal": 4, "tipo_de_usuario": 6, "is_staff": false, "date_joined": "2024-05-26T21:09:51.640Z", "groups": [], "user_permissions": []}}, {"model": "web.usuario", "pk": 3, "fields": {"password": "contra123456789", "last_login": "2024-05-26T21:56:55Z", "is_superuser": false, "email": "correo2@correo2.cl", "nombres": "Nombre 2", "apellidos": "Apellido 2", "rut": "177404810", "direccion": "Direccion Falsa 2", "telefono_personal": 777777777, "tipo_de_usuario": 5, "is_staff": false, "date_joined": "2024-05-26T21:57:18.591Z", "groups": [], "user_permissions": []}}]
+[
+    {
+      "model": "web.usuario",
+      "pk": 1,
+      "fields": {
+        "password": "pbkdf2_sha256$600000$WBqylD3meio5XX6Thc6ZWt$BRlznWpOnIqmOkwWy883bPw363GHTHeDt16AG8e0ScE=",
+        "last_login": "2024-05-26T21:09:04Z",
+        "is_superuser": true,
+        "email": "jose.latapiatt@proton.me",
+        "nombres": "Jose Andres",
+        "apellidos": "Latapiatt Perez",
+        "rut": "103364957",
+        "direccion": "Calle siempre falsa 123",
+        "telefono_personal": 888888888,
+        "tipo_de_usuario": null,
+        "is_staff": true,
+        "date_joined": "2024-05-26T21:08:25.104Z",
+        "groups": [
+          
+        ],
+        "user_permissions": [
+          
+        ]
+      }
+    },
+    {
+      "model": "web.usuario",
+      "pk": 2,
+      "fields": {
+        "password": "contra123456789",
+        "last_login": "2024-05-26T21:09:14Z",
+        "is_superuser": false,
+        "email": "correo@correo.cl",
+        "nombres": "Usuario 1",
+        "apellidos": "Apellido 1",
+        "rut": "185855430",
+        "direccion": "Direccion 1",
+        "telefono_personal": 4,
+        "tipo_de_usuario": 1,
+        "is_staff": false,
+        "date_joined": "2024-05-26T21:09:51.640Z",
+        "groups": [
+          
+        ],
+        "user_permissions": [
+          
+        ]
+      }
+    },
+    {
+      "model": "web.usuario",
+      "pk": 3,
+      "fields": {
+        "password": "contra123456789",
+        "last_login": "2024-05-26T21:56:55Z",
+        "is_superuser": false,
+        "email": "correo2@correo2.cl",
+        "nombres": "Nombre 2",
+        "apellidos": "Apellido 2",
+        "rut": "177404810",
+        "direccion": "Direccion Falsa 2",
+        "telefono_personal": 777777777,
+        "tipo_de_usuario": 2,
+        "is_staff": false,
+        "date_joined": "2024-05-26T21:57:18.591Z",
+        "groups": [
+          
+        ],
+        "user_permissions": [
+          
+        ]
+      }
+    }
+  ]

@@ -2,8 +2,82 @@ from django.core.exceptions import ValidationError
 from django.core.validators import BaseValidator
 import re
 
+class RechazadaVsAceptadaValidator (BaseValidator):
+    code = 'estado_invalido'
+    message = f'Una solicitud no puede estar rechazada y aceptada al mismo tiempo.'
+
+    def compare (self, aceptada:bool, rechazada:bool) -> bool:
+        return aceptada and rechazada
+    
+    def clean (self, x):
+        return x
+    
+    def __init__(self, aceptada_field:str, rechazada_field:str, message:str = None, code:str = None):
+        self.aceptada_field = aceptada_field
+        self.rechazada_field = rechazada_field
+        if message is not None:
+            self.message = message
+        if code is not None:
+            self.code = code
+        super().__init__(limit_value = None, message = message)
+
+    def __call__ (self, instance):
+        if hasattr(instance, self.aceptada_field):
+            aceptada = getattr(instance, self.aceptada_field)
+        else:
+            raise ValidationError(f'{self.aceptada_field} no puede ser Nulo.', code = 'null_aceptada')
+        
+        if hasattr(instance, self.rechazada_field):
+            rechazada = getattr(instance, self.rechazada_field)
+        else:
+            raise ValidationError(f'{self.rechazada_field} no puede ser Nulo.', code = 'null_rechazada')
+        
+        if aceptada is not None and rechazada is not None:
+            value = aceptada
+            self.limit_value = rechazada
+            params = {'field': self.aceptada_field,'value': value, self.rechazada_field: rechazada}
+            if self.compare(value, self.limit_value):
+                raise ValidationError (self.message, code = self.code, params = params)
+        else:
+             raise ValidationError(f'Ni {self.aceptada} ni {self.rechazada} pueden ser Nulos.', code = 'null_m2')
+
 class TerrenoVsConstruidoValidator (BaseValidator):
-    pass
+    code = 'terreno_invalido'
+    message = f'El valor del terreno construido no es valido.'
+
+    def compare (self, m2_construidos:float, m2_totales:float) -> bool:
+        return m2_construidos > m2_totales
+    
+    def clean (self, x):
+        return x
+    
+    def __init__(self, contruido_field:str, total_field:str, message:str = None, code:str = None):
+        self.contruido_field = contruido_field
+        self.total_field = total_field
+        if message is not None:
+            self.message = message
+        if code is not None:
+            self.code = code
+        super().__init__(limit_value = None, message = message)
+
+    def __call__ (self, instance):
+        if hasattr(instance, self.contruido_field):
+            m2_contruidos = getattr(instance, self.contruido_field)
+        else:
+            raise ValidationError(f'{self.contruido_field} no puede ser Nulo.', code = 'null_m2_construidos')
+        if hasattr(instance, self.total_field):
+            m2_totales = getattr(instance, self.total_field)
+        else:
+            raise ValidationError(f'{self.total_field} no puede ser Nulo.', code = 'null_m2_totales')
+        
+        if m2_contruidos is not None and m2_totales is not None:
+            value = m2_contruidos
+            self.limit_value = m2_totales
+            params = {'field': self.contruido_field,'value': value, self.total_field: m2_totales}
+            if self.compare(value, self.limit_value):
+                raise ValidationError (self.message, code = self.code, params = params)
+        else:
+             raise ValidationError(f'Ni {self.total_field} ni {self.contruido_field} pueden ser Nulos.', code = 'null_m2')
 
 class RutValidator (BaseValidator):
     code = 'rut_invalido'
@@ -17,9 +91,6 @@ class RutValidator (BaseValidator):
         wrong_rut_re = "^(\d)\1{6,7}[\dkK]$"
         pattern_wrong_rut = re.compile(wrong_rut_re)
         if pattern_rut.match(rut) is None: # En verdad podria levantar error
-            # print(rut_re)
-            # print(re.search(rut, rut_re))
-            # print('rut_re in regex_rut')
             return False
         elif pattern_wrong_rut.match(rut) is None:
             return True

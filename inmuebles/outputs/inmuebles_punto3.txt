@@ -1,6 +1,16 @@
-Los inmuebles de la comuna Alto Hospicio
+Los inmuebles de la region Biobío
 Nombre: nombre 3
  Descripcion: Descripcion 3
+ Metros² Construidos: 30.0[m²]
+ Metros Totales o del Terreno: 35.0[m²]
+ Cantidad de estacionamientos: 2
+ Cantidad de habitaciones: 2
+ Cantidad de baños: 2
+ Direccion: Direccion 3, Alto Hospicio, Biobío
+ Tipo de Inmueble: Casa
+ Precio mensual de arriendo: $1500000
+Nombre: asd
+ Descripcion: asd
  Metros² Construidos: 30.0[m²]
  Metros Totales o del Terreno: 35.0[m²]
  Cantidad de estacionamientos: 2

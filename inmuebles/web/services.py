@@ -115,37 +115,58 @@ def get_fixtures():
 
     with open(f'web/fixtures/comunas.json', 'w', encoding = 'utf-8') as file:
         serialized_data = []
+        id = 1
         for comuna in comunas:
+            comuna["id"] = id
             serialized_obj = {
-                "model": "web.Comuna",  # Replace with the actual app_label and model_name
-                "pk": comuna["id"],  # Assuming 'id' is the primary key field
-                "fields": comuna  # Add all other fields of the object
+                "model": "web.Comuna",
+                # "pk": comuna["id"],  # Assuming 'id' is the primary key field
+                "pk": id,
+                "fields": comuna
             }
+            id += 1
             serialized_data.append(serialized_obj)
         # file.write(serialized_data)
         json.dump(serialized_data, file, indent=4, ensure_ascii=False)
     with open(f'web/fixtures/regiones.json', 'w', encoding = 'utf-8') as file:
         serialized_data = []
+        id = 1
         for region in regiones:
+            region["id"] = id
             serialized_obj = {
-                "model": "web.Region",  # Replace with the actual app_label and model_name
-                "pk": region["id"],  # Assuming 'id' is the primary key field
-                "fields": region  # Add all other fields of the object
+                "model": "web.Region", 
+                # "pk": region["id"],
+                "pk": id,
+                "fields": region
             }
+            id += 1
             serialized_data.append(serialized_obj)
         json.dump(serialized_data, file, indent=4, ensure_ascii=False)
         # file.write(serialized_data)
-def get_inmuebles(nombre:str, descripcion:str) -> list[Inmueble]:
+def get_inmuebles_comuna(comuna:str) -> list[Inmueble]:
     raw_query = f"""
-        SELECT * 
-        FROM web_inmueble
-        WHERE web_inmueble.nombre = '{nombre}' AND web_inmueble.descripcion = '{descripcion}'
-        ORDER BY web_inmueble.comuna_id;
+        SELECT web_comuna.id, web_comuna.nombre_comuna, web_inmueble.nombre, web_inmueble.descripcion
+        FROM web_comuna INNER JOIN web_inmueble ON web_comuna.id = web_inmueble.comuna_id
+        WHERE web_comuna.nombre_comuna = '{comuna}'
     """
     inmuebles = Inmueble.objects.raw(raw_query)
-    # inmuebles = Inmueble.objects.filter(descripcion = descripcion).filter(nombre = nombre).raw(raw_query)
-    for inmueble in inmuebles:
-        print(f'Inmueble: {inmueble}')
+    with open('outputs/inmuebles_punto2.txt', 'w', encoding='utf-8') as file:
+        file.write(f'Los inmuebles de la comuna {comuna}\n')
+        for inmueble in inmuebles:
+            file.write(f'{inmueble}\n')
+    return inmuebles
+
+def get_inmuebles_region(region:str) -> list[Inmueble]:
+    raw_query = f"""
+        SELECT web_region.id, web_region.nombre_region, web_inmueble.nombre, web_inmueble.descripcion
+        FROM web_region INNER JOIN web_inmueble ON web_region.id = web_inmueble.region_id
+        WHERE web_region.nombre_region = '{region}'
+    """
+    inmuebles = Inmueble.objects.raw(raw_query)
+    with open('outputs/inmuebles_punto3.txt', 'w', encoding='utf-8') as file:
+        file.write(f'Los inmuebles de la region {region}\n')
+        for inmueble in inmuebles:
+            file.write(f'{inmueble}\n')
     return inmuebles
 
 def get_inmuebles(nombre:str, descripcion:str) -> list[Inmueble]:
@@ -167,10 +188,13 @@ def get_inmuebles(nombre:str, descripcion:str) -> list[Inmueble]:
                 file.write(f'{nombre_comuna}:\n')
             file.write(f'Inmueble en {inmueble.comuna}: {inmueble}\n')
     return inmuebles
+    
 
 #from web.services import test
 #test()
 #from web.services import get_fixtures
 #get_fixtures()
-#from web.services import get_inmuebles
-#get_inmuebles('nombre 3', 'Descripcion 3')
+#from web.services import get_inmuebles_comuna
+#get_inmuebles_comuna('Alto Hospicio')
+#from web.services import get_inmuebles_region
+#get_inmuebles_region('Biobío')

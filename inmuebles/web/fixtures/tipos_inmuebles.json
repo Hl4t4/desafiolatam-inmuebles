@@ -1,1 +1,23 @@
-[{"model": "web.tipoinmueble", "pk": 4, "fields": {"nombre_tipo_inmueble": "Casa"}}, {"model": "web.tipoinmueble", "pk": 5, "fields": {"nombre_tipo_inmueble": "Departamento"}}, {"model": "web.tipoinmueble", "pk": 6, "fields": {"nombre_tipo_inmueble": "Parcela"}}]
+[
+    {
+      "model": "web.tipoinmueble",
+      "pk": 1,
+      "fields": {
+        "nombre_tipo_inmueble": "Casa"
+      }
+    },
+    {
+      "model": "web.tipoinmueble",
+      "pk": 2,
+      "fields": {
+        "nombre_tipo_inmueble": "Departamento"
+      }
+    },
+    {
+      "model": "web.tipoinmueble",
+      "pk": 3,
+      "fields": {
+        "nombre_tipo_inmueble": "Parcela"
+      }
+    }
+  ]
