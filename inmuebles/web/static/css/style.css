@@ -1,0 +1,38 @@
+* {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #26979f;
+}
+
+html {
+    background-color: #fef9f0;
+    
+}
+
+header {
+    background-color: #fef9f0;
+}
+
+nav {
+    background-color: #fac0b3;
+}
+
+section {
+    background-color: #c8f0ef;
+}
+
+footer {
+    background-color: #fac0b3;
+}
+
+
+header>img {
+    max-height: 300px;
+    max-width: 400px;
+}
+
+.link-text {
+    color: #26979f;
+}
