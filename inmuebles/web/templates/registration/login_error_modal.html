@@ -1,0 +1,15 @@
+{% block alertmodal %}
+<div class="modal fade show d-block" id="loginErrorModal" tabindex="-1" aria-labelledby="loginErrorModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body modal-custom-bg">
+                <div class="alert alert-custom-bg alert-dismissible mt-3 text-center" role="alert">
+                    <p>Tu nombre de usuario y/o contraseña no son correctos. Intentalo de nuevo.</p>
+                    <i class="fa-solid fa-triangle-exclamation fa-2xl"></i>
+                    <button type="button" id="loginErrorModalClose" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock alertmodal %}

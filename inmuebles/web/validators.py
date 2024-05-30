@@ -100,6 +100,7 @@ class RutValidator (BaseValidator):
         
     @staticmethod
     def modulo11(rut:str) -> bool:
+        
         length_rut = len(rut)
         six_counter = 0
         sum = 0
@@ -108,16 +109,21 @@ class RutValidator (BaseValidator):
             sum = sum + number * (six_counter + 2)
             six_counter = (six_counter + 1) % 6
         control = sum % 11
+
         if control == 0:
-            control == '0'
+            control = '0'
+
         elif control == 1:
             control = 'k'
+
         else:
             control = str(11-control)
+
         if control == rut[-1]:
             return True 
+        
         else:
-            return False # Podria levantar error
+            return False
         
     def clean (self, x):
         return x
@@ -138,7 +144,9 @@ class RutValidator (BaseValidator):
         if rut is not None:
             params = {'field': self.rut_field,'value': rut}
             # print(rut)
+            rut = rut.replace('.', '').replace('-', '')
             if self.regex_rut(rut):
+                # print(rut)
                 if not self.modulo11(rut):
                     print('modulo11 in __call__')
                     raise ValidationError (self.message, code = self.code, params = params)

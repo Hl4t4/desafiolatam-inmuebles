@@ -19,11 +19,9 @@ python manage.py dumpdata web.Inmueble --output=web/fixtures/inmuebles.json
 
 python manage.py dumpdata web.Usuario --output=web/fixtures/usuarios.json
 
-python manage.py dumpdata web.Comuna --output=web/fixtures/comunas.json --encoding=utf-8
+python manage.py dumpdata web.Comuna --output=web/fixtures/comunas.json ## No recomendadas usar otro metodo
 
-python manage.py dumpdata web.Comuna --output=web/fixtures/comunas.json
-
-python manage.py dumpdata web.Region --output=web/fixtures/regiones.json
+python manage.py dumpdata web.Region --output=web/fixtures/regiones.json ## No recomendadas usar otro metodo
 
 python manage.py dumpdata web.TipoUsuario --output=web/fixtures/tipos_usuarios.json
 

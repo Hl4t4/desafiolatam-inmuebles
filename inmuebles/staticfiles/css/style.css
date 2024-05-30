@@ -12,7 +12,6 @@ html {
 }
 
 header {
-    background-image: url('/img/portada_fondo.png');
     background-color: #fef9f0;
 }
 
@@ -36,4 +35,9 @@ header>img {
 
 .link-text {
     color: #26979f;
+}
+
+hr {
+    color: #26979f;
+    border-color: #26979f;
 }

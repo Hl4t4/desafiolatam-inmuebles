@@ -1,0 +1,18 @@
+{% extends 'bases/base.html' %}
+
+{% block content%}
+<section class = "container-fluid py-5">
+    <div class = "card card-custom-bg w-75 py-4 px-3 mx-auto">
+        <div class = "row">
+            <div class = "col-12">
+                {%block form-description%}
+                {%endblock form-description%}
+            </div>
+            <div class = "col-12">
+                {% block form-details%}
+                {% endblock form-details%}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content%}

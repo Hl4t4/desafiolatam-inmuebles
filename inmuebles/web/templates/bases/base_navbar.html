@@ -13,18 +13,22 @@
             <div class="navbar-nav ms-auto">
                 <a class="nav-link link-text" href="/">Inicio</a>
                 {% if user.is_authenticated %}
-                    <a class="nav-link link-text" href="/bienvenido">Bienvenido</a>
+                    <a class="nav-link link-text" href="/profile">Perfil</a>
+                    <a class="nav-link link-text" href="/rental_applications">Solicitudes de Arriendo</a>
                 {% endif %}
-                <a class="nav-link link-text" href="/acerca">Acerca</a>
-                <a class="nav-link link-text" href="/contacto">Contacto</a>
+                {% if user.tipo_usuario.nombre_tipo_usuario == "arrendatario" %}
+                    <a class="nav-link link-text" href="/rental_offers">Tus Arriendos</a>
+                {% endif %}
+                <a class="nav-link link-text" href="/about">Acerca</a>
+                <a class="nav-link link-text" href="/contact">Contacto</a>
                 
                 {% if user.is_authenticated %}
-                {% comment %} <form action="{% url 'logout' %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit" class="mt-2">Cerrar sesion</button>
-                </form> {% endcomment %}
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button class= "btn btn-outline-info" type="submit" value = "Cerrar Sesión">Cerrar Sesión</button>
+                    </form>
                 {% else %}
-                    <a href="/accounts/login"><button type="submit" class="mt-2">Iniciar sesión</button></a>
+                    <a href="/login"><button class= "btn btn-outline-info" type="submit" value = "Iniciar Sesión">Iniciar Sesión</button></a>
                 {% endif %}
             </div>
         </div>

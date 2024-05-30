@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-from django.core.validators import MinValueValidator 
+from django.core.validators import MinValueValidator, MinLengthValidator
 from web.validators import TipoUsuarioValidator, RutValidator, TerrenoVsConstruidoValidator, RechazadaVsAceptadaValidator
 from datetime import date
 
@@ -15,6 +15,7 @@ class UsuarioManager(BaseUserManager):
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
+        # print(user)
         user.save(using=self._db)
         return user
 
@@ -29,14 +30,17 @@ class UsuarioManager(BaseUserManager):
 class Usuario (AbstractBaseUser, PermissionsMixin):
 
     email = models.EmailField(unique = True, null = False, blank = False, verbose_name = 'Correo Electronico')
+    password = models.CharField(validators = [MinLengthValidator(8)], max_length=128, verbose_name = "Contraseña")
     nombres = models.CharField(max_length = 50, null = False, blank = False, verbose_name = 'Nombres')
     apellidos = models.CharField(max_length = 50, null = False, blank = False, verbose_name = 'Apellidos')
-    rut = models.CharField(max_length = 10, null = False, blank = False, verbose_name = 'RUT') ## Deberia bajar el limite a 9
+    rut = models.CharField(max_length = 12, null = False, blank = False, verbose_name = 'RUT')
     direccion = models.CharField(max_length = 50, null = False, blank = True, verbose_name = 'Direccion')
     telefono_personal = models.PositiveIntegerField(null = False, blank = True, verbose_name = 'Telefono Personal', validators=[MinValueValidator(0)])
-    tipo_de_usuario = models.ForeignKey(to = "TipoUsuario", on_delete = models.CASCADE, null = True, blank = True)
+    tipo_usuario = models.ForeignKey(to = "TipoUsuario", on_delete = models.CASCADE, null = True, blank = True)
     is_staff = models.BooleanField(default = False)
-    date_joined = models.DateTimeField(auto_now_add = date.today())
+    is_active = models.BooleanField(default = True, verbose_name = "Esta el usuario activo?")
+    date_joined = models.DateTimeField(auto_now_add = True)
+    date_modified = models.DateTimeField(auto_now = True)
 
     
     objects = UsuarioManager()
@@ -48,18 +52,18 @@ class Usuario (AbstractBaseUser, PermissionsMixin):
     
     def has_module_perms(self, app_label):
         return True
-    
-    @property
-    def is_active(self):
-        return True
 
     def clean(self):
         validator_rut = RutValidator(rut_field = 'rut')
         validator_rut(self)
 
     def save(self, *args, **kwargs):
+        print(self.password)
         self.clean()
+        print(self.password)
         super().save(*args, **kwargs)
+        print(self.password)
+
 
     @staticmethod
     def format_rut(rut:str) -> str:
@@ -68,9 +72,9 @@ class Usuario (AbstractBaseUser, PermissionsMixin):
         return f'{body[:-6]}.{body[-6:-3]}.{body[-3:]}-{verifier}'
 
     def __str__(self):
-        return f'Nombre: {self.nombres} {self.apellidos}\nRUT: {self.format_rut(self.rut)}\nDireccion: {self.direccion}\nTelefono: {self.telefono_personal}\nCorreo Electronico: {self.email}\nTipo de Usuario: {self.tipo_de_usuario}'
+        return f'Nombre: {self.nombres} {self.apellidos}\nRUT: {self.format_rut(self.rut)}\nDireccion: {self.direccion}\nTelefono: {self.telefono_personal}\nCorreo Electronico: {self.email}\nTipo de Usuario: {self.tipo_usuario}'
 
-    # def __init__(self, nombres:str, apellido:str, rut:str, direccion:str, telefono_personal:str, tipo_de_usuario:str, *args: Any, **kwargs: Any) -> None:
+    # def __init__(self, nombres:str, apellido:str, rut:str, direccion:str, telefono_personal:str, tipo_usuario:str, *args: Any, **kwargs: Any) -> None:
     #     super().__init__(*args, **kwargs)
 
 
@@ -91,8 +95,8 @@ class Inmueble (models.Model):
     arrendatario = models.ForeignKey(Usuario, null = False, blank = False, on_delete = models.CASCADE, related_name = 'inmueble_arrendatario')
     
     def clean(self):
-        validator_arrendador = TipoUsuarioValidator(foreing_key_field = 'arrendador', related_field = ['tipo_de_usuario', 'nombre_tipo_usuario'], tipos_de_usuario = ['arrendador'])
-        validator_arrendatario = TipoUsuarioValidator(foreing_key_field = 'arrendatario', related_field = ['tipo_de_usuario', 'nombre_tipo_usuario'], tipos_de_usuario = ['arrendatario'])
+        validator_arrendador = TipoUsuarioValidator(foreing_key_field = 'arrendador', related_field = ['tipo_usuario', 'nombre_tipo_usuario'], tipos_de_usuario = ['arrendador'])
+        validator_arrendatario = TipoUsuarioValidator(foreing_key_field = 'arrendatario', related_field = ['tipo_usuario', 'nombre_tipo_usuario'], tipos_de_usuario = ['arrendatario'])
         validator_metros = TerrenoVsConstruidoValidator(contruido_field = 'm2_construidos', total_field = 'm2_totales')
         validator_arrendador(self)
         validator_arrendatario(self)
@@ -112,7 +116,7 @@ class SolicitudArriendo (models.Model):
     rechazada = models.BooleanField(default = False, null = False, verbose_name = "Ha sido rechazada la solicitud?") # Se necesita validador que no pueden estar los dos positivos al mismo tiempo
 
     def clean(self):
-        validator_arrendador = TipoUsuarioValidator(foreing_key_field = 'arrendador', related_field = 'tipo_de_usuario', tipos_de_usuario = ['arrendador'])
+        validator_arrendador = TipoUsuarioValidator(foreing_key_field = 'arrendador', related_field = 'tipo_usuario', tipos_de_usuario = ['arrendador'])
         validator_aceptadas = RechazadaVsAceptadaValidator(aceptada_field = 'aceptada', rechazada_field = 'rechazada')
         validator_arrendador(self)
         validator_aceptadas(self)

@@ -15,10 +15,26 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from web.views import index_view
+from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView
+from django.urls import include, path
+from web.views import index_view, about_view, profile_view, profile_update_sucess_view, signup_view, signup_success_view, PasswordRecoveryView, PasswordRecoveryDoneView, PasswordRecoveryConfirmView, PasswordRecoveryCompleteView, UsuarioPasswordChangeView, UsuarioPasswordChangeSuccessView
+from web.forms import AuthenticationFormWithWidgets
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_view)
+    path('', index_view),
+    path('about/', about_view, name = "about"),
+    path('login/', LoginView.as_view(authentication_form = AuthenticationFormWithWidgets), name='login'),
+    path("logout/", LogoutView.as_view(), name="logout"),
+    path('profile/', profile_view),
+    path('profile/update_success/', profile_update_sucess_view),
+    path('signup/', signup_view, name = 'signup'),
+    path('signup/signup_success/', signup_success_view),
+    path("password_change/", UsuarioPasswordChangeView.as_view(), name="password_change"),
+    path("password_change/success/", UsuarioPasswordChangeSuccessView.as_view(), name="password_change_success"),
+    path('password_recovery/', PasswordRecoveryView.as_view(), name = 'password_recovery'),
+    path('password_recovery/done/', PasswordRecoveryDoneView.as_view(), name = 'password_recovery_done'),
+    path('password_recovery/<uidb64>/<token>/', PasswordRecoveryConfirmView.as_view(), name = 'password_recovery_confirm'),
+    path('password_recovery/complete/', PasswordRecoveryCompleteView.as_view(), name = 'password_recovery_complete'),
 ]

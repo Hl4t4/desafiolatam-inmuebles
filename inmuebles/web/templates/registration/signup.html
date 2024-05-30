@@ -1,0 +1,43 @@
+{% extends 'bases/base_form.html' %}    
+    {%block form-description%}
+        {% if user.is_authenticated %}
+            <div class="col-12 text-center">
+                <h2>No tienes acceso a esta página.</h2>
+                <a href="/"><button class = "btn btn-outline-info">Volver a la página principal</button></a>
+            </div>
+        {% else %}
+            <div class="col-12 text-center">
+                <h1>Creacion de Usuario</h1>
+                <hr style="width:50%; margin-left:auto; margin-right:auto;">
+                <p>Por favor rellene los datos a continuacion para crear su cuenta.</p>
+            </div>
+        {% endif %}
+    {%endblock form-description%}
+
+    {% block form-details%}
+        {% if user.is_authenticated %}
+        {% else %}
+            <form  action="/signup/" method="post" class="px-3">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class = "mb-3">
+                {% for field in form %}
+                    <label for = "{{ field.id_for_label }}" class="form-label ps-2">
+                        {{ field.label_tag }}
+                    </label>
+                    <div class="pb-1 w-750 border-1">
+                        {{ field }}
+                    </div>
+                    <div class="text-danger">
+                        {{ field.errors }}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class = "text-center pb-3">
+                <input class = "btn btn-outline-info" type="submit" value="Crear Cuenta">
+            </div>
+            </form>
+        {% endif %}
+
+    {% endblock form-details%}
+
