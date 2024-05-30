@@ -529,3 +529,7 @@ class TipoInmueble (models.Model):
     def __str__(self):
         return f'{self.nombre_tipo_inmueble}'
 
+class ContactRequest(models.Model):
+    customer_email = models.EmailField(verbose_name = "Correo Electronico")
+    customer_name = models.CharField(max_length=64, verbose_name="Nombre")
+    message = models.TextField(verbose_name="Mensaje")

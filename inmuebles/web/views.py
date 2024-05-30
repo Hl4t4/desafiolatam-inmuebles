@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.core.mail import send_mail
+from django.shortcuts import render
+from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from web.models import Usuario, Inmueble
-from web.forms import UsuarioModelForm, UsuarioCreationModelForm, UsuarioSetPasswordForm, UsuarioPasswordResetForm, UsuarioPasswordChangeForm
+from web.models import Usuario, Inmueble, ContactRequest
+from web.forms import UsuarioModelForm, UsuarioCreationModelForm, UsuarioSetPasswordForm, UsuarioPasswordResetForm, UsuarioPasswordChangeForm, ContactRequestForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView, PasswordChangeView, PasswordChangeDoneView
 
@@ -73,3 +75,23 @@ class UsuarioPasswordChangeView(PasswordChangeView):
 
 class UsuarioPasswordChangeSuccessView(PasswordChangeDoneView):
     template_name = 'registration/password_change_success.html'
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactRequestForm(request.POST)
+        if form.is_valid():
+            contact_request = ContactRequest.objects.create(**form.cleaned_data)
+            send_mail(
+                subject = "Se ha realizado una nueva solicitud de contacto - Inmuebles Kristen",
+                message = f"La persona {contact_request.customer_name}, ha enviado el siguiente mensaje:\n{contact_request.message}\nPor favor responder a la brevedadad al siguiente correo: {contact_request.customer_email}",
+                from_email = settings.DEFAULT_FROM_EMAIL,
+                recipient_list= [settings.DEFAULT_CONTACT_NOTICE_EMAIL]
+            )
+            return HttpResponseRedirect('success/')
+    else:
+        form = ContactRequestForm()
+    
+    return render(request, "contact.html", {'form': form})
+
+def contact_success_view(request):
+    return render(request, "contact_success.html", {})

@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView, PasswordChangeDoneView
 from django.urls import include, path
-from web.views import index_view, about_view, profile_view, profile_update_sucess_view, signup_view, signup_success_view, PasswordRecoveryView, PasswordRecoveryDoneView, PasswordRecoveryConfirmView, PasswordRecoveryCompleteView, UsuarioPasswordChangeView, UsuarioPasswordChangeSuccessView
+from web.views import index_view, about_view, contact_view, contact_success_view, profile_view, profile_update_sucess_view, signup_view, signup_success_view, PasswordRecoveryView, PasswordRecoveryDoneView, PasswordRecoveryConfirmView, PasswordRecoveryCompleteView, UsuarioPasswordChangeView, UsuarioPasswordChangeSuccessView
 from web.forms import AuthenticationFormWithWidgets
 
 
@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view),
     path('about/', about_view, name = "about"),
+    path('contact/', contact_view, name = "contact"),
+    path('contact/success/', contact_success_view, name = "contact_success"),
     path('login/', LoginView.as_view(authentication_form = AuthenticationFormWithWidgets), name='login'),
     path("logout/", LogoutView.as_view(), name="logout"),
     path('profile/', profile_view),

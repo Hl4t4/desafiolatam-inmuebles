@@ -4,7 +4,7 @@ from django.contrib.auth import password_validation
 # from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, PasswordResetForm, SetPasswordForm, PasswordChangeForm
 from django.utils.translation import gettext_lazy as _
-from web.models import Usuario, Inmueble, TipoUsuarioChoices
+from web.models import Usuario, Inmueble, TipoUsuarioChoices, ContactRequest
 
 class AuthenticationFormWithWidgets(AuthenticationForm):
     username = forms.EmailField(
@@ -110,3 +110,13 @@ class UsuarioPasswordChangeForm(PasswordChangeForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.set_password_form = UsuarioSetPasswordForm(user=self.user)
+
+class ContactRequestForm(forms.ModelForm):
+    class Meta:
+        model = ContactRequest
+        fields = ['customer_email', 'customer_name', 'message']
+        widgets = {
+            'customer_email' : forms.EmailInput(attrs={'class':'form-control', 'placeholder':'correo@dominio.cl'}),
+            'customer_name' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'Nombre'}),
+            'message' : forms.Textarea(attrs={'class':'form-control'}),
+        }
