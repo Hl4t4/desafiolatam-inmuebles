@@ -1,0 +1,14 @@
+{% extends 'bases/base_email.html' %}
+{% block email-subject%}
+    <title>Activacion de Cuenta</title>
+{% block email-subject%}
+{% block email-title%}
+    <h1>Arriendos Kristen</h1>
+{% endblock email-title%}
+{% block email-body%}
+    <p>Hola {{ user.email }},</p>
+    <p>Por favor haz click en el enlace a continuación para confirmar su registro:</p>
+    <p>{{ protocol }}://{{ domain }}{% url 'signup_activation' uidb64=uid token=token %}</p>
+    <p>Gracias por visitar nuestro sitio</p>
+    <p>El equipo de {{ site_name }}</p>
+{% endblock email-body%}

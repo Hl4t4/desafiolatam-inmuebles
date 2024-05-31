@@ -1,0 +1,182 @@
+{% load custom_filters %}
+
+<div class="col-12 text-center mb-3">
+    <div class ="card py-4 px-3 mx-5 card-inmuebles">
+        <div class = "card-title" id="renter_filters">
+            <h3>Filtros de Busqueda</h3>
+        </div>
+        <div class = "card-body">
+            <form method="post" action="{% url 'renter' user=user.id %}" class="px-3">
+                {% csrf_token %}
+                <div class = "card py-3 px-3 mb-2">
+                    <div class = 'row'>
+                        <div class = 'col-6'>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.nombre.label_tag }}
+                                </div>
+                            </div>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.nombre }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'col-6'>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.direccion.label_tag }}
+                                </div>
+                            </div>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.direccion }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = 'row'>
+                        <div class = 'col-3'>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.tipo_inmueble.label_tag }}
+                                </div>
+                            </div>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.tipo_inmueble }}
+                                </div>
+                            </div>
+                        </div>
+                    <div class = 'col-4'>
+                        <div class = 'row'>
+                            <div class = 'col'>
+                                {{ form.comuna.label_tag }}
+                            </div>
+                        </div>
+                        <div class = 'row'>
+                            <div class = 'col'>
+                                {{ form.comuna }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class = 'col-5'>
+                        <div class = 'row'>
+                            <div class = 'col'>
+                                {{ form.region.label_tag }}
+                            </div>
+                        </div>
+                        <div class = 'row'>
+                            <div class = 'col'>
+                                {{ form.region }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class = "card py-3 px-3 my-2">
+                    <div class = 'row'>
+                        <div class = 'col-4'>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.m2_construidos_min.label_tag }}
+                                </div>
+                            </div>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    Min {{ form.m2_construidos_min }}
+                                </div>
+                                <div class = 'col'>
+                                    Max {{ form.m2_construidos_max }}                                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'col-4'>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.m2_totales_min.label_tag }}
+                                </div>
+                            </div>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    Min {{ form.m2_totales_min }}
+                                </div>
+                                <div class = 'col'>
+                                    Max {{ form.m2_totales_max }}                                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'col-4'>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.arriendo_min.label_tag }}
+                                </div>
+                            </div>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    Min {{ form.arriendo_min }}
+                                </div>
+                                <div class = 'col'>
+                                    Max {{ form.arriendo_max }}                                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "card py-3 px-3 my-2">
+                    <div class = 'row'>
+                        <div class = 'col-4'>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.estacionamientos_min.label_tag }}
+                                </div>
+                            </div>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    Min {{ form.estacionamientos_min }}
+                                </div>
+                                <div class = 'col'>
+                                    Max {{ form.estacionamientos_max }}                                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'col-4'>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.habitaciones_min.label_tag }}
+                                </div>
+                            </div>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    Min {{ form.habitaciones_min }}
+                                </div>
+                                <div class = 'col'>
+                                    Max {{ form.habitaciones_max }}                                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class = 'col-4'>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    {{ form.restrooms_min.label_tag }}
+                                </div>
+                            </div>
+                            <div class = 'row'>
+                                <div class = 'col'>
+                                    Min {{ form.restrooms_min }}
+                                </div>
+                                <div class = 'col'>
+                                    Max {{ form.restrooms_max }}                                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class = "btn btn-outline-info w-100 mt-1 mb-2" type="submit" value="Filtrar">Filtrar</button>
+                <a href={{"/renter/" |addstr:user.id |addstr:"/"}}><button class = "btn btn-outline-info w-100" type="button" value="Limpiar Filtros">Limpiar Filtros</button></a>
+            </form>
+        </div>
+    </div>
+</div>

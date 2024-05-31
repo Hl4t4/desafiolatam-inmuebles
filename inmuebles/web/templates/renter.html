@@ -1,0 +1,73 @@
+{% extends 'bases/base.html' %}
+{% load custom_filters %}
+{% block content%}
+
+<section>
+    {% include "property_details.html" %}
+    <div class = "container-fluid py-5">
+        <div class = "row">
+            <div class="col-12 text-center mb-3">
+                <div class ="card py-4 px-3 mx-5">
+                    <div class = "card-title">
+                        <h1>Sus Inmuebles para Arrendar</h1>
+                    </div>
+                    <hr style="width:50%; margin-left:auto; margin-right:auto;">
+                    <div class = "card-body">
+                        <p>Hola {{ user.nombres }}, aquí puedes encontrar todos los sitios que tienes disponibles para arrendar.</p>
+                        <a href="{% url 'post_rent' user=user.id %}"><button class= "btn btn-outline-info" type="button" value = "Publicar Nuevo Anuncio">Publicar Nuevo Anuncio</button></a>
+                    </div>
+                </div>
+            </div>
+            {% include "bases/base_rent_filter.html" %}
+            <div class="col-12 text-center">
+                <div class ="card py-4 px-3 mx-5 card-inmuebles" id = "renter_filtered">
+                    {% block rents%}
+                        <div class = 'row'>
+                            {% for inmueble in inmuebles %}
+                                <div class = "col-4 py-4">
+                                    <div class = "card h-100" id = "{{ inmueble.id }}">
+                                        {% comment %} AGREGAR O NO IMAGENES <img src="{{ flan.image_url }}" class="card-img-top" alt= "{{ flan.name }}"> {% endcomment %}
+                                        <div class = "card-header text-center">
+                                            <h3>{{ inmueble.nombre }}</h3>
+                                        </div>
+                                        <div class = "card-body overflow-y-scroll" >
+                                            <div class = "row">
+                                                <div class = "col-12">
+                                                    {% if inmueble.arrendador.nombres %}
+                                                        <p>{{ inmueble.arrendador.nombres }}</p>
+                                                    {% else %}
+                                                        <p>No hay arrendador aún</p>
+                                                    {% endif %}
+                                                </div>
+                                                <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                                    <p>Metros² Construidos: {{ inmueble.m2_construidos }}[m²]</p>
+                                                </div>
+                                                <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                                    <p>Metros² Totales: {{ inmueble.m2_totales }}[m²]</p>    
+                                                </div>
+                                                <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                                    <p>Comuna: {{ inmueble.comuna }}</p>
+                                                </div>
+                                                <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                                    <p>Región: {{ inmueble.region }}</p>
+                                                </div>
+                                                <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                                    <p>Tipo de Inmueble: {{ inmueble.tipo_inmueble }}</p>
+                                                </div>
+                                                <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                                    <p>Valor de Arriendo: <b>${{ inmueble.arriendo }}</b></p>
+                                                </div>
+                                            </div>
+                                            <button class = "btn btn-outline-info detailsOpenModal" data-toggle="modal" data-target="#detailsModal" data-value = "{{ inmueble|as_dict }}">Detalles</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endblock rents%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content%}

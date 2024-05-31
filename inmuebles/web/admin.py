@@ -19,7 +19,7 @@ class UsuarioAdmin(UserAdmin):
     form = CustomUserChangeForm
     add_form = CustomUserCreationForm
 
-    list_display = ('email', 'nombres', 'apellidos', 'rut', 'direccion', 'telefono_personal', 'tipo_usuario', 'is_staff', 'is_superuser')
+    list_display = ('email', 'nombres', 'apellidos', 'rut', 'direccion', 'telefono_personal', 'tipo_usuario', 'is_active', 'is_staff', 'is_superuser')
     search_fields = ('email', 'nombres', 'apellidos', 'rut')
     readonly_fields = ('date_joined',)
     ordering = ('email',)

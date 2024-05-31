@@ -1,0 +1,55 @@
+{% extends 'bases/base.html' %}
+{% load custom_filters %}
+{% block content%}
+<section>
+    <div class = "container-fluid py-5">
+        <div class = "row">
+            <div class="col-12 text-center">
+                <div class ="card py-4 px-3 mx-5">
+                    <div class = "card-title">
+                        <h1>Sus Solicitudes de Arriendo</h1>
+                    </div>
+                    <hr style="width:50%; margin-left:auto; margin-right:auto;">
+                    <div class = "card-body">
+                        <p>Hola {{ user.nombres }}, aquí puedes encontrar todas tus solicitudes de arriendo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <div class ="card py-4 px-3 mx-5">
+                    {% block rents%}
+                    <div class = 'row'>
+                        {% for inmueble in inmuebles %}
+                            <div class = "col py-4">
+                                <div class = "card border-0 h-100" id = "{{ flan.flan_uuid }}">
+                                    {% comment %} <img src="{{ flan.image_url }}" class="card-img-top" alt= "{{ flan.name }}"> {% endcomment %}
+                                    <div class = "card-header text-center">
+                                        <h3>{{ inmueble.nombre }}</h3>
+                                    </div>
+                                    <div class = "card-body overflow-y-scroll" >
+                                        <p>{{ inmueble.descripcion }}</p>
+                                        <p>{{ inmueble.m2_construidos }}</p>
+                                        <p>{{ inmueble.m2_totales }}</p>
+                                        <p>{{ inmueble.estacionamientos }}</p>
+                                        <p>{{ inmueble.habitaciones }}</p>
+                                        <p>{{ inmueble.restrooms }}</p>
+                                        <p>{{ inmueble.direccion }}</p>
+                                        <p>{{ inmueble.comuna }}</p>
+                                        <p>{{ inmueble.region }}</p>
+                                        <p>{{ inmueble.tipo_inmueble }}</p>
+                                        <p>{{ inmueble.arriendo }}</p>
+                                        <p>{{ inmueble.arrendador }}</p>
+                                        <p>{{ inmueble.arrendatario }}</p>
+                                        {% comment %} <a href="#{{ flan.flan_uuid }}" class="nav-toggle text-black">Ver menos</a> {% endcomment %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% endblock rents%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content%}

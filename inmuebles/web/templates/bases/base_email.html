@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" style = "background-color: #fac0b3;">
+    <head>
+        <meta charset="UTF-8">
+        {% block email-subject%}
+            <title>Correo base para {{ site_name }}</title>
+        {% block email-subject%}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=yes">
+    </head>
+    <body style = "color: #26979f;">
+        <div style = "background-color: #fac0b3; padding : 20px;">
+            <section style = "background-color: #c8f0ef; margin : 20px;">
+                <div class = "container-fluid" style = "padding-top : 50px; padding-bottom : 50px;">
+                    <div class = "row">
+                        <div class="col-12 text-center">
+                            <div class ="card"  style = "margin-top : 50px; margin-bottom : 50px; margin-left: 60px; margin-right: 60px;">
+                                <div class = "card-title">
+                                    {% block email-title%}
+                                        <h1>Titulo base para {{ site_name }}</h1>
+                                    {% endblock email-title%}
+                                </div>
+                                <hr style="width:50%; margin-left:0; margin-right:auto; color: #d3a297;">
+                                <div class = "card-body">
+                                    {% block email-body%}
+                                        <p>Body base para {{ site_name }}</p>
+                                    {% endblock email-body%}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>    
+        </div>
+    </body>
+</html>

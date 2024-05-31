@@ -1,1 +1,36 @@
-{% extends 'bases/base.html' %}
+{% extends 'bases/base_form.html' %}    
+    {%block form-description%}
+        <div class="col-12 text-center">
+            <h1>Agrega un nuevo Arriendo</h1>
+            <hr style="width:50%; margin-left:auto; margin-right:auto;">
+            <p>Ingresa los datos solicitados a continuación para agregar un nuevo anuncio de arriendo.</p>
+        </div>
+    {%endblock form-description%}
+    {% block form-details%}
+    <form  action="{% url 'post_rent' user=user.id %}" method="post" class="px-3">
+        {% csrf_token %}
+        {% comment %} {{ form }} {% endcomment %}
+        {{ form.non_field_errors }}
+        
+        <div class = "mb-3">
+            {% for field in form %}
+                <label for = "{{ field.id_for_label }}" class="form-label ps-2">
+                    {{ field.label_tag }}
+                </label>
+                <div class="pb-1 w-750 border-1">
+                    {% comment %} {% if field.id_for_label == 'id_arrendatario' %} {% endcomment %}
+                        {% comment %} <input type="text" name="arrendatario" readonly="readonly" required="" id="id_arrendatario" value = {{ user.id }}> {% endcomment %}
+                    {% comment %} {% else %} {% endcomment %}
+                        {{ field }}
+                    {% comment %} {% endif %} {% endcomment %}
+                </div>
+                <div class="text-danger">
+                    {{ field.errors }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class = "text-center pb-3">
+            <input class= "btn btn-outline-info" type="submit" value="Agregar Anuncio">
+        </div>
+    </form>
+    {% endblock form-details%}

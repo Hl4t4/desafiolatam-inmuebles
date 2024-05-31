@@ -85,17 +85,16 @@ class RutValidator (BaseValidator):
 
     @staticmethod
     def regex_rut (rut:str) -> bool:
-        rut_re = "^([1-9][\d]{6}[\dk])|([1-9][\d]{7}[\dkK])$"
+        rut_re = r"^([1-9][\d]{6}[\dk])|([1-9][\d]{7}[\dkK])$"
         pattern_rut = re.compile(rut_re)
         # rut_wrong_re = "^(1{7,8}[\dkK])|(2{7,8}[\dkK])|(3{7,8}[\dkK])|(4{7,8}[\dkK])|(5{7,8}[\dkK])|(6{7,8}[\dkK])|(7{7,8}[\dkK])|(8{7,8}[\dkK])|(9{7,8}[\dkK])|(0{7,8}[\dkK])$"
-        wrong_rut_re = "^(\d)\1{6,7}[\dkK]$"
+        wrong_rut_re = r"^(\d)\1{6,7}[\dkK]$"
         pattern_wrong_rut = re.compile(wrong_rut_re)
-        if pattern_rut.match(rut) is None: # En verdad podria levantar error
+        if pattern_rut.match(rut) is None:
             return False
         elif pattern_wrong_rut.match(rut) is None:
             return True
         else:
-            # print('rut_wrong_re in regex_rut')
             return False
         
     @staticmethod
@@ -115,11 +114,10 @@ class RutValidator (BaseValidator):
 
         elif control == 1:
             control = 'k'
-
         else:
             control = str(11-control)
 
-        if control == rut[-1]:
+        if control == rut[-1].lower():
             return True 
         
         else:

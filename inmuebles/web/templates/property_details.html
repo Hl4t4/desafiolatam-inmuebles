@@ -1,1 +1,47 @@
-{% extends 'bases/base.html' %}
+{% block details-modal %}
+<div class="modal fade show" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body modal-custom-bg border-0">
+                <button type="button" id="detailsModalCloseTop" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                <div class = 'container-fluid'>
+                    <div class = 'row'>
+                        <div class = "col-12 py-4">
+                            <div class = "card border-0 h-100" id = "{{ inmueble.id }}">
+                                {% comment %} <img src="{{ flan.image_url }}" class="card-img-top" alt= "{{ flan.name }}"> {% endcomment %}
+                                {% comment %} <div class = "card-header text-center">
+                                    <h3>{{ inmueble.nombre }}</h3>
+                                </div> {% endcomment %}
+                                <div class = "card-body overflow-y-scroll" >
+                                    <p>{{ inmueble.descripcion }}</p>
+                                    <p>Metros² Construidos: {{ inmueble.m2_construidos }}[m²]</p>
+                                    <p>Metros² Totales: {{ inmueble.m2_totales }}[m²]</p>
+                                    <p>N° Estacionamientos: {{ inmueble.estacionamientos }}</p>
+                                    <p>N° Habitaciones: {{ inmueble.habitaciones }}</p>
+                                    <p>N° Baños: {{ inmueble.restrooms }}</p>
+                                    <p>Dirección: {{ inmueble.direccion }}</p>
+                                    <p>Comuna: {{ inmueble.comuna }}</p>
+                                    <p>Región: {{ inmueble.region }}</p>
+                                    <p>Tipo de Inmueble: {{ inmueble.tipo_inmueble }}</p>
+                                    <p>Valor de Arriendo: ${{ inmueble.arriendo }}</p>
+                                    {% if inmueble.arrendador.nombres %}
+                                        <p>{{ inmueble.arrendador.nombres }}</p>
+                                    {% else %}
+                                        <p>No hay arrendador aún</p>
+                                    {% endif %}
+                                    {% comment %} <p>{{ inmueble.arrendatario }}</p> {% endcomment %}
+                                    {% comment %} <a href="#{{ flan.flan_uuid }}" class="nav-toggle text-black">Ver menos</a> {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="detailsModalCloseBottom" data-bs-dismiss="modal" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                {% comment %} <button type="button" class="btn btn-primary">Guardar cambios</button> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock details-modal %}

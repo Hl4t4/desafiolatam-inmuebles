@@ -58,12 +58,8 @@ class Usuario (AbstractBaseUser, PermissionsMixin):
         validator_rut(self)
 
     def save(self, *args, **kwargs):
-        print(self.password)
         self.clean()
-        print(self.password)
         super().save(*args, **kwargs)
-        print(self.password)
-
 
     @staticmethod
     def format_rut(rut:str) -> str:
@@ -72,11 +68,8 @@ class Usuario (AbstractBaseUser, PermissionsMixin):
         return f'{body[:-6]}.{body[-6:-3]}.{body[-3:]}-{verifier}'
 
     def __str__(self):
-        return f'Nombre: {self.nombres} {self.apellidos}\nRUT: {self.format_rut(self.rut)}\nDireccion: {self.direccion}\nTelefono: {self.telefono_personal}\nCorreo Electronico: {self.email}\nTipo de Usuario: {self.tipo_usuario}'
-
-    # def __init__(self, nombres:str, apellido:str, rut:str, direccion:str, telefono_personal:str, tipo_usuario:str, *args: Any, **kwargs: Any) -> None:
-    #     super().__init__(*args, **kwargs)
-
+        return f'{self.nombres} {self.apellidos}'
+        # return f'Nombre: {self.nombres} {self.apellidos}\nRUT: {self.format_rut(self.rut)}\nDireccion: {self.direccion}\nTelefono: {self.telefono_personal}\nCorreo Electronico: {self.email}\nTipo de Usuario: {self.tipo_usuario}'
 
 class Inmueble (models.Model):
     nombre = models.CharField(max_length = 50, null = False, blank = False, verbose_name = 'Nombre')
@@ -92,7 +85,8 @@ class Inmueble (models.Model):
     tipo_inmueble = models.ForeignKey(to = "TipoInmueble", on_delete = models.CASCADE)
     arriendo = models.PositiveIntegerField(null = False, blank = False, validators=[MinValueValidator(0)], verbose_name = 'Precio mensual de arriendo')
     arrendador = models.ForeignKey(Usuario, null=True, blank=True, on_delete = models.CASCADE, related_name = 'inmueble_arrendador')
-    arrendatario = models.ForeignKey(Usuario, null = False, blank = False, on_delete = models.CASCADE, related_name = 'inmueble_arrendatario')
+    arrendatario = models.ForeignKey(Usuario, null = True, blank = False, on_delete = models.CASCADE, related_name = 'inmueble_arrendatario')
+
     
     def clean(self):
         validator_arrendador = TipoUsuarioValidator(foreing_key_field = 'arrendador', related_field = ['tipo_usuario', 'nombre_tipo_usuario'], tipos_de_usuario = ['arrendador'])
@@ -105,6 +99,25 @@ class Inmueble (models.Model):
     def save(self, *args, **kwargs):
         self.clean()
         super().save(*args, **kwargs)
+        
+    def as_dict(self):
+        return {
+            "nombre": self.nombre,
+            "descripcion": self.descripcion,
+            "m2_construidos": self.m2_construidos,
+            "m2_totales": self.m2_totales,
+            "estacionamientos": self.estacionamientos,
+            "habitaciones": self.habitaciones,
+            "restrooms": self.restrooms,
+            "direccion": self.direccion,
+            "comuna": self.comuna.nombre_comuna if self.comuna else None,
+            "region": self.region.nombre_region if self.region else None,
+            "tipo_inmueble": self.tipo_inmueble.nombre_tipo_inmueble if self.tipo_inmueble else None,
+            "arriendo": self.arriendo,
+            "arrendador": self.arrendador.nombres + ' ' + self.arrendador.apellidos if self.arrendador else "No hay arrendador", # Assuming arrendador and arrendatario are ForeignKey fields
+            "arrendatario": self.arrendatario.nombres + ' ' + self.arrendatario.apellidos if self.arrendatario else None,
+        }
+
 
     def __str__(self):
         return f'Nombre: {self.nombre}\nDescripcion: {self.descripcion}\nMetros² Construidos: {self.m2_construidos}[m²]\nMetros Totales o del Terreno: {self.m2_totales}[m²]\nCantidad de estacionamientos: {self.estacionamientos}\nCantidad de habitaciones: {self.habitaciones}\nCantidad de baños: {self.restrooms}\nDireccion: {self.direccion}, {self.comuna}, {self.region}\nTipo de Inmueble: {self.tipo_inmueble}\nPrecio mensual de arriendo: ${self.arriendo}'
