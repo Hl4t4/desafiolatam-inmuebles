@@ -27,6 +27,8 @@ python manage.py dumpdata web.TipoUsuario --output=web/fixtures/tipos_usuarios.j
 
 python manage.py dumpdata web.TipoInmueble --output=web/fixtures/tipos_inmuebles.json
 
+python manage.py dumpdata web.SolicitudArriendo --output=web/fixtures/solicitudes_arriendo.json
+
 ------------------------------------------------------------------
 
 python manage.py loaddata web/fixtures/comunas.json
