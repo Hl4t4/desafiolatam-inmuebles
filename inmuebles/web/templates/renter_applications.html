@@ -5,22 +5,22 @@
     {% include "property_details.html" %}
     <div class = "container-fluid py-5">
         <div class = "row">
-            <div class="col-12 text-center mb-3">
+            <div class="col-12 text-center mb-4">
                 <div class ="card py-4 px-3 mx-5">
                     <div class = "card-title">
-                        <h1>Sus Inmuebles para Arrendar</h1>
+                        <h1>Sus Solicitudes de Arriendo</h1>
                     </div>
                     <hr style="width:50%; margin-left:auto; margin-right:auto;">
                     <div class = "card-body">
-                        <p>Hola {{ user.nombres }}, aquí puedes encontrar todos los sitios que tienes disponibles para arrendar.</p>
+                        <p>Hola {{ user.nombres }}, aquí puedes encontrar todas las solicitudes de arriendo de tus inmuebles</p>
                         <a href="{% url 'renter' user=user.id %}"><button class= "btn btn-outline-info custom" type="button" value = "Ver Arriendos Posibles">Ver tus Arriendos</button></a>
                         <a href="{% url 'renter_add_rent' user=user.id %}"><button class= "btn btn-outline-info custom" type="button" value = "Publicar Nuevo Anuncio">Publicar Nuevo Anuncio</button></a>
                         <a href="{% url 'renter_applications' user=user.id %}"><button class= "btn btn-outline-info custom" type="button" value = "Ver tus Solicitudes">Ver tus Solicitudes</button></a>
                     </div>
                 </div>
             </div>
-            {% include "bases/base_rent_filter.html" with redirection='renter' %}
-            {% include "bases/base_rent.html" with card_name="Tus Arriendos" %}
+            {% include "bases/base_application_filter.html" with redirection='renter' %}
+            {% include "bases/base_application.html" with card_name="Solicitudes Ingresadas" redirection="renter"%}
         </div>
     </div>
 </section>

@@ -7,9 +7,13 @@
 }
 
 html {
-    background-color: #fef9f0;
+    background-color: #fac0b3;
     
 }
+/* body {
+    background-color: #fac0b3;
+    
+} */
 
 header {
     background-color: #fef9f0;
@@ -21,10 +25,22 @@ nav {
 
 section {
     background-color: #c8f0ef;
+    /* height: 100vh; */
+}
+
+.modal-content {
+    background-color: #c8f0ef;
+    /* height: 100vh; */
+}
+
+.card-inmuebles {
+    background-color: #fac0b3;
 }
 
 footer {
     background-color: #fac0b3;
+    /* position: fixed;
+    bottom: 0; */
 }
 
 
@@ -40,4 +56,24 @@ header>img {
 hr {
     color: #26979f;
     border-color: #26979f;
+}
+
+a:link {
+    color: #26979f;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: #17595e;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #d3a297;
+    text-decoration: underline;
+}
+  
+a:active {
+    color: #d3a297;
+    text-decoration: underline;
 }

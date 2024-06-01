@@ -1,9 +1,10 @@
 {% extends 'bases/base.html' %}
 {% block content%}
 <section>
+    {% include "property_details.html" %}
     <div class = "container-fluid py-5">
         <div class = "row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mb-4">
                 <div class ="card py-4 px-3 mx-5">
                     <div class = "card-title">
                         <h1>Arriendos Kristen</h1>
@@ -14,6 +15,7 @@
                     </div>
                 </div>
             </div>
+            {% include "bases/base_rent.html" with card_name="Arriendos disponibles" index=True%}
         </div>
     </div>
 </section>

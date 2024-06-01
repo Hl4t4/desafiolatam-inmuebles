@@ -27,10 +27,10 @@
                 {% if user.is_authenticated %}
                     <form action="{% url 'logout' %}" method="post">
                         {% csrf_token %}
-                        <button class= "btn btn-outline-info" type="submit" value = "Cerrar Sesión">Cerrar Sesión</button>
+                        <button class= "btn btn-outline-info custom" type="submit" value = "Cerrar Sesión">Cerrar Sesión</button>
                     </form>
                 {% else %}
-                    <a href="/login"><button class= "btn btn-outline-info" type="submit" value = "Iniciar Sesión">Iniciar Sesión</button></a>
+                    <a href="/login"><button class= "btn btn-outline-info custom" type="submit" value = "Iniciar Sesión">Iniciar Sesión</button></a>
                 {% endif %}
             </div>
         </div>

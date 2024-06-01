@@ -4,7 +4,8 @@ from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from web.models import Usuario, Inmueble, Comuna, Region, ContactRequest, SolicitudArriendo, TipoInmueble, TipoUsuario
-from web.forms import UsuarioModelForm, UsuarioCreationModelForm, UsuarioSetPasswordForm, UsuarioPasswordResetForm, UsuarioPasswordChangeForm, ContactRequestForm, InmuebleForm, InmuebleFilterForm
+from web.forms import UsuarioModelForm, UsuarioCreationModelForm, UsuarioSetPasswordForm, UsuarioPasswordResetForm, UsuarioPasswordChangeForm, ContactRequestForm, InmuebleForm, InmuebleFilterForm, SolicitudArriendoForm, SolicitudArriendoModifiableForm
+from web.decorators import tipo_usuario_required
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView, PasswordChangeView, PasswordChangeDoneView
 from django.contrib.sites.shortcuts import get_current_site
@@ -15,7 +16,12 @@ from django.template.loader import render_to_string
 
 
 def index_view(request):
-    return render(request, "index.html", {})
+    inmuebles = Inmueble.objects.filter(arrendador = None) # Exclude para lo opuesto
+    context = {'inmuebles': inmuebles}
+    return render(request, "index.html", context)
+
+def not_authorized_view(request):
+    return render(request, "not_authorized.html", {})
 
 def about_view(request):
     return render(request, "about.html", {})
@@ -132,6 +138,7 @@ def contact_success_view(request):
     return render(request, "contact_success.html", {})
 
 @login_required
+@tipo_usuario_required('arrendatario')
 def renter_view(request, user:Usuario):
     if request.method == 'POST':
         form = InmuebleFilterForm(request.POST)
@@ -159,7 +166,6 @@ def renter_view(request, user:Usuario):
                     filter_params = {key: related_model}
                     inmuebles = inmuebles.filter(**filter_params)
                 elif type(value) == str:
-                    print('str')
                     filter_params = {f'{key}__icontains': value}
                     inmuebles = inmuebles.filter(**filter_params)
                 else:
@@ -180,14 +186,8 @@ def renter_view(request, user:Usuario):
         return render(request, "renter.html", context)
 
 @login_required
-def rentee_view(request, user:Usuario):
-    solicitudes_arriendo = {"solicitudes_arriendo" : SolicitudArriendo.objects.filter(arrendador = request.user)}
-    return render(request, "rentee.html", solicitudes_arriendo)
-
-
-# Hacer decorator propio para renters y rentees
-@login_required
-def post_rent_view(request, user:Usuario):
+@tipo_usuario_required('arrendatario')
+def renter_add_rent_view(request, user:Usuario):
     if request.method == 'POST':
         form = InmuebleForm(request.POST)
         if form.is_valid():
@@ -202,8 +202,189 @@ def post_rent_view(request, user:Usuario):
         initial_data['arrendatario'] = user
         form = InmuebleForm(initial = initial_data)
     
-    return render(request, "post_rent.html", {'form': form})
+    return render(request, "renter_add_rent.html", {'form': form})
 
 @login_required
-def post_rent_success_view(request, user:Usuario):
-    return render(request, "post_rent_success.html", {})
+@tipo_usuario_required('arrendatario')
+def renter_add_rent_success_view(request, user:Usuario):
+    return render(request, "renter_add_rent_success.html", {})
+
+@login_required
+@tipo_usuario_required('arrendatario')
+def renter_update_rent_view(request, user:Usuario, inmueble:Inmueble):
+    inmueble_original = Inmueble.objects.get(id = inmueble)
+    if request.method == 'POST':
+        form = InmuebleForm(request.POST, instance = inmueble_original)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/renter/' + user + '/')
+    else:
+        form = InmuebleForm(instance = inmueble_original)
+    return render(request, "renter_update_rent.html", {'form': form, 'inmueble': inmueble_original})
+
+@login_required
+@tipo_usuario_required('arrendatario')
+def renter_delete_rent_view(request, user:Usuario, inmueble:Inmueble):
+    to_be_deleted_inmueble = Inmueble.objects.get(id = inmueble)
+    usuario = Usuario.objects.get(id = user)
+    if request.user.id == int(user) and to_be_deleted_inmueble.arrendatario == usuario:
+        to_be_deleted_inmueble.delete()
+    return HttpResponseRedirect('/renter/' + user + '/')
+
+@login_required
+@tipo_usuario_required('arrendatario')
+def renter_applications_view(request, user:Usuario):
+    inmuebles = Inmueble.objects.filter(arrendatario = request.user) 
+    solicitudes_arriendo =  SolicitudArriendo.objects
+    solicitudes_arriendo =  solicitudes_arriendo.filter(inmueble__in = inmuebles)
+    context = {'inmuebles': inmuebles,
+               'solicitudes_arriendo': solicitudes_arriendo}
+    return render(request, "renter_applications.html", context)
+
+@login_required
+@tipo_usuario_required('arrendatario')
+def renter_update_application_view(request, user:Usuario, application:SolicitudArriendo):
+    solicitud_arriendo = SolicitudArriendo.objects.get(id = application)
+    arrendador = solicitud_arriendo.arrendador
+    inmueble = solicitud_arriendo.inmueble
+    if request.method == 'POST':
+        # solicitud_arriendo = SolicitudArriendo.objects.get(id = application)
+        form = SolicitudArriendoModifiableForm(request.POST, instance = solicitud_arriendo)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/renter/' + user + '/applications/')
+        else:
+            context = {'form': form,
+                'arrendador': arrendador,
+                'inmueble': inmueble,
+                'application': application}        
+            return render(request, "renter_modify_application.html", context)
+    prefill = {'arrendador' : arrendador.id, 'inmueble' : inmueble.id, 'aceptada' : False, 'rechazada' : False}
+    form = SolicitudArriendoModifiableForm(pre_filled_value = prefill)
+    context = {'form': form,
+                'arrendador': arrendador,
+                'inmueble': inmueble,
+                'application': application}
+    return render(request, "renter_modify_application.html", context)
+
+@login_required
+@tipo_usuario_required('arrendatario')
+def renter_accepted_applications_view(request, user:Usuario):
+    inmuebles = Inmueble.objects.filter(arrendatario = request.user) 
+    solicitudes_arriendo =  SolicitudArriendo.objects
+    solicitudes_arriendo =  solicitudes_arriendo.filter(inmueble__in = inmuebles)
+    solicitudes_arriendo =  solicitudes_arriendo.filter(aceptada = True)
+    context = {'inmuebles': inmuebles,
+               'solicitudes_arriendo': solicitudes_arriendo}
+    return render(request, "renter_applications.html", context)
+
+@login_required
+@tipo_usuario_required('arrendatario')
+def renter_rejected_applications_view(request, user:Usuario):
+    inmuebles = Inmueble.objects.filter(arrendatario = request.user) 
+    solicitudes_arriendo =  SolicitudArriendo.objects
+    solicitudes_arriendo =  solicitudes_arriendo.filter(inmueble__in = inmuebles)
+    solicitudes_arriendo =  solicitudes_arriendo.filter(rechazada = True)
+    context = {'inmuebles': inmuebles,
+               'solicitudes_arriendo': solicitudes_arriendo}
+    return render(request, "renter_applications.html", context)
+
+@login_required
+@tipo_usuario_required('arrendador')
+def rentee_view(request, user:Usuario):
+    inmuebles = Inmueble.objects.filter(arrendador = None).exclude(arrendatario = request.user)
+    solicitudes_arriendo =  SolicitudArriendo.objects.filter(arrendador = request.user)
+    for solicitud_arriendo in solicitudes_arriendo:
+        inmuebles = inmuebles.exclude(id = solicitud_arriendo.inmueble.id)
+    context = {'inmuebles': inmuebles,
+               'solicitudes_arriendo': solicitudes_arriendo}
+    return render(request, "rentee.html", context)
+
+@login_required
+@tipo_usuario_required('arrendador')
+def rentee_accepted_applications_view(request, user:Usuario):
+    inmuebles = Inmueble.objects.filter(arrendador = None).exclude(arrendatario = request.user)
+    solicitudes_arriendo =  SolicitudArriendo.objects.filter(arrendador = request.user)
+    for solicitud_arriendo in solicitudes_arriendo:
+        inmuebles = inmuebles.exclude(id = solicitud_arriendo.inmueble.id)
+    solicitudes_arriendo =  solicitudes_arriendo.filter(aceptada = True)
+    context = {'inmuebles': inmuebles,
+               'solicitudes_arriendo': solicitudes_arriendo}
+    return render(request, "rentee.html", context)
+
+@login_required
+@tipo_usuario_required('arrendador')
+def rentee_rejected_applications_view (request, user:Usuario):
+    inmuebles = Inmueble.objects.filter(arrendador = None).exclude(arrendatario = request.user)
+    solicitudes_arriendo =  SolicitudArriendo.objects.filter(arrendador = request.user)
+    for solicitud_arriendo in solicitudes_arriendo:
+        inmuebles = inmuebles.exclude(id = solicitud_arriendo.inmueble.id)
+    solicitudes_arriendo =  solicitudes_arriendo.filter(rechazada = True)
+    context = {'inmuebles': inmuebles,
+               'solicitudes_arriendo': solicitudes_arriendo}
+    return render(request, "rentee.html", context)
+
+
+@login_required
+@tipo_usuario_required('arrendador')
+def rentee_rents_view(request, user:Usuario):
+    inmuebles = Inmueble.objects.filter(arrendador = None).exclude(arrendatario = request.user) 
+    solicitudes_arriendo =  SolicitudArriendo.objects.filter(arrendador = request.user)
+    for solicitud_arriendo in solicitudes_arriendo:
+        inmuebles = inmuebles.exclude(id = solicitud_arriendo.inmueble.id)
+    if request.method == 'POST':
+        form = InmuebleFilterForm(request.POST)
+        if form.is_valid():
+            real_filters = {key:value for key,value in form.cleaned_data.items() if value != "" and value != 0} # Eliminar filtros no usados
+            model_mapping = {
+                'tipo_inmueble': [TipoInmueble , 'nombre_tipo_inmueble'],
+                'tipo_usuario': [TipoUsuario, 'nombre_tipo_usuario'], 
+                'comuna': [Comuna, 'nombre_comuna'],
+                'region': [Region, 'nombre_region']
+                }
+            # PROBAR CON RAWQUERY
+            for key, value in real_filters.items():
+                if type(value) == int or type(value) == float:
+                    if 'min' in key:
+                        filter_params = {f'{key[0:-4]}__gte': value}
+                    else:
+                        filter_params = {f'{key[0:-4]}__lte': value}
+                    inmuebles = inmuebles.filter(**filter_params)
+                elif key in model_mapping:
+                    model = model_mapping[key]
+                    filter_params = {model[1]: value}
+                    related_model = model[0].objects.get(**filter_params)
+                    filter_params = {key: related_model}
+                    inmuebles = inmuebles.filter(**filter_params)
+                elif type(value) == str:
+                    filter_params = {f'{key}__icontains': value}
+                    inmuebles = inmuebles.filter(**filter_params)
+                else:
+                    filter_params = {key: value}
+                    inmuebles = inmuebles.filter(**filter_params)
+    else:
+        form = InmuebleFilterForm()
+    context = {"inmuebles" : inmuebles, 
+                "form" : form,}
+    return render(request, "rentee_rents.html", context)
+
+@login_required
+@tipo_usuario_required('arrendador')
+def rentee_add_application_view(request, user:Usuario, inmueble:Inmueble):
+    inmueble = Inmueble.objects.get(id = inmueble)
+    if request.method == 'POST':
+        form = SolicitudArriendoForm(request.POST)
+        if form.is_valid():
+            solicitud_arriendo = SolicitudArriendo.objects.create(**form.cleaned_data)
+            return HttpResponseRedirect('/rentee/' + user + '/')
+    else:
+        prefill = {'arrendador' : user, 'inmueble' : inmueble, 'aceptada' : False, 'rechazada' : False}
+        form = SolicitudArriendoForm(pre_filled_value = prefill)
+        if form.is_valid():
+            solicitud_arriendo = SolicitudArriendo.objects.create(**form.cleaned_data)
+            return HttpResponseRedirect('/rentee/' + user + '/')
+    context = {'inmueble': inmueble,
+               'form': form}
+    return render(request, "rentee_add_application.html", context)
+
+

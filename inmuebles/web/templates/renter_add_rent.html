@@ -7,7 +7,7 @@
         </div>
     {%endblock form-description%}
     {% block form-details%}
-    <form  action="{% url 'post_rent' user=user.id %}" method="post" class="px-3">
+    <form  action="{% url 'renter_add_rent' user=user.id %}" method="post" class="px-3">
         {% csrf_token %}
         {% comment %} {{ form }} {% endcomment %}
         {{ form.non_field_errors }}
@@ -30,7 +30,7 @@
             {% endfor %}
         </div>
         <div class = "text-center pb-3">
-            <input class= "btn btn-outline-info" type="submit" value="Agregar Anuncio">
+            <input class= "btn btn-outline-info custom" type="submit" value="Agregar Anuncio">
         </div>
     </form>
     {% endblock form-details%}

@@ -1,0 +1,42 @@
+{% load custom_filters %}
+
+<div class="col-12 text-center">
+    <div class ="card py-4 px-3 mx-5 card-inmuebles" id = "renter_filtered">
+        <h3>{{ card_name }}</h3>
+        {% block rents%}
+            <div class = 'row'>
+                {% for solicitud_arriendo in solicitudes_arriendo %}
+                    <div class = "col-4 py-4">
+                        <div class = "card h-100" id = "{{ solicitud_arriendo.id }}">
+                            {% comment %} AGREGAR O NO IMAGENES <img src="{{ flan.image_url }}" class="card-img-top" alt= "{{ flan.name }}"> {% endcomment %}
+                            <div class = "card-header text-center">
+                                <h3>{{ solicitud_arriendo.id }}</h3>
+                            </div>
+                            <div class = "card-body overflow-y-scroll" >
+                                <div class = "row">
+                                    <div class = "col-12">
+                                        <p>Arrendador: {{ solicitud_arriendo.arrendador.nombres |addstr:' ' |addstr:solicitud_arriendo.arrendador.apellidos }}</p>
+                                    </div>
+                                    <div class = "col-12">
+                                        <p>Inmueble: {{ solicitud_arriendo.inmueble }}</p>
+                                    </div>
+                                    <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                        <p>Aceptada: {{ solicitud_arriendo.aceptada }}</p>    
+                                    </div>
+                                    <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                        <p>Rechazada: {{ solicitud_arriendo.rechazada }}</p>
+                                    </div>
+                                    {% if redirection == 'renter' and solicitud_arriendo.aceptada == False and solicitud_arriendo.rechazada == False%}
+                                    <div class = "col-12">
+                                        <a href="{% url 'renter_update_application' user=user.id application=solicitud_arriendo.id%}"><button class= "btn btn-outline-info custom w-100" type="button" value = "Aceptar o Rechazar">Aceptar o Rechazar</button></a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endblock rents%}
+    </div>
+</div>

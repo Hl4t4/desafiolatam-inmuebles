@@ -37,6 +37,9 @@ class RechazadaVsAceptadaValidator (BaseValidator):
             self.limit_value = rechazada
             params = {'field': self.aceptada_field,'value': value, self.rechazada_field: rechazada}
             if self.compare(value, self.limit_value):
+                print(self.message)
+                print(self.code)
+                
                 raise ValidationError (self.message, code = self.code, params = params)
         else:
              raise ValidationError(f'Ni {self.aceptada} ni {self.rechazada} pueden ser Nulos.', code = 'null_m2')

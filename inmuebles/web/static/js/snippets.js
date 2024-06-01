@@ -15,12 +15,14 @@ $(document).ready(function () {
     $(".detailsOpenModal").on('click', function() {
         let inmueble = $(this).data('value');
         inmueble = inmueble.replace(/\'/g, "\"");
+        inmueble = inmueble.replace("O\"Higgins", "O'Higgins");
         inmueble = JSON.parse(inmueble);
 
         new_html = `
             <div class = "card-header text-center">
                 <h3> ${ inmueble.nombre }</h3>
             <div class = "card-body overflow-y-scroll" >
+                <p> Arrendatario: ${ inmueble.arrendatario }</p>
                 <p> Arrendador: ${ inmueble.arrendador }</p>
                 <p>${ inmueble.descripcion }</p>
                 <p>Metros² Construidos: ${ inmueble.m2_construidos }[m²]</p>

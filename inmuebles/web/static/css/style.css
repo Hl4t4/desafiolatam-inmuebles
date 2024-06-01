@@ -77,3 +77,18 @@ a:active {
     color: #d3a297;
     text-decoration: underline;
 }
+
+.btn-outline-info.custom {
+    background-color: white;
+    color: #26979f; /* Keep the info color for text and borders */
+}
+
+.btn-outline-info.custom:hover, 
+.btn-outline-info.custom:focus, 
+.btn-outline-info.custom:active, 
+.btn-outline-info.custom.active,
+.btn-outline-info.custom:not(:disabled):not(.disabled):active,
+.show>.btn-outline-info.custom.dropdown-toggle {
+    background-color: #26979f; /* Revert to info background color on hover, focus, and active */
+    color: white;
+}

@@ -1,0 +1,55 @@
+{% extends 'bases/base_form.html' %}
+{% load custom_filters %}
+
+    {%block form-description%}
+        <div class="col-12 text-center">
+            <h1>Acepta o Rechaza tu Solicitud de Arriendo</h1>
+        </div>
+    {%endblock form-description%}
+    {% block form-details%}
+    <form  action="{% url 'renter_update_application' user=user.id application=application %}" method="post" class="px-3">
+        {% csrf_token %}
+        {% comment %} {{ form }} {% endcomment %}
+        {{ form.non_field_errors }}
+        
+        <div class = "card mb-3">
+            
+            <div class="pb-1 w-750 border-1">
+                <label for = "{{ form.arrendador.id_for_label }}" class="form-label ps-2">
+                    {{ form.arrendador.label_tag }}
+                </label>
+                {{ arrendador.nombres |addstr:" " |addstr:arrendador.apellidos }}
+            </div>
+            <div class="pb-1 w-750 border-1">
+                <label for = "{{ form.inmueble.id_for_label }}" class="form-label ps-2">
+                    {{ form.inmueble.label_tag }}
+                </label>
+                {{ inmueble }}
+            </div>
+            <div class="pb-1 w-750 border-1">
+                <label for = "{{ form.aceptada.id_for_label }}" class="form-label ps-2">
+                    {{ form.aceptada.label_tag }}
+                </label>
+                {{ form.aceptada }}
+            </div>
+            <div class="pb-1 w-750 border-1">
+                <label for = "{{ form.rechazada.id_for_label }}" class="form-label ps-2">
+                    {{ form.rechazada.label_tag }}
+                </label>
+                {{ form.rechazada }}
+            </div>
+            <div class="text-danger">
+                {{ form.arrendador }}
+                {{ form.inmueble }}
+                {{ form.arrendador.errors }}
+                {{ form.inmueble.errors }}
+                {{ form.aceptada.errors }}
+                {{ form.rechazada.errors }}
+            </div>
+            
+        </div>
+        <div class = "text-center pb-3">
+            <input class= "btn btn-outline-info custom" type="submit" value="Enviar Solicitud Actualizada">
+        </div>
+    </form>
+    {% endblock form-details%}

@@ -1,10 +1,12 @@
 from typing import Any
 from django import forms
 from django.contrib.auth import password_validation
+from django.core.files.base import File
 from django.core.validators import MinValueValidator
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, PasswordResetForm, SetPasswordForm, PasswordChangeForm
+from django.forms.utils import ErrorList
 from django.utils.translation import gettext_lazy as _
-from web.models import Usuario, Inmueble, TipoUsuarioChoices, TipoInmuebleChoices, ComunaChoices, RegionChoices, ContactRequest
+from web.models import Usuario, Inmueble, TipoUsuarioChoices, TipoInmuebleChoices, ComunaChoices, RegionChoices, ContactRequest, SolicitudArriendo
 
 class AuthenticationFormWithWidgets(AuthenticationForm):
     username = forms.EmailField(
@@ -158,3 +160,39 @@ class InmuebleFilterForm(forms.Form):
     restrooms_max = forms.IntegerField(min_value = 0, initial = 0, required = False, label = 'Cantidad de baños', widget=forms.NumberInput(attrs={'class': 'form-control'}))
     arriendo_min = forms.IntegerField(min_value = 0, initial = 0, required = False, label = 'Precio mensual de arriendo', widget=forms.NumberInput(attrs={'class': 'form-control'}))
     arriendo_max = forms.IntegerField(min_value = 0, initial = 0, required = False, label = 'Precio mensual de arriendo', widget=forms.NumberInput(attrs={'class': 'form-control'}))
+
+class SolicitudArriendoForm(forms.ModelForm):
+    class Meta:
+        model = SolicitudArriendo
+        fields = ['arrendador', 'inmueble', 'aceptada', 'rechazada']
+        widgets = {
+            # 'aceptada' : forms.CheckboxInput(attrs={"disabled":"disabled"}),
+            # 'rechazada' : forms.CheckboxInput(attrs={"disabled":"disabled"}),
+            'arrendador': forms.HiddenInput(), 
+            'inmueble': forms.HiddenInput(), 
+            'aceptada' : forms.HiddenInput(),
+            'rechazada' : forms.HiddenInput(),
+        }
+    def __init__(self, *args, **kwargs):
+        initial = kwargs.get('initial', {})
+        if 'pre_filled_value' in kwargs:
+            pre_filled_value = kwargs.pop('pre_filled_value')
+            initial['arrendador'] = pre_filled_value.get('arrendador', '')
+            initial['inmueble'] = pre_filled_value.get('inmueble', '')
+            initial['aceptada'] = pre_filled_value.get('aceptada', '')
+            initial['rechazada'] = pre_filled_value.get('rechazada', '')
+        kwargs['initial'] = initial
+        super().__init__(*args, **kwargs)
+        # for field in self.fields.values():
+        #     field.widget.attrs['disabled'] = 'disabled'
+
+class SolicitudArriendoModifiableForm(SolicitudArriendoForm):
+    class Meta:
+        model = SolicitudArriendo
+        fields = ['arrendador', 'inmueble', 'aceptada', 'rechazada']
+        widgets = {
+            'arrendador': forms.HiddenInput(), 
+            'inmueble': forms.HiddenInput(), 
+            'aceptada' : forms.CheckboxInput(),
+            'rechazada' : forms.CheckboxInput(),
+        }

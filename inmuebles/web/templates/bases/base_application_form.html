@@ -1,0 +1,42 @@
+{% load custom_filters %}
+
+<div class="col-12 text-center">
+    <div class ="card py-4 px-3 mx-5 card-inmuebles" id = "renter_filtered">
+        <h3>{{ card_name }}</h3>
+        {% block rents%}
+            <div class = 'row'>
+                {% for solicitud_arriendo in solicitudes_arriendo %}
+                <form  action="{% url 'renter_add_rent' user=user.id %}" method="post" class="px-3">
+                    <div class = "col-4 py-4">
+                        <div class = "card h-100" id = "{{ solicitud_arriendo.id }}">
+                            {% comment %} AGREGAR O NO IMAGENES <img src="{{ flan.image_url }}" class="card-img-top" alt= "{{ flan.name }}"> {% endcomment %}
+                            <div class = "card-header text-center">
+                                <h3>{{ solicitud_arriendo.id }}</h3>
+                            </div>
+                            <div class = "card-body overflow-y-scroll" >
+                                <div class = "row">
+                                    <div class = "col-12">
+                                        <p>Arrendador: {{ solicitud_arriendo.arrendador.nombres |addstr:' ' |addstr:solicitud_arriendo.arrendador.apellidos }}</p>
+                                    </div>
+                                    <div class = "col-12">
+                                        <p>Inmueble: {{ solicitud_arriendo.inmueble }}</p>
+                                    </div>
+                                    <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                        <p>Aceptada: {{ solicitud_arriendo.aceptada }}</p>    
+                                    </div>
+                                    <div class = "col-12 col-xs-12 col-sm-12 col-md-6">
+                                        <p>Rechazada: {{ solicitud_arriendo.rechazada }}</p>
+                                    </div>
+                                </div>
+                                <div class = "text-center pb-3">
+                                    <input class= "btn btn-outline-info custom" type="submit" value="Agregar Anuncio">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                {% endfor %}
+            </div>
+        {% endblock rents%}
+    </div>
+</div>

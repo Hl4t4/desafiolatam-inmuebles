@@ -1,0 +1,18 @@
+{% load custom_filters %}
+
+<div class="col-12 text-center mb-3">
+    <div class ="card py-4 px-3 mx-5 card-inmuebles">
+        <div class = "card-title" id="renter_filters">
+            <h3>Filtros de Solicitudes</h3>
+        </div>
+        <div class = "card-body">
+            {% if redirection == 'rentee' %}
+                <a href="{% url redirection user=user.id %}"><button class= "btn btn-outline-info custom" type="button" value = "Todas las Solicitudes">Todas las Solicitudes</button></a>
+            {% else %}
+                <a href="{% url redirection|addstr:'_applications' user=user.id %}"><button class= "btn btn-outline-info custom" type="button" value = "Todas las Solicitudes">Todas las Solicitudes</button></a>
+            {% endif %}
+            <a href="{% url redirection|addstr:'_accepted_applications' user=user.id %}"><button class= "btn btn-outline-info custom" type="button" value = "Solicitudes Aceptadas">Solicitudes Aceptadas</button></a>
+            <a href="{% url redirection|addstr:'_rejected_applications' user=user.id %}"><button class= "btn btn-outline-info custom" type="button" value = "Solicitudes Rechazadas">Solicitudes Rechazadas</button></a>
+        </div>
+    </div>
+</div>
