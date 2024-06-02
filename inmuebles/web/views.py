@@ -85,7 +85,7 @@ def signup_activation_view(request, uidb64, token):
         return HttpResponseRedirect('/signup/activation/success/') # Puede estar malo
         #return HttpResponseRedirect('success/') # Puede ser este otro
     else:
-        return render(request, 'registration/account_activation_invalid.html')
+        return render(request, 'registration/signup_activation_invalid.html')
     
 def signup_activation_success_view(request):
     return render(request, "registration/signup_activation_success.html", {})
@@ -126,7 +126,7 @@ def contact_view(request):
                 subject = "Se ha realizado una nueva solicitud de contacto - Inmuebles Kristen",
                 message = f"La persona {contact_request.customer_name}, ha enviado el siguiente mensaje:\n{contact_request.message}\nPor favor responder a la brevedadad al siguiente correo: {contact_request.customer_email}",
                 from_email = settings.DEFAULT_FROM_EMAIL,
-                recipient_list= [settings.DEFAULT_CONTACT_NOTICE_EMAIL]
+                recipient_list= [contact_request.customer_email]
             )
             return HttpResponseRedirect('success/')
     else:
