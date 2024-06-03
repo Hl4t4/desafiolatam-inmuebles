@@ -162,30 +162,33 @@ SITE_ID = 1
 
 ##### Email Settings
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'inmuebleskristen@gmail.com'
-# EMAIL_HOST_PASSWORD = local_settings.EMAIL_HOST_PASSWORD
 
-# DEFAULT_FROM_EMAIL = 'inmuebleskristen@gmail.com'
+## CONSOLE
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# Anymail settings
-DEFAULT_CONTACT_NOTICE_EMAIL = local_settings.DEFAULT_CONTACT_NOTICE_EMAIL
-EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
+# ZOHO
+EMAIL_BACKEND = local_settings.EMAIL_BACKEND
+EMAIL_HOST = local_settings.EMAIL_HOST
+EMAIL_PORT = local_settings.EMAIL_PORT
+EMAIL_USE_TLS = local_settings.EMAIL_USE_TLS
+EMAIL_HOST_USER = local_settings.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = local_settings.EMAIL_HOST_PASSWORD
 DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
-ANYMAIL = {
-    "MAILGUN_API_KEY": local_settings.MAILGUN_API_KEY,
-    "MAILGUN_SENDER_DOMAIN": local_settings.MAILGUN_SENDER_DOMAIN,
-    "MAILGUN_API_URL" : "https://api.mailgun.net/v3/",
-    "MAILGUN_API_SENDER": local_settings.MAILGUN_API_SENDER,
-    "MAILGUN_SEND_DEFAULTS": {
-        "html": True,
-        "inline_css": True,  # Enable inline CSS in HTML emails
-    },
-}
-EMAIL_USE_TLS = True
+DEFAULT_CONTACT_NOTICE_EMAIL = local_settings.DEFAULT_CONTACT_NOTICE_EMAIL
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# ANYMAIL
+# DEFAULT_CONTACT_NOTICE_EMAIL = local_settings.DEFAULT_CONTACT_NOTICE_EMAIL
+# EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
+# DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
+# ANYMAIL = {
+#     "MAILGUN_API_KEY": local_settings.MAILGUN_API_KEY,
+#     "MAILGUN_SENDER_DOMAIN": local_settings.MAILGUN_SENDER_DOMAIN,
+#     "MAILGUN_API_URL" : "https://api.mailgun.net/v3/",
+#     "MAILGUN_API_SENDER": local_settings.MAILGUN_API_SENDER,
+#     "MAILGUN_SEND_DEFAULTS": {
+#         "html": True,
+#         "inline_css": True,  # Enable inline CSS in HTML emails
+#     },
+# }
+# EMAIL_USE_TLS = True
+
