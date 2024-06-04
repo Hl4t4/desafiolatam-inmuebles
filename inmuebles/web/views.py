@@ -13,6 +13,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
 from django.contrib.auth.tokens import default_token_generator
 from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 
 
 def index_view(request):
@@ -62,7 +63,8 @@ def signup_view(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': default_token_generator.make_token(user),
             })
-            send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [user.email])
+            plain_message = strip_tags(message)
+            send_mail(subject, plain_message, settings.DEFAULT_FROM_EMAIL, [user.email], html_message= message)
             return HttpResponseRedirect('success/')
     else:
         form = UsuarioCreationModelForm()
@@ -252,6 +254,9 @@ def renter_update_application_view(request, user:Usuario, application:SolicitudA
         form = SolicitudArriendoModifiableForm(request.POST, instance = solicitud_arriendo)
         if form.is_valid():
             form.save()
+            if solicitud_arriendo.aceptada:
+                inmueble.arrendador = arrendador
+                inmueble.save()
             return HttpResponseRedirect('/renter/' + user + '/applications/')
         else:
             context = {'form': form,
