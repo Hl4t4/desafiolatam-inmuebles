@@ -13,16 +13,20 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 import inmuebles.local_settings as local_settings
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Load environment variables from .env file
+env_path = BASE_DIR / '.env'
+load_dotenv(dotenv_path=env_path)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = local_settings.SECRET_KEY
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -90,11 +94,11 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': local_settings.BDD_NAME,
-        'USER': local_settings.BDD_USER,
-        'PASSWORD': local_settings.BDD_PASSWORD,
-        'HOST': local_settings.BDD_HOST,
-        'PORT': local_settings.BDD_PORT,
+        'NAME': os.environ.get('BDD_NAME'),
+        'USER': os.environ.get('BDD_USER'),
+        'PASSWORD': os.environ.get('BDD_PASSWORD'),
+        'HOST': os.environ.get('BDD_HOST'),
+        'PORT': os.environ.get('BDD_PORT'),
         'OPTIONS': {
             'client_encoding': 'UTF8',
         }
@@ -165,26 +169,26 @@ SITE_ID = 1
 
 ## CONSOLE
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
+SLACK_API_KEY = os.environ.get('SLACK_API_KEY')
 # ZOHO
-EMAIL_BACKEND = local_settings.EMAIL_BACKEND
-EMAIL_HOST = local_settings.EMAIL_HOST
-EMAIL_PORT = local_settings.EMAIL_PORT
-EMAIL_USE_TLS = local_settings.EMAIL_USE_TLS
-EMAIL_HOST_USER = local_settings.EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = local_settings.EMAIL_HOST_PASSWORD
-DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
-DEFAULT_CONTACT_NOTICE_EMAIL = local_settings.DEFAULT_CONTACT_NOTICE_EMAIL
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+DEFAULT_CONTACT_NOTICE_EMAIL = os.environ.get('DEFAULT_CONTACT_NOTICE_EMAIL')
 
 # ANYMAIL
-# DEFAULT_CONTACT_NOTICE_EMAIL = local_settings.DEFAULT_CONTACT_NOTICE_EMAIL
+# DEFAULT_CONTACT_NOTICE_EMAIL = os.environ.get('DEFAULT_CONTACT_NOTICE_EMAIL')
 # EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
-# DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
+# DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 # ANYMAIL = {
-#     "MAILGUN_API_KEY": local_settings.MAILGUN_API_KEY,
-#     "MAILGUN_SENDER_DOMAIN": local_settings.MAILGUN_SENDER_DOMAIN,
+#     "MAILGUN_API_KEY": os.environ.get('MAILGUN_API_KEY'),
+#     "MAILGUN_SENDER_DOMAIN": os.environ.get('MAILGUN_SENDER_DOMAIN'),
 #     "MAILGUN_API_URL" : "https://api.mailgun.net/v3/",
-#     "MAILGUN_API_SENDER": local_settings.MAILGUN_API_SENDER,
+#     "MAILGUN_API_SENDER": os.environ.get('MAILGUN_API_SENDER'),
 #     "MAILGUN_SEND_DEFAULTS": {
 #         "html": True,
 #         "inline_css": True,  # Enable inline CSS in HTML emails
