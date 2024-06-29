@@ -15,6 +15,7 @@ $(document).ready(function () {
     $(".detailsOpenModal").on('click', function() {
         let inmueble = $(this).data('value');
         inmueble = inmueble.replace(/\'/g, "\"");
+        inmueble = inmueble.replace("O\"Higgins", "O'Higgins");
         inmueble = JSON.parse(inmueble);
 
         new_html = `
