@@ -68,7 +68,6 @@ class Usuario (AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return f'{self.nombres} {self.apellidos}'
-        # return f'Nombre: {self.nombres} {self.apellidos}\nRUT: {self.format_rut(self.rut)}\nDireccion: {self.direccion}\nTelefono: {self.telefono_personal}\nCorreo Electronico: {self.email}\nTipo de Usuario: {self.tipo_usuario}'
 
 class Inmueble (models.Model):
     nombre = models.CharField(max_length = 50, null = False, blank = False, verbose_name = 'Nombre')
@@ -120,7 +119,6 @@ class Inmueble (models.Model):
 
     def __str__(self):
         return f'{self.nombre} - {self.direccion}, {self.comuna}, {self.region}'
-        # return f'Nombre: {self.nombre}\nDescripcion: {self.descripcion}\nMetros² Construidos: {self.m2_construidos}[m²]\nMetros Totales o del Terreno: {self.m2_totales}[m²]\nCantidad de estacionamientos: {self.estacionamientos}\nCantidad de habitaciones: {self.habitaciones}\nCantidad de baños: {self.restrooms}\nDireccion: {self.direccion}, {self.comuna}, {self.region}\nTipo de Inmueble: {self.tipo_inmueble}\nPrecio mensual de arriendo: ${self.arriendo}'
 
 class SolicitudArriendo (models.Model):
     arrendador = models.ForeignKey(Usuario, on_delete=models.CASCADE, verbose_name = "Arrendador")

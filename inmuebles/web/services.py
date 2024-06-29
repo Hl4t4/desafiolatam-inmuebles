@@ -120,13 +120,11 @@ def get_fixtures():
             comuna["id"] = id
             serialized_obj = {
                 "model": "web.Comuna",
-                # "pk": comuna["id"],  # Assuming 'id' is the primary key field
                 "pk": id,
                 "fields": comuna
             }
             id += 1
             serialized_data.append(serialized_obj)
-        # file.write(serialized_data)
         json.dump(serialized_data, file, indent=4, ensure_ascii=False)
     with open(f'web/fixtures/regiones.json', 'w', encoding = 'utf-8') as file:
         serialized_data = []
@@ -142,7 +140,6 @@ def get_fixtures():
             id += 1
             serialized_data.append(serialized_obj)
         json.dump(serialized_data, file, indent=4, ensure_ascii=False)
-        # file.write(serialized_data)
 def get_inmuebles_comuna(comuna:str) -> list[Inmueble]:
     raw_query = f"""
         SELECT web_comuna.id, web_comuna.nombre_comuna, web_inmueble.nombre, web_inmueble.descripcion
@@ -177,24 +174,12 @@ def get_inmuebles(nombre:str, descripcion:str) -> list[Inmueble]:
         ORDER BY web_inmueble.comuna_id;
     """
     inmuebles = Inmueble.objects.raw(raw_query)
-    # inmuebles = Inmueble.objects.filter(descripcion = descripcion).filter(nombre = nombre).raw(raw_query)
     old_comuna = ''
     with open('outputs/inmuebles_punto2.txt', 'w', encoding='utf-8') as file:
         for inmueble in inmuebles:
-            # nombre_comuna = Comuna.objects.get(id = inmueble.comuna).nombre_comuna
             nombre_comuna = inmueble.comuna.nombre_comuna
             if old_comuna != nombre_comuna:
                 old_comuna = nombre_comuna
                 file.write(f'{nombre_comuna}:\n')
             file.write(f'Inmueble en {inmueble.comuna}: {inmueble}\n')
     return inmuebles
-    
-
-#from web.services import test
-#test()
-#from web.services import get_fixtures
-#get_fixtures()
-#from web.services import get_inmuebles_comuna
-#get_inmuebles_comuna('Alto Hospicio')
-#from web.services import get_inmuebles_region
-#get_inmuebles_region('Biobío')

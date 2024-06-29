@@ -9,7 +9,6 @@ def tipo_usuario_required(request_tipo_usuario:str):
             if request.user.is_authenticated:
                 tipo_usuario = getattr(request.user, 'tipo_usuario', None)
                 if tipo_usuario and getattr(tipo_usuario, 'nombre_tipo_usuario', None) == request_tipo_usuario:
-                # if hasattr (request.user, 'tipo_usuario') and request.user.tipo_usuario.nombre_tipo_usuario == 'arrendatario':
                     return view_func(request, *args, **kwargs)
                 else:
                     return redirect('not_authorized')  # Change this to your 'not authorized' view

@@ -90,7 +90,6 @@ class RutValidator (BaseValidator):
     def regex_rut (rut:str) -> bool:
         rut_re = r"^([1-9][\d]{6}[\dk])|([1-9][\d]{7}[\dkK])$"
         pattern_rut = re.compile(rut_re)
-        # rut_wrong_re = "^(1{7,8}[\dkK])|(2{7,8}[\dkK])|(3{7,8}[\dkK])|(4{7,8}[\dkK])|(5{7,8}[\dkK])|(6{7,8}[\dkK])|(7{7,8}[\dkK])|(8{7,8}[\dkK])|(9{7,8}[\dkK])|(0{7,8}[\dkK])$"
         wrong_rut_re = r"^(\d)\1{6,7}[\dkK]$"
         pattern_wrong_rut = re.compile(wrong_rut_re)
         if pattern_rut.match(rut) is None:
@@ -144,10 +143,8 @@ class RutValidator (BaseValidator):
             raise ValidationError(f'{self.rut_field} no puede ser Nulo.', code = 'null_rut')
         if rut is not None:
             params = {'field': self.rut_field,'value': rut}
-            # print(rut)
             rut = rut.replace('.', '').replace('-', '')
             if self.regex_rut(rut):
-                # print(rut)
                 if not self.modulo11(rut):
                     print('modulo11 in __call__')
                     raise ValidationError (self.message, code = self.code, params = params)

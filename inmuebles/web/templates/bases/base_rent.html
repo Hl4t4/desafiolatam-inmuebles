@@ -8,7 +8,6 @@
                 {% for inmueble in inmuebles %}
                     <div class = "col-4 py-4">
                         <div class = "card h-100" id = "{{ inmueble.id }}">
-                            {% comment %} AGREGAR O NO IMAGENES <img src="{{ flan.image_url }}" class="card-img-top" alt= "{{ flan.name }}"> {% endcomment %}
                             <div class = "card-header text-center">
                                 <h3>{{ inmueble.nombre }}</h3>
                             </div>

@@ -9,7 +9,6 @@
                 <form  action="{% url 'renter_add_rent' user=user.id %}" method="post" class="px-3">
                     <div class = "col-4 py-4">
                         <div class = "card h-100" id = "{{ solicitud_arriendo.id }}">
-                            {% comment %} AGREGAR O NO IMAGENES <img src="{{ flan.image_url }}" class="card-img-top" alt= "{{ flan.name }}"> {% endcomment %}
                             <div class = "card-header text-center">
                                 <h3>{{ solicitud_arriendo.id }}</h3>
                             </div>

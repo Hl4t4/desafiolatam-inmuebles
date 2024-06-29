@@ -21,7 +21,6 @@ class AuthenticationFormWithWidgets(AuthenticationForm):
 class UsuarioModelForm(forms.ModelForm):
     class Meta:
         model = Usuario
-        # fields = ['email', 'nombres', 'apellidos', 'rut', 'direccion', 'telefono_personal', 'tipo_usuario', 'date_joined']
         fields = ['email', 'nombres', 'apellidos', 'rut', 'direccion', 'telefono_personal', 'tipo_usuario']
         widgets = {
             'email' : forms.EmailInput(attrs={'class':'form-control', 'placeholder':'correo@dominio.cl'}),
@@ -32,12 +31,8 @@ class UsuarioModelForm(forms.ModelForm):
             'telefono_personal' : forms.NumberInput(attrs={'class':'form-control', 'placeholder':'XXXXXXXXX'}),
             'direccion' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'Avenida Siempre Viva 123'}),
             'tipo_usuario' : forms.Select(choices = TipoUsuarioChoices.choices),
-            # 'date_joined' : forms.DateInput(attrs={'readonly': 'readonly', 'class':'form-control'})
         }
     
-    # def __init__(self, *args, **kwargs):
-    #     super(UsuarioModelForm, self).__init__(*args, **kwargs)
-    #     self.fields['date_joined'].disabled = True
 class UsuarioCreationModelForm(UserCreationForm):
     class Meta:
         model = Usuario
@@ -53,7 +48,6 @@ class UsuarioCreationModelForm(UserCreationForm):
             'telefono_personal' : forms.NumberInput(attrs={'class':'form-control', 'placeholder':'XXXXXXXXX'}),
             'direccion' : forms.TextInput(attrs={'class':'form-control', 'placeholder':'Avenida Siempre Viva 123'}),
             'tipo_usuario' : forms.Select(attrs={'class':'form-control'}, choices = TipoUsuarioChoices.choices),
-            # 'date_joined' : forms.DateInput(attrs={'readonly': 'readonly', 'class':'form-control'})
         }
         
 class UsuarioPasswordResetForm(PasswordResetForm):
@@ -93,7 +87,6 @@ class UsuarioPasswordChangeForm(PasswordChangeForm):
         label=_("Contraseña Antigua"),
         strip=False,
         widget=forms.PasswordInput(
-            # attrs={"autocomplete": "current-password", "autofocus": True}
             attrs={"autofocus": True, 'class':'form-control', 'placeholder':'*****************'}
         ),
     )
@@ -166,8 +159,6 @@ class SolicitudArriendoForm(forms.ModelForm):
         model = SolicitudArriendo
         fields = ['arrendador', 'inmueble', 'aceptada', 'rechazada']
         widgets = {
-            # 'aceptada' : forms.CheckboxInput(attrs={"disabled":"disabled"}),
-            # 'rechazada' : forms.CheckboxInput(attrs={"disabled":"disabled"}),
             'arrendador': forms.HiddenInput(), 
             'inmueble': forms.HiddenInput(), 
             'aceptada' : forms.HiddenInput(),
@@ -183,8 +174,6 @@ class SolicitudArriendoForm(forms.ModelForm):
             initial['rechazada'] = pre_filled_value.get('rechazada', '')
         kwargs['initial'] = initial
         super().__init__(*args, **kwargs)
-        # for field in self.fields.values():
-        #     field.widget.attrs['disabled'] = 'disabled'
 
 class SolicitudArriendoModifiableForm(SolicitudArriendoForm):
     class Meta:

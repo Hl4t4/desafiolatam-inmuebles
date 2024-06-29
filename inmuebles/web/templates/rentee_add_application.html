@@ -10,7 +10,6 @@
     {% block form-details%}
     <form  action="{% url 'rentee_add_application' user=user.id inmueble=inmueble.id %}" method="post" class="px-3">
         {% csrf_token %}
-        {% comment %} {{ form }} {% endcomment %}
         {{ form.non_field_errors }}
         
         <div class = "mb-3">

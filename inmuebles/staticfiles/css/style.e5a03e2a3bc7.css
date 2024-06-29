@@ -1,0 +1,94 @@
+* {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #26979f;
+}
+
+html {
+    background-color: #fac0b3;
+    
+}
+/* body {
+    background-color: #fac0b3;
+    
+} */
+
+header {
+    background-color: #fef9f0;
+}
+
+nav {
+    background-color: #fac0b3;
+}
+
+section {
+    background-color: #c8f0ef;
+    /* height: 100vh; */
+}
+
+.modal-content {
+    background-color: #c8f0ef;
+    /* height: 100vh; */
+}
+
+.card-inmuebles {
+    background-color: #fac0b3;
+}
+
+footer {
+    background-color: #fac0b3;
+    /* position: fixed;
+    bottom: 0; */
+}
+
+
+header>img {
+    max-height: 300px;
+    max-width: 400px;
+}
+
+.link-text {
+    color: #26979f;
+}
+
+hr {
+    color: #26979f;
+    border-color: #26979f;
+}
+
+a:link {
+    color: #26979f;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: #17595e;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #d3a297;
+    text-decoration: underline;
+}
+  
+a:active {
+    color: #d3a297;
+    text-decoration: underline;
+}
+
+.btn-outline-info.custom {
+    background-color: white;
+    color: #26979f; /* Keep the info color for text and borders */
+}
+
+.btn-outline-info.custom:hover, 
+.btn-outline-info.custom:focus, 
+.btn-outline-info.custom:active, 
+.btn-outline-info.custom.active,
+.btn-outline-info.custom:not(:disabled):not(.disabled):active,
+.show>.btn-outline-info.custom.dropdown-toggle {
+    background-color: #26979f; /* Revert to info background color on hover, focus, and active */
+    color: white;
+}

@@ -9,7 +9,6 @@
     {% block form-details%}
     <form  action="{% url 'renter_add_rent' user=user.id %}" method="post" class="px-3">
         {% csrf_token %}
-        {% comment %} {{ form }} {% endcomment %}
         {{ form.non_field_errors }}
         
         <div class = "mb-3">
@@ -18,11 +17,7 @@
                     {{ field.label_tag }}
                 </label>
                 <div class="pb-1 w-750 border-1">
-                    {% comment %} {% if field.id_for_label == 'id_arrendatario' %} {% endcomment %}
-                        {% comment %} <input type="text" name="arrendatario" readonly="readonly" required="" id="id_arrendatario" value = {{ user.id }}> {% endcomment %}
-                    {% comment %} {% else %} {% endcomment %}
                         {{ field }}
-                    {% comment %} {% endif %} {% endcomment %}
                 </div>
                 <div class="text-danger">
                     {{ field.errors }}

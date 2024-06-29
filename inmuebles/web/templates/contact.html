@@ -9,7 +9,6 @@
     {% block form-details%}
     <form  action="/contact/" method="post" class="px-3">
         {% csrf_token %}
-        {% comment %} {{ form }} {% endcomment %}
         {{ form.non_field_errors }}
         
         <div class = "mb-3">

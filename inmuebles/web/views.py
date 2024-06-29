@@ -31,10 +31,8 @@ def about_view(request):
 def profile_view(request):
     usuario_original = Usuario.objects.get(id = request.user.id)
     if request.method == 'POST':
-        # usuario_original = Usuario.objects.filter(email = request.user.email)
         form = UsuarioModelForm(request.POST, instance = usuario_original)
         if form.is_valid():
-            # form = form.cleaned_data
             form.save()
             return HttpResponseRedirect('success/')
     else:
@@ -85,7 +83,6 @@ def signup_activation_view(request, uidb64, token):
         user.is_active = True
         user.save()
         return HttpResponseRedirect('/signup/activation/success/') # Puede estar malo
-        #return HttpResponseRedirect('success/') # Puede ser este otro
     else:
         return render(request, 'registration/signup_activation_invalid.html')
     
@@ -173,13 +170,10 @@ def renter_view(request, user:Usuario):
                 else:
                     filter_params = {key: value}
                     inmuebles = inmuebles.filter(**filter_params)
-            # form = InmuebleFilterForm()
             context = {"inmuebles" : inmuebles, 
                     "form" : form,}
             return render(request, "renter.html", context)
 
-    # field_text_filters = ['nombre', 'direccion', 'comuna', 'region', 'tipo_inmueble']
-    # field_number_filters = ['m2_construidos', 'm2_totales', 'estacionamientos', 'habitaciones', 'restrooms', 'arriendo' ]
     else:
         inmuebles = Inmueble.objects.filter(arrendatario = request.user)
         form = InmuebleFilterForm()
@@ -250,7 +244,6 @@ def renter_update_application_view(request, user:Usuario, application:SolicitudA
     arrendador = solicitud_arriendo.arrendador
     inmueble = solicitud_arriendo.inmueble
     if request.method == 'POST':
-        # solicitud_arriendo = SolicitudArriendo.objects.get(id = application)
         form = SolicitudArriendoModifiableForm(request.POST, instance = solicitud_arriendo)
         if form.is_valid():
             form.save()

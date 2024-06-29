@@ -23,7 +23,6 @@
                 <div class="col">
                     <form method="post" action="{% url 'login' %}" class="px-3">
                         {% csrf_token %}
-                        {% comment %} {{ form.non_field_errors }} {% endcomment %}
 
                         <div class="mb-3">
                             {% for field in form %}
@@ -39,8 +38,6 @@
                             {% endfor %}
                         </div>
                         <div class="text-center pb-3">
-                            {# Assumes you set up the password_reset view in your URLconf #}
-                            {% comment %} <p><a href="{% url 'password_reset' %}">¿Olvido su contraseña?</a></p> {% endcomment %}
                             <p><a href="{% url 'password_recovery' %}">¿Olvido su contraseña?</a></p>
                             <p><a href="{% url 'signup' %}">¿No tiene cuenta? Cree una</a></p>
                             <input class = "btn btn-outline-info" type="submit" value="Iniciar Sesión">
