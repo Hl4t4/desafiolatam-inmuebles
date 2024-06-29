@@ -40,5 +40,5 @@ EXPOSE 80
 USER hlata
 
 # Launch app
-# RUN gunicorn inmuebles.wsgi --bind=0.0.0.0:80
+# RUN gunicorn inmuebles.wsgi --bind=0.0.0.0:80 
 CMD [ "gunicorn", "--bind", "0.0.0.0:80", "inmuebles.wsgi:application"]
