@@ -21,6 +21,6 @@
         "RUN python manage.py collectstatic",
         "EXPOSE 80",
         "USER hlata",
-        "CMD [ "gunicorn", "--bind", "0.0.0.0:80", "inmuebles.wsgi:application"]"
+        "CMD [ 'gunicorn', '--bind', '0.0.0.0:80', 'inmuebles.wsgi:application']"
   ]
 }
