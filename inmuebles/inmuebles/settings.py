@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from django.core.exceptions import ImproperlyConfigured
 #from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,10 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY') or ImproperlyConfigured("SECRET_KEY not set")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -92,6 +93,12 @@ WSGI_APPLICATION = 'inmuebles.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+name = os.environ.get('BDD_NAME') or ImproperlyConfigured("BDD_NAME not set")
+user = os.environ.get('BDD_USER') or ImproperlyConfigured("BDD_USER not set")
+password = os.environ.get('BDD_PASSWORD') or ImproperlyConfigured("BDD_PASSWORD not set")
+host = os.environ.get('BDD_HOST') or ImproperlyConfigured("BDD_HOST not set")
+port = os.environ.get('BDD_PORT') or ImproperlyConfigured("BDD_PORT not set")
+
 DATABASES = {
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
@@ -99,11 +106,11 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('BDD_NAME'),
-        'USER': os.environ.get('BDD_USER'),
-        'PASSWORD': os.environ.get('BDD_PASSWORD'),
-        'HOST': os.environ.get('BDD_HOST'),
-        'PORT': os.environ.get('BDD_PORT'),
+        'NAME': name,
+        'USER': user,
+        'PASSWORD': password,
+        'HOST': host,
+        'PORT': port,
         'OPTIONS': {
             'client_encoding': 'UTF8',
         }
@@ -186,14 +193,14 @@ SITE_ID = 1
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # SLACK_API_KEY = os.environ.get('SLACK_API_KEY')
 # ZOHO
-EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
-DEFAULT_CONTACT_NOTICE_EMAIL = os.environ.get('DEFAULT_CONTACT_NOTICE_EMAIL')
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND') or ImproperlyConfigured("EMAIL_BACKEND not set")
+EMAIL_HOST = os.environ.get('EMAIL_HOST') or ImproperlyConfigured("EMAIL_HOST not set")
+EMAIL_PORT = os.environ.get('EMAIL_PORT') or ImproperlyConfigured("EMAIL_PORT not set")
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS') or ImproperlyConfigured("EMAIL_USE_TLS not set")
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER') or ImproperlyConfigured("EMAIL_HOST_USER not set")
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD') or ImproperlyConfigured("EMAIL_HOST_PASSWORD not set")
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL') or ImproperlyConfigured("DEFAULT_FROM_EMAIL not set")
+DEFAULT_CONTACT_NOTICE_EMAIL = os.environ.get('DEFAULT_CONTACT_NOTICE_EMAIL') or ImproperlyConfigured("DEFAULT_CONTACT_NOTICE_EMAIL not set")
 
 # ANYMAIL
 # DEFAULT_CONTACT_NOTICE_EMAIL = os.environ.get('DEFAULT_CONTACT_NOTICE_EMAIL')

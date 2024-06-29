@@ -16,7 +16,7 @@
         "RUN python manage.py loaddata web/fixtures/usuarios.json",
         "RUN python manage.py loaddata web/fixtures/inmuebles.json ",
         "RUN python manage.py loaddata web/fixtures/solicitudes_arriendo.json",
-        "RUN python manage.py collectstatic",
+        "RUN python manage.py collectstatic --noinput",
         "EXPOSE 80",
         "USER hlata",
         "CMD [ 'gunicorn', '--bind', '0.0.0.0:80', 'inmuebles.wsgi:application']"

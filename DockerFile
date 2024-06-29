@@ -35,7 +35,7 @@ RUN python manage.py loaddata web/fixtures/inmuebles.json
 RUN python manage.py loaddata web/fixtures/solicitudes_arriendo.json
 
 # Load Statics
-RUN python manage.py collectstatic
+RUN python manage.py collectstatic --noinput
 
 # Expose the listening port
 EXPOSE 80
