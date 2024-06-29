@@ -36,10 +36,10 @@ ENV BDD_PORT=${BDD_PORT}
 
 
 WORKDIR /usr/inmuebles
-RUN mkdir -p /usr/inmuebles/static
+# RUN mkdir -p /usr/inmuebles/static
 
 # New User
-RUN adduser -D hlata
+# RUN adduser -D hlata
 # RUN adduser hlata sudo
 # RUN grep sudo /etc/group
 
@@ -75,7 +75,7 @@ RUN pip install -r requirements.txt
 EXPOSE 80
 
 # Change user
-USER hlata
+#USER hlata
 
 # Launch app
 # RUN gunicorn inmuebles.wsgi --bind=0.0.0.0:80 
