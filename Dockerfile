@@ -57,17 +57,17 @@ RUN apk update && apk upgrade && apk add --no-cache make g++ openssh libpq-dev p
 RUN pip install -r requirements.txt
 
 # Load Postgresql data
-RUN python manage.py migrate
-RUN python manage.py loaddata web/fixtures/regiones.json
-RUN python manage.py loaddata web/fixtures/comunas.json
-RUN python manage.py loaddata web/fixtures/tipos_usuarios.json
-RUN python manage.py loaddata web/fixtures/tipos_inmuebles.json
-RUN python manage.py loaddata web/fixtures/usuarios.json
-RUN python manage.py loaddata web/fixtures/inmuebles.json 
-RUN python manage.py loaddata web/fixtures/solicitudes_arriendo.json
+# RUN python manage.py migrate
+# RUN python manage.py loaddata web/fixtures/regiones.json
+# RUN python manage.py loaddata web/fixtures/comunas.json
+# RUN python manage.py loaddata web/fixtures/tipos_usuarios.json
+# RUN python manage.py loaddata web/fixtures/tipos_inmuebles.json
+# RUN python manage.py loaddata web/fixtures/usuarios.json
+# RUN python manage.py loaddata web/fixtures/inmuebles.json 
+# RUN python manage.py loaddata web/fixtures/solicitudes_arriendo.json
 
 # Load Statics
-RUN python manage.py collectstatic --noinput
+# RUN python manage.py collectstatic --noinput
 
 # Expose the listening port
 EXPOSE 80
@@ -77,4 +77,4 @@ USER hlata
 
 # Launch app
 # RUN gunicorn inmuebles.wsgi --bind=0.0.0.0:80 
-CMD [ "gunicorn", "--bind", "0.0.0.0:80", "inmuebles.wsgi:application"]
+CMD sh /usr/inmuebles/startcmd.sh
