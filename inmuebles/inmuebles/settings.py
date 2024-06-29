@@ -37,10 +37,11 @@ ALLOWED_HOSTS = [
     'www.hlata-dev.cl',
     'apps.hlata-dev.cl',
     'inmuebles-kristen.apps.hlata-dev.cl',
-    'https://inmuebles-kristen.apps.hlata-dev.cl',
     'inmuebleskristen.shop',
     'www.inmuebleskristen.shop'
 ]
+
+CSRF_TRUSTED_ORIGINS = ['https://inmuebles-kristen.apps.hlata-dev.cl','https://*.127.0.0.1']
 
 
 # Application definition
