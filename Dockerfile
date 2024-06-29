@@ -33,9 +33,10 @@ ENV BDD_HOST=${BDD_HOST}
 ENV BDD_PORT=${BDD_PORT}
 
 # Set working directory
-# RUN mkdir -p /usr/inmuebles
+
 
 WORKDIR /usr/inmuebles
+RUN mkdir -p /usr/inmuebles/static
 
 # New User
 RUN adduser -D hlata
