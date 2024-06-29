@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
     'www.hlata-dev.cl',
     'apps.hlata-dev.cl',
     'inmuebles-kristen.apps.hlata-dev.cl',
+    'https://inmuebles-kristen.apps.hlata-dev.cl',
     'inmuebleskristen.shop',
     'www.inmuebleskristen.shop'
 ]
