@@ -48,6 +48,7 @@ RUN adduser -D hlata
 
 # Copy data
 COPY ./requirements.txt ./
+COPY ./startcmd.sh ./
 COPY ./inmuebles/ ./
 
 # Update Linux and install dependencies
