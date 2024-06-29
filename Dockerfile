@@ -51,7 +51,7 @@ COPY ./requirements.txt ./
 COPY ./inmuebles/ ./
 
 # Update Linux and install dependencies
-RUN apk update && apk upgrade && apk add --no-cache make g++ openssh libpq-dev postgresql-dev postgresql postgresql-contrib curl
+RUN apk update && apk upgrade && apk add --no-cache make g++ openssh libpq-dev postgresql-dev postgresql postgresql-contrib bind-tools curl
 
 # Install pip packages
 RUN pip install -r requirements.txt
