@@ -3,9 +3,7 @@
     "dockerfileLines": [
         "FROM python:3.12.4-alpine3.20",
         "WORKDIR /usr/inmuebles",
-        "RUN adduser hlata",
-        "RUN adduser hlata sudo",
-        "RUN grep sudo /etc/group",
+        "RUN adduser -D hlata",
         "COPY ./requirements.txt ./",
         "COPY ./inmuebles/ ./",
         "RUN apk update && apk upgrade && apk add --no-cache make g++ openssh libpq-dev postgresql-dev postgresql postgresql-contrib curl",

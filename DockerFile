@@ -6,9 +6,13 @@ FROM python:3.12.4-alpine3.20
 WORKDIR /usr/inmuebles
 
 # New User
-RUN adduser hlata
-RUN adduser hlata sudo
-RUN grep sudo /etc/group
+RUN adduser -D hlata
+# RUN adduser hlata sudo
+# RUN grep sudo /etc/group
+
+#RUN adduser -D $USER && mkdir -p /etc/sudoers.d \
+        #&& echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USER \
+        #&& chmod 0440 /etc/sudoers.d/$USER
 
 # Copy data
 COPY ./requirements.txt ./
