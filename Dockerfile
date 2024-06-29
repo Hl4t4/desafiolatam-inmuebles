@@ -53,7 +53,7 @@ COPY ./startcmd.sh ./
 COPY ./inmuebles/ ./
 
 # Update Linux and install dependencies
-RUN apk update && apk upgrade && apk add --no-cache make g++ openssh libpq-dev postgresql-dev postgresql postgresql-contrib bind-tools curl
+RUN apk update && apk upgrade && apk add --no-cache make g++ libpq-dev postgresql-dev bind-tools curl
 
 # Install pip packages
 RUN pip install -r requirements.txt
