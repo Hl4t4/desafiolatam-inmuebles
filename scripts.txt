@@ -49,3 +49,7 @@ TipoInmueble.objects.all().delete()
 TipoUsuario.objects.all().delete()
 Region.objects.all().delete()
 Comuna.objects.all().delete()
+
+------------------------------------------------------------------
+
+python manage.py inspectdb > models.py

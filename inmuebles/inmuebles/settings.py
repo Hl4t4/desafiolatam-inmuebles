@@ -32,7 +32,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost'
+    'localhost',
+    'hlata-dev.cl',
+    'www.hlata-dev.cl',
+    'apps.hlata-dev.cl',
+    'inmuebles-kristen.apps.hlata-dev.cl',
+    'inmuebleskristen.shop',
+    'www.inmuebleskristen.shop'
 ]
 
 
@@ -143,7 +149,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
@@ -157,7 +163,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
 'http://localhost:8000',
-'http://127.0.0.1:8000'
+'http://127.0.0.1:8000',
+'http://inmuebleskristen.shop',
+'https://inmuebleskristen.shop',
+'http://www.inmuebleskristen.shop',
+'https://www.inmuebleskristen.shop',
+'http://apps.hlata-dev.cl',
+'https://apps.hlata-dev.cl',
+'http://inmuebles-kristen.apps.hlata-dev.cl',
+'https://inmuebles-kristen.apps.hlata-dev.cl',
+'http://inmuebles-kristen-db.apps.hlata-dev.cl',
+'https://inmuebles-kristen-db.apps.hlata-dev.cl',
 ]
 
 ##### Site Settings
@@ -169,7 +185,7 @@ SITE_ID = 1
 
 ## CONSOLE
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-SLACK_API_KEY = os.environ.get('SLACK_API_KEY')
+# SLACK_API_KEY = os.environ.get('SLACK_API_KEY')
 # ZOHO
 EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
