@@ -7,6 +7,4 @@ python manage.py loaddata web/fixtures/usuarios.json
 python manage.py loaddata web/fixtures/inmuebles.json 
 python manage.py loaddata web/fixtures/solicitudes_arriendo.json
 
-python manage.py collectstatic --noinput
-
 gunicorn inmuebles.wsgi --bind=0.0.0.0:80 
