@@ -246,12 +246,12 @@ CORS_ORIGIN_WHITELIST = [
 'https://inmuebles-kristen.apps.hlata-dev.cl',
 'http://inmuebles-kristen-db.apps.hlata-dev.cl',
 'https://inmuebles-kristen-db.apps.hlata-dev.cl',
-'http://apps.hlata.bar',
-'https://apps.hlata.bar',
-'http://inmuebles-kristen.apps.hlata.bar',
-'https://inmuebles-kristen.apps.hlata.bar',
-'http://inmuebles-kristen-db.apps.hlata.bar',
-'https://inmuebles-kristen-db.apps.hlata.bar',
+'http://hlata.bar',
+'https://hlata.bar',
+'http://inmuebles-kristen.hlata.bar',
+'https://inmuebles-kristen.hlata.bar',
+'http://inmuebles-kristen-db.hlata.bar',
+'https://inmuebles-kristen-db.hlata.bar',
 ]
 
 ##### Site Settings
