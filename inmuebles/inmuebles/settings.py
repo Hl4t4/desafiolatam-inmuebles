@@ -36,7 +36,11 @@ ALLOWED_HOSTS = [
     'hlata-dev.cl',
     'www.hlata-dev.cl',
     'apps.hlata-dev.cl',
+    'hlata.bar',
+    'www.hlata.bar',
+    'apps.hlata.bar',
     'inmuebles-kristen.apps.hlata-dev.cl',
+    'inmuebles-kristen.hlata.bar',
     'inmuebleskristen.shop',
     'www.inmuebleskristen.shop'
 ]
@@ -242,6 +246,12 @@ CORS_ORIGIN_WHITELIST = [
 'https://inmuebles-kristen.apps.hlata-dev.cl',
 'http://inmuebles-kristen-db.apps.hlata-dev.cl',
 'https://inmuebles-kristen-db.apps.hlata-dev.cl',
+'http://apps.hlata.bar',
+'https://apps.hlata.bar',
+'http://inmuebles-kristen.apps.hlata.bar',
+'https://inmuebles-kristen.apps.hlata.bar',
+'http://inmuebles-kristen-db.apps.hlata.bar',
+'https://inmuebles-kristen-db.apps.hlata.bar',
 ]
 
 ##### Site Settings
